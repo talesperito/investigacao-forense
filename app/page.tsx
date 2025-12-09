@@ -218,3 +218,19 @@ export default function HomePage() {
     </>
   );
 }
+<li className="flex items-start gap-3">
+                <span className="text-blue-400 font-bold">•</span>
+                <span className="text-gray-900">Ciências Forenses</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-blue-400 font-bold">•</span>
+                <span className="text-gray-900">Análise de Dados</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-blue-400 font-bold">•</span>
+                <span className="text-gray-900">Segurança da Informação</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-blue-400 font-bold">•</span>
+                <span className="text-gray-900">Desenvolvimento de Software</span>
+              </li>
