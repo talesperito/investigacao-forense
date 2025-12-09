@@ -135,19 +135,19 @@ export default function HomePage() {
               <ul className="space-y-4 mb-8 text-gray-300 flex-grow">
 <li className="flex items-start gap-3">
                   <span className="text-blue-400 font-bold">•</span>
-                  <span>Desenvolvimento de Sistemas e Aplicações Sob Medida</span>
+<span className="text-gray-900">Desenvolvimento de Sistemas e Aplicações Sob Medida</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-blue-400 font-bold">•</span>
-                  <span>Criação de Plataformas SaaS para Negócios e Operações</span>
+                  <span className="text-gray-900">Criação de Plataformas SaaS para Negócios e Operações</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-blue-400 font-bold">•</span>
-                  <span>Consultoria Técnica em Perícias, Auditoria e Rastreabilidade</span>
+                  <span className="text-gray-900">Consultoria Técnica em Perícias, Auditoria e Rastreabilidade</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-blue-400 font-bold">•</span>
-                  <span>Gestão de Projetos, Processos e Integrações Tecnológicas</span>
+                  <span className="text-gray-900">Gestão de Projetos, Processos e Integrações Tecnológicas</span>
                 </li>
               </ul>
               <a href="/servicos" className="px-6 py-3 bg-blue-600 hover:bg-blue-700 transition-all duration-300 text-white font-semibold rounded-lg text-center">
