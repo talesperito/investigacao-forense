@@ -124,30 +124,30 @@ export default function HomePage() {
       </section>
 
       {/* SERVIÇOS E CURSOS */}
-      <section className="py-20 px-4 bg-gray-800/20">
+      <section className="py-20 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center text-white mb-16">O Que Oferecemos</h2>
+          <h2 className="text-4xl font-bold text-center text-gray-900 mb-16">O Que Oferecemos</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {/* SERVIÇOS */}
             <div className="flex flex-col">
-              <h3 className="text-2xl font-bold text-white mb-8">Serviços</h3>
-              <ul className="space-y-4 mb-8 text-gray-300 flex-grow">
+              <h3 className="text-2xl font-bold text-gray-900 mb-8">Serviços</h3>
+              <ul className="space-y-4 mb-8 flex-grow">
                 <li className="flex items-start gap-3">
-                  <span className="text-blue-400 font-bold">•</span>
-                  <span>Desenvolvimento de Sistemas e Aplicações Sob Medida</span>
+                  <span className="text-blue-600 font-bold">•</span>
+                  <span className="text-gray-800">Desenvolvimento de Sistemas e Aplicações Sob Medida</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-blue-400 font-bold">•</span>
-                  <span>Criação de Plataformas SaaS para Negócios e Operações</span>
+                  <span className="text-blue-600 font-bold">•</span>
+                  <span className="text-gray-800">Criação de Plataformas SaaS para Negócios e Operações</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-blue-400 font-bold">•</span>
-                  <span>Consultoria Técnica em Perícias, Auditoria e Rastreabilidade</span>
+                  <span className="text-blue-600 font-bold">•</span>
+                  <span className="text-gray-800">Consultoria Técnica em Perícias, Auditoria e Rastreabilidade</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-blue-400 font-bold">•</span>
-                  <span>Gestão de Projetos, Processos e Integrações Tecnológicas</span>
+                  <span className="text-blue-600 font-bold">•</span>
+                  <span className="text-gray-800">Gestão de Projetos, Processos e Integrações Tecnológicas</span>
                 </li>
               </ul>
               <a href="/servicos" className="px-6 py-3 bg-blue-600 hover:bg-blue-700 transition-all duration-300 text-white font-semibold rounded-lg text-center">
@@ -157,23 +157,23 @@ export default function HomePage() {
             
             {/* CURSOS */}
             <div className="flex flex-col">
-              <h3 className="text-2xl font-bold text-white mb-8">Cursos e Treinamentos</h3>
-              <ul className="space-y-4 mb-8 text-gray-300 flex-grow">
+              <h3 className="text-2xl font-bold text-gray-900 mb-8">Cursos e Treinamentos</h3>
+              <ul className="space-y-4 mb-8 flex-grow">
                 <li className="flex items-start gap-3">
-                  <span className="text-blue-400 font-bold">•</span>
-                  <span>Curso de Criminalística</span>
+                  <span className="text-blue-600 font-bold">•</span>
+                  <span className="text-gray-800">Curso de Criminalística</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-blue-400 font-bold">•</span>
-                  <span>Curso de Toxicologia Forense</span>
+                  <span className="text-blue-600 font-bold">•</span>
+                  <span className="text-gray-800">Curso de Toxicologia Forense</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-blue-400 font-bold">•</span>
-                  <span>Curso de Medicina Legal</span>
+                  <span className="text-blue-600 font-bold">•</span>
+                  <span className="text-gray-800">Curso de Medicina Legal</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-blue-400 font-bold">•</span>
-                  <span>Curso de Perícia Digital (Em breve)</span>
+                  <span className="text-blue-600 font-bold">•</span>
+                  <span className="text-gray-800">Curso de Perícia Digital (Em breve)</span>
                 </li>
               </ul>
               <a href="/cursos" className="px-6 py-3 bg-blue-600 hover:bg-blue-700 transition-all duration-300 text-white font-semibold rounded-lg text-center">
