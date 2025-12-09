@@ -104,15 +104,6 @@ export default function Footer() {
               © {currentYear} Investigação Forense. Todos os direitos reservados.
             </p>
             <nav className="flex gap-6 text-sm">
-              <Link href="/sobre" className="text-gray-400 hover:text-white transition-colors duration-200">
-                Sobre
-              </Link>
-              <Link href="/servicos" className="text-gray-400 hover:text-white transition-colors duration-200">
-                Serviços
-              </Link>
-              <Link href="/blog" className="text-gray-400 hover:text-white transition-colors duration-200">
-                Blog
-              </Link>
             </nav>
           </div>
         </div>
