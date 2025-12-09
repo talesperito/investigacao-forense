@@ -38,7 +38,7 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="px-8 py-24 text-center">
         <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-          Bem-vindo ao canal dedicado ao estudo da Investigação Forense🪫
+          Bem-vindo ao canal dedicado ao estudo da Investigação Forense 🔬
         </h2>
         <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
           Nossos artigos são cuidadosamente elaborados, fundamentados em rigorosas pesquisas científicas, proporcionando um mergulho aprofundado no fascinante mundo da Investigação Forense.
@@ -52,7 +52,7 @@ export default function HomePage() {
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-8 text-gray-300">
             <li className="flex items-start gap-4">
               <span className="text-2xl">📚</span>
-              <span>Artígos sobre as ciências forenses</span>
+              <span>Artigos sobre as ciências forenses</span>
             </li>
             <li className="flex items-start gap-4">
               <span className="text-2xl">🔔</span>
