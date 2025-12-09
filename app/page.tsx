@@ -1,123 +1,93 @@
 'use client';
 
-import { useState } from 'react';
+import Link from 'next/link';
 
-export default function Home() {
-  const [email, setEmail] = useState('');
-
-  const handleSubscribe = (e: React.FormEvent) => {
-    e.preventDefault();
-    alert(`Obrigado! Confirmamos seu email: ${email}`);
-    setEmail('');
-  };
-
+export default function HomePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white">
-      {/* Header */}
-      <header className="flex items-center justify-between px-8 py-6 border-b border-gray-700">
-        <div className="text-2xl font-bold">InvestigacaoForense.com</div>
-        <nav className="flex gap-8">
-          <a href="#servicos" className="hover:text-blue-400 transition">Serviços</a>
-          <a href="#sobre" className="hover:text-blue-400 transition">Sobre</a>
-          <a href="#contato" className="hover:text-blue-400 transition">Contato</a>
-        </nav>
-      </header>
-
+    <main className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">
       {/* Hero Section */}
       <section className="px-8 py-24 text-center">
-        <h1 className="text-5xl font-bold mb-6 leading-tight">
-          Perícia Criminal com Inteligência e Inovação
+        <h1 className="text-6xl font-bold text-white mb-6 leading-tight">
+          Bem-vindo ao canal dedicado ao estudo da Inves­tigação Forense🪫
         </h1>
-        <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-          Serviços de investigação digital, análise forense e consultoria especializada.
+        <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
+          Nossos artígos são cuidadosamente elaborados, fundamentados em rigorosas pesquisas científicas, proporcionando um mergulho aprofundado no fascinante mundo da Investigação Forense.
         </p>
-        <button className="bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-lg font-semibold transition">
-          Solicitar Consultoria
-        </button>
-      </section>
-
-      {/* Services Section */}
-      <section id="servicos" className="px-8 py-16 bg-gray-800/50">
-        <h2 className="text-3xl font-bold mb-12 text-center">Nossos Serviços</h2>
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-          <div className="bg-gray-700 p-6 rounded-lg border border-gray-600">
-            <h3 className="text-xl font-semibold mb-4">Investigação Digital</h3>
-            <p className="text-gray-300">Análise forense de dispositivos, recuperação de dados e preservação de evidências digitais.</p>
-          </div>
-          <div className="bg-gray-700 p-6 rounded-lg border border-gray-600">
-            <h3 className="text-xl font-semibold mb-4">Perícia Criminal</h3>
-            <p className="text-gray-300">Assessoria técnica em investigações criminais e análise de elementos periciáveis.</p>
-          </div>
-          <div className="bg-gray-700 p-6 rounded-lg border border-gray-600">
-            <h3 className="text-xl font-semibold mb-4">AI & Data Forensics</h3>
-            <p className="text-gray-300">Aplicação de inteligência artificial e ciência de dados em análise forense.</p>
-          </div>
-        </div>
       </section>
 
       {/* About Section */}
-      <section id="sobre" className="px-8 py-16">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8">Sobre</h2>
-          <p className="text-gray-300 text-lg leading-relaxed mb-6">
-            Com mais de 20 anos de experiência em investigação criminal e perícia digital, nosso objetivo é oferecer soluções avançadas em forense, combinando metodologias tradicionais com tecnologia de ponta.
-          </p>
-          <p className="text-gray-300 text-lg leading-relaxed">
-            Especializado em investigação digital, análise de evidências eletrônicas e desenvolvimento de aplicações para análise forense, integrando inteligência artificial e ciência de dados.
-          </p>
-        </div>
-      </section>
-
-      {/* Newsletter Section */}
-      <section id="contato" className="px-8 py-16 bg-gray-800/50">
-        <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">Fique Atualizado</h2>
-          <p className="text-gray-300 mb-8">Receba atualizações sobre investigação forense e metodologias inovadoras.</p>
-          <form onSubmit={handleSubscribe} className="flex gap-4">
-            <input
-              type="email"
-              placeholder="Seu email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              className="flex-1 px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500"
-            />
-            <button
-              type="submit"
-              className="bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-lg font-semibold transition"
-            >
-              Inscrever
-            </button>
-          </form>
-        </div>
-      </section>
-
-
-      
-            {/* Artigos em Destaque */}
-      <section className="px-8 py-16 bg-blue-50">
+      <section className="bg-gray-white/5 px-8 py-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-12 text-center">Artículos em Destaque</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <article className="bg-white rounded-lg shadow hover:shadow-lg transition p-6 border-l-4 border-blue-600">
-              <span className="text-xs font-semibold text-blue-600 uppercase">Inteligência Artificial</span>
-              <h3 className="text-xl font-bold mt-2 mb-3">Perícia Criminal e IA: O Futuro das Investigações</h3>
-              <p className="text-gray-700 mb-4">A Inteligência Artificial está transformando como as investigações criminais são conduzidas. Explore como a IA revoluciona a perícia criminal com análise de dados e reconhecimento de padrões.</p>
-              <div className="text-sm text-gray-500">Tales Vieira • Outubro 2024</div>
+          <h2 className="text-4xl font-bold mb-12 text-center text-white">Aqui você vai encontrar:</h2>
+          <ul className="grid grid-cols-1 md:grid-cols-2 gap-8 text-gray-300">
+            <li className="flex items-start gap-4">
+              <span className="text-2xl">📚</span>
+              <span>Artígos sobre as ciências forenses</span>
+            </li>
+            <li className="flex items-start gap-4">
+              <span className="text-2xl">🔔</span>
+              <span>Principais notícias da segurança pública</span>
+            </li>
+            <li className="flex items-start gap-4">
+              <span className="text-2xl">📄</span>
+              <span>Materiais para download</span>
+            </li>
+            <li className="flex items-start gap-4">
+              <span className="text-2xl">🔍</span>
+              <span>Casos periciais e Quiz para você praticar</span>
+            </li>
+          </ul>
+          <div className="text-center mt-12">
+            <Link href="/blog" className="inline-block px-8 py-3 bg-blue-600 text-white font-bold rounded hover:bg-blue-700 transition">
+              SAIBA MAIS
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Articles */}
+      <section className="px-8 py-16">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold mb-12 text-center text-white">Matérias em destaque</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <article className="bg-gray-white/5 rounded-lg p-6 hover:bg-gray-white/10 transition">
+              <h3 className="text-xl font-bold text-white mb-2">Perícia Criminal e Inteligência Artificial: O Futuro das Investigações</h3>
+              <p className="text-sm text-gray-400 mb-4">Por Tales Vieira</p>
+              <p className="text-sm text-gray-400">outubro 24, 2024</p>
             </article>
-            <article className="bg-white rounded-lg shadow hover:shadow-lg transition p-6 border-l-4 border-blue-600">
-              <span className="text-xs font-semibold text-blue-600 uppercase">Forense Digital</span>
-              <h3 className="text-xl font-bold mt-2 mb-3">Tecnologia na Perícia Criminal</h3>
-              <p className="text-gray-700 mb-4">Descubra as ferramentas avançadas que os peritos criminais usam para coleta e análise de evidências em investigações modernas.</p>
-              <div className="text-sm text-gray-500">Tales Vieira • Novembro 2024</div>
+            <article className="bg-gray-white/5 rounded-lg p-6 hover:bg-gray-white/10 transition">
+              <h3 className="text-xl font-bold text-white mb-2">Falsificação de Produtos de Limpeza e Higiene</h3>
+              <p className="text-sm text-gray-400 mb-4">Por Tales Vieira</p>
+              <p className="text-sm text-gray-400">outubro 19, 2024</p>
+            </article>
+            <article className="bg-gray-white/5 rounded-lg p-6 hover:bg-gray-white/10 transition">
+              <h3 className="text-xl font-bold text-white mb-2">Tecnologia na Perícia Criminal: Ferramentas Avançadas</h3>
+              <p className="text-sm text-gray-400 mb-4">Por Tales Vieira</p>
+              <p className="text-sm text-gray-400">outubro 11, 2024</p>
             </article>
           </div>
         </div>
       </section>
-{/* Footer */}
-      <footer className="px-8 py-8 border-t border-gray-700 text-center text-gray-400">
-        <p>&copy; 2024 InvestigacaoForense.com. Todos os direitos reservados.</p>
-      </footer>
-    </div>
+
+      {/* Services Section */}
+      <section className="bg-gray-white/5 px-8 py-16">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-4xl font-bold mb-12 text-center text-white">Meus Serviços</h2>
+          <div className="space-y-4 text-gray-300 mb-12">
+            <p>✅ Consultoria para Instituições de Educação Básica no apoio à implantação de Itinerários Formativos em Investigação Forense</p>
+            <p>✅ Criação de disciplinas em Investigação Forense para Instituições de Ensino Superior</p>
+            <p>✅ Organização de Locais Simulados de perícia com aplicação de metodologias ativas</p>
+            <p>✅ Capacitações e Palestras para Instituições</p>
+            <p>✅ Mentorias para Peritos Judiciais e Particulares</p>
+            <p>✅ Cursos preparatórios para concursos</p>
+          </div>
+          <div className="text-center">
+            <Link href="/servicos" className="inline-block px-8 py-3 bg-blue-600 text-white font-bold rounded hover:bg-blue-700 transition">
+              CONHEÇA TODOS OS SERVIÇOS E CONDIÇÕES
+            </Link>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }
