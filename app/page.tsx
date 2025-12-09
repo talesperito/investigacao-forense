@@ -92,7 +92,29 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
+
+      
+            {/* Artigos em Destaque */}
+      <section className="px-8 py-16 bg-blue-50">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold mb-12 text-center">Artículos em Destaque</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <article className="bg-white rounded-lg shadow hover:shadow-lg transition p-6 border-l-4 border-blue-600">
+              <span className="text-xs font-semibold text-blue-600 uppercase">Inteligência Artificial</span>
+              <h3 className="text-xl font-bold mt-2 mb-3">Perícia Criminal e IA: O Futuro das Investigações</h3>
+              <p className="text-gray-700 mb-4">A Inteligência Artificial está transformando como as investigações criminais são conduzidas. Explore como a IA revoluciona a perícia criminal com análise de dados e reconhecimento de padrões.</p>
+              <div className="text-sm text-gray-500">Tales Vieira • Outubro 2024</div>
+            </article>
+            <article className="bg-white rounded-lg shadow hover:shadow-lg transition p-6 border-l-4 border-blue-600">
+              <span className="text-xs font-semibold text-blue-600 uppercase">Forense Digital</span>
+              <h3 className="text-xl font-bold mt-2 mb-3">Tecnologia na Perícia Criminal</h3>
+              <p className="text-gray-700 mb-4">Descubra as ferramentas avançadas que os peritos criminais usam para coleta e análise de evidências em investigações modernas.</p>
+              <div className="text-sm text-gray-500">Tales Vieira • Novembro 2024</div>
+            </article>
+          </div>
+        </div>
+      </section>
+{/* Footer */}
       <footer className="px-8 py-8 border-t border-gray-700 text-center text-gray-400">
         <p>&copy; 2024 InvestigacaoForense.com. Todos os direitos reservados.</p>
       </footer>
