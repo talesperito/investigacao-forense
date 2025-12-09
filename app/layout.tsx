@@ -14,9 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Investigação Forense",
-  description: "Perícia Criminal e Investigação Forense com Inteligência Artificial",
-};
+title: "Tecnologia, Dados e Soluções Inteligentes", description: "Transformamos processos complexos em ferramentas simples, eficientes e inteligentes com tecnologia, dados e soluções digitais.",};
 
 export default function RootLayout({
   children,
@@ -33,13 +31,13 @@ export default function RootLayout({
           <div className="max-w-6xl mx-auto flex items-center justify-between">
             <div className="text-2xl font-bold">InvestigacaoForense.com</div>
             <ul className="flex gap-6 text-sm font-semibold">
-              <li><a href="/" className="hover:text-blue-400 transition">Início</a></li>
-              <li><a href="/blog" className="hover:text-blue-400 transition">Notícias/Matérias</a></li>
-              <li><a href="/servicos" className="hover:text-blue-400 transition">Serviços</a></li>
-              <li><a href="/cursos" className="hover:text-blue-400 transition">Cursos</a></li>
-              <li><a href="/landingpage" className="hover:text-blue-400 transition">Mentoria</a></li>
-              <li><a href="/sobre" className="hover:text-blue-400 transition">Sobre</a></li>
-            </ul>
+<li><a href="/" className="hover:text-blue-400 transition">Início</a></li>
+                 <li><a href="/portfolio" className="hover:text-blue-400 transition">Portfólio</a></li>
+                 <li><a href="/aplicacoes" className="hover:text-blue-400 transition">Aplicações</a></li>
+                 <li><a href="/cursos" className="hover:text-blue-400 transition">Cursos</a></li>
+                 <li><a href="/servicos" className="hover:text-blue-400 transition">Serviços</a></li>
+                 <li><a href="/contato" className="hover:text-blue-400 transition">Contato</a></li>
+                </ul>
           </div>
         </nav>
         {children}
