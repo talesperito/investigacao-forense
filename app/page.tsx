@@ -4,7 +4,7 @@ export default function HomePage() {
   return (
     <>
       {/* HERO SECTION */}
-      <section className="relative w-full h-screen bg-cover bg-center" style={{backgroundImage: 'url(/hero-banner.jpg)'}}>
+      <section className="relative w-full h-[65vh] md:h-[70vh] bg-cover bg-center" style={{backgroundImage: 'url(/hero-banner.jpg)'}}>
         {/* Overlay for text readability */}
         <div className="absolute inset-0 bg-black/40"></div>
         
