@@ -134,7 +134,8 @@ export default function HomePage() {
               <h3 className="text-2xl font-bold text-white mb-8">Serviços</h3>
               <ul className="space-y-4 mb-8 text-gray-300 flex-grow">
                 <li className="flex items-start gap-3">
-<span className="text-blue-400 font-bold">•</span>
+<li className="flex items-start gap-3">
+                  <span className="text-blue-400 font-bold">•</span>
                   <span>Desenvolvimento de Sistemas e Aplicações Sob Medida</span>
                 </li>
                 <li className="flex items-start gap-3">
