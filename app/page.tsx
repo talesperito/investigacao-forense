@@ -160,19 +160,19 @@ export default function HomePage() {
               <ul className="space-y-4 mb-8 text-gray-300 flex-grow">
                 <li className="flex items-start gap-3">
                   <span className="text-blue-400 font-bold">•</span>
-                  <span>Ciências Forenses</span>
+                  <span className="text-gray-900">Ciências Forenses</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-blue-400 font-bold">•</span>
-                  <span>Análise de Dados</span>
+                  <span className="text-gray-900">Análise de Dados</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-blue-400 font-bold">•</span>
-                  <span>Segurança da Informação</span>
+                  <span className="text-gray-900">Segurança da Informação</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-blue-400 font-bold">•</span>
-                  <span>Desenvolvimento de Software</span>
+                  <span className="text-gray-900">Desenvolvimento de Software</span>
                   <li className="flex items-start gap-3">
                   <span className="text-blue-400 font-bold">•</span>
                   <span className="text-gray-900">Curso de Criminalística</span>
