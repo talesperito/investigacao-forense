@@ -35,10 +35,8 @@ export default function RootLayout({
               <li><a href="/blog" className="hover:text-blue-400 transition">Notícias/Matérias</a></li>
               <li><a href="/servicos" className="hover:text-blue-400 transition">Serviços</a></li>
               <li><a href="/cursos" className="hover:text-blue-400 transition">Cursos</a></li>
-              <li><a href="/casos" className="hover:text-blue-400 transition">Casos Periciais</a></li>
-              <li><a href="/downloads" className="hover:text-blue-400 transition">Downloads</a></li>
-              <li><a href="/quiz" className="hover:text-blue-400 transition">Quiz</a></li>
-              <li><a href="/sobre" className="hover:text-blue-400 transition">Sobre</a></li>
+                               <li><a href="/landingpage" className="hover:text-blue-400 transition">Mentoria</a></li>
+            <li><a href="/sobre" className="hover:text-blue-400 transition">Sobre</a></li>
             </ul>
           </div>
         </nav>
