@@ -74,38 +74,39 @@ export default function HomePage() {
       </section>
 
       {/* SETORES ATENDIDOS */}
-      <section className="py-20 px-4 bg-gray-800/30">
+  
+      <section className="py-20 px-4 bg-gray-200">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-center text-white mb-16">Setores que Atendemos</h2>
+          <h2 className="text-4xl font-bold text-center text-gray-900 mb-16">Setores que Atendemos</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="space-y-4 text-gray-300 text-lg">
+            <div className="space-y-4 text-lg">
               <div className="flex items-start gap-3">
-                <span className="text-blue-400 font-bold">•</span>
-                <span>Jurídico</span>
+                <span className="text-blue-600 font-bold">•</span>
+                <span className="text-gray-900">Jurídico</span>
               </div>
               <div className="flex items-start gap-3">
-                <span className="text-blue-400 font-bold">•</span>
-                <span>Corporativo</span>
+                <span className="text-blue-600 font-bold">•</span>
+                <span className="text-gray-900">Corporativo</span>
               </div>
               <div className="flex items-start gap-3">
-                <span className="text-blue-400 font-bold">•</span>
-                <span>Perícias</span>
+                <span className="text-blue-600 font-bold">•</span>
+                <span className="text-gray-900">Perícias</span>
               </div>
             </div>
             
-            <div className="space-y-4 text-gray-300 text-lg">
+            <div className="space-y-4 text-lg">
               <div className="flex items-start gap-3">
-                <span className="text-blue-400 font-bold">•</span>
-                <span>Agronegócio</span>
+                <span className="text-blue-600 font-bold">•</span>
+                <span className="text-gray-900">Agronegócio</span>
               </div>
               <div className="flex items-start gap-3">
-                <span className="text-blue-400 font-bold">•</span>
-                <span>Gestão Documental</span>
+                <span className="text-blue-600 font-bold">•</span>
+                <span className="text-gray-900">Gestão Documental</span>
               </div>
               <div className="flex items-start gap-3">
-                <span className="text-blue-400 font-bold">•</span>
-                <span>Operações Ambientais</span>
+                <span className="text-blue-600 font-bold">•</span>
+                <span className="text-gray-900">Operações Ambientais</span>
               </div>
             </div>
           </div>
