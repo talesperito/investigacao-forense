@@ -208,6 +208,7 @@ export default function PortfolioPage() {
                 Criação do site em WordPress e posterior migração para HTML/CSS
                 estático, aprovado no Google Adsense e otimizado em SEO.
               </p>
+                          </div>
                           <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all duration-300">
               <h3 className="text-xl font-bold text-white mb-3">
                 Análise de Relatórios com Machine Learning
