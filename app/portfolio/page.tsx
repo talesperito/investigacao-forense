@@ -239,14 +239,3 @@ export default function PortfolioPage() {
     </main>
   );
 }
-```
-
----
-
-## ⚠️ **IMPORTANTE - Estrutura de Pastas:**
-
-A pasta deve ser **`app/portfolio`** (sem "i" no meio) e **NÃO precisa do `styles.css`**:
-```
-app/
-  └── portfolio/
-      └── page.tsx  (apenas esse arquivo)
