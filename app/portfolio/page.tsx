@@ -28,7 +28,7 @@ export default function PortfolioPage() {
             <div className="flex justify-center">
               <div className="relative w-64 h-64 rounded-xl overflow-hidden border-4 border-blue-500">
                 <Image
-                  src="/tales.jpg"
+                  src="/tales.PNG"
                   fill
                   alt="Foto de Tales Vieira"
                   className="object-cover"
