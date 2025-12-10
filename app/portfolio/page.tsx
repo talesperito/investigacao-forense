@@ -224,6 +224,7 @@ export default function PortfolioPage() {
             solicitação aos profissionais.
           </p>
         </div>
+                          </div>
       </section>
       <section className="py-16 px-4 bg-gradient-to-r from-blue-900 to-blue-700">
         <div className="max-w-4xl mx-auto text-center">
