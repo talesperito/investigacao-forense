@@ -219,10 +219,6 @@ export default function PortfolioPage() {
                 da PCMG, utilizando NLP e análise de padrões.
               </p>
             </div>
-            </div>
-
-          </div>
-
           <p className="text-center text-gray-400 italic mt-12">
             Algumas dessas aplicações podem ser demonstradas ou testadas mediante
             solicitação aos profissionais.
