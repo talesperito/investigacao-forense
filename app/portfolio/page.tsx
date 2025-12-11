@@ -39,11 +39,12 @@ export default function PortfolioPage() {
             <div className="md:col-span-2 space-y-4">
               <h2 className="text-3xl font-bold text-white mb-4">Tales Vieira</h2>
               <p className="text-gray-300 leading-relaxed">
-                Criminalista, Perito Oficial da Polícia Civil de Minas Gerais desde
-                2005, Pós-Doutor em Ciência de Dados pela UFLA e professor
-                universitário. Atua em perícias digitais, ciência de dados,
-                segurança pública, desenvolvimento de sistemas e automações
-                aplicadas a processos periciais e investigativos.
+                Perito Oficial da Polícia Civil de Minas Gerais desde 2005
+                Possui graduação e mestrado em Química pela UFMG, doutorado
+                em Química pela UFLA e Pós-Doutorado em Ciência de Dados pela UFLA
+                Professor universitário e palestrante desde 2004. Atua em perícias digitais,
+                ciência de dados,segurança pública, desenvolvimento de sistemas e automações
+                aplicadas a processos comerciais, periciais e investigativos.
               </p>
               <p className="text-gray-300 leading-relaxed">
                 Experiência em Python, Power BI, análise forense, big data,
@@ -77,10 +78,11 @@ export default function PortfolioPage() {
             <div className="md:col-span-2 space-y-4 md:order-1 order-2">
               <h2 className="text-3xl font-bold text-white mb-4">Matheus Vieira</h2>
               <p className="text-gray-300 leading-relaxed">
-                Estudante de Direito (UFLA) e Análise e Desenvolvimento de Sistemas
-                (Unilavras). Integrante do Grupo de Estudos em Informática Forense e
-                Cibersegurança, atua no desenvolvimento de sistemas, Python,
-                reconhecimento facial, BI e soluções aplicadas à segurança pública.
+                Graduado em Análise e Desenvolvimento de Sistemas pelo Unilavras e 
+                Graduando em Direito na Universidade Federal de Lavras (UFLA). 
+                Integrante e diretor do Grupo de Estudos em Perícia e Investigação 
+                Digital (GEPID), atua no desenvolvimento de sistemas, full stack, 
+                Businees Intelligence (BI) e soluções aplicadas à segurança pública.
                 Inglês avançado e forte foco em tecnologia e direito.
               </p>
               <p className="text-gray-300 leading-relaxed">
