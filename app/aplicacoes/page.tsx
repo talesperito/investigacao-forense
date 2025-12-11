@@ -9,9 +9,9 @@ export default function AplicacoesPage() {
         <h1 className="text-4xl md:text-5xl font-bold mb-6">Aplicacoes e MVPs</h1>
 
         <p className="text-lg text-gray-400 mb-8">
-          Nesta pagina apresentamos prototipos funcionais (MVPs) desenvolvidos para avaliacao tecnica,
-          testes exploratorios e demonstracoes sob demanda. Cada aplicacao aqui listada representa a
-          base de uma solucao SaaS completa que esta em evolucao. Nosso objetivo e transformar esses
+          Nesta pagina apresentamos prototipos funcionais (MVPs - <span className="font-semibold">Minimum Viable Product</span>), 
+          desenvolvidos para avaliacao tecnica, testes exploratorios e demonstracoes sob demanda. Cada aplicacao aqui listada representa a
+          base de uma solucao SaaS completa que esta em evolucao. Nosso objetivo eh transformar esses
           prototipos em plataformas robustas com autenticacao, escalabilidade, integracao segura de dados
           e pipelines avancados de analise.
         </p>
@@ -148,4 +148,4 @@ export default function AplicacoesPage() {
       </div>
     </section>
   );
-}      
+}
