@@ -16,7 +16,7 @@ export default function CursosPage() {
       title: "Curso de Medicina Legal",
       description: "Estude os princípios e práticas da medicina legal aplicada à investigação.",
       purchaseUrl: "https://go.hotmart.com/E60780435Q"
-    }
+    },
         {
       title: "Perícia Digital (Em breve)",
       description: "Explore principais técnicas de perícia de informática na investigação. Aprenda análise de malware, recuperação de dados deletados, análise de metadados e rastreamento digital.",
