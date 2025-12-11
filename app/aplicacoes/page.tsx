@@ -4,17 +4,17 @@ export default function AplicacoesPage() {
   return (
     <section className="py-16 px-4 md:px-8 max-w-6xl mx-auto">
       <div className="mb-16">
-        <h1 className="text-4xl md:text-5xl font-bold mb-6">Nossas Aplicações</h1>
+        <h1 className="text-4xl md:text-5xl font-bold mb-6">Nossas Aplicacoes</h1>
         <p className="text-lg text-gray-400 mb-4 leading-relaxed">
           Apresentamos aqui nossos sistemas em fase de <span className="text-blue-400 font-semibold">Minimum Viable Product (MVP)</span>, 
-          desenvolvidos para validação de conceitos e demonstração de funcionalidades core. Estas aplicações representam protótipos 
-          funcionais que serão evoluídos para plataformas SaaS completas, incorporando arquiteturas escaláveis, microsserviços, 
-          APIs robustas e integrações enterprise-grade.
+          desenvolvidos para validacao de conceitos e demonstracao de funcionalidades core. Estas aplicacoes representam prototipos 
+          funcionais que serao evoluidos para plataformas SaaS completas, incorporando arquiteturas escalaveis, microsservicos, 
+          APIs robustas e integracoes enterprise-grade.
         </p>
         <p className="text-base text-gray-400 leading-relaxed">
-          Os MVPs disponibilizados permitem testes práticos de workflows e validação de casos de uso reais em ambientes controlados. 
-          O acesso é disponibilizado mediante solicitação formal para clientes e parceiros interessados em avaliar as capacidades 
-          técnicas e aplicabilidade das soluções.
+          Os MVPs disponibilizados permitem testes praticos de workflows e validacao de casos de uso reais em ambientes controlados. 
+          O acesso e disponibilizado mediante solicitacao formal para clientes e parceiros interessados em avaliar as capacidades 
+          tecnicas e aplicabilidade das solucoes.
         </p>
       </div>
 
@@ -30,9 +30,9 @@ export default function AplicacoesPage() {
         </div>
         
         <p className="text-gray-300 mb-6 leading-relaxed">
-          Sistema de gestão documental forense com arquitetura serverless, autenticação OAuth 2.0 e armazenamento 
+          Sistema de gestao documental forense com arquitetura serverless, autenticacao OAuth 2.0 e armazenamento 
           em banco de dados PostgreSQL (Supabase). Oferece pipeline automatizado para processamento de laudos periciais 
-          e documentos técnicos com integridade criptográfica garantida.
+          e documentos tecnicos com integridade criptografica garantida.
         </p>
 
         <div className="grid md:grid-cols-2 gap-4 mb-6">
@@ -41,12 +41,12 @@ export default function AplicacoesPage() {
               <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
               </svg>
-              Integridade Criptográfica
+              Integridade Criptografica
             </h3>
             <ul className="text-sm text-gray-400 space-y-1">
-              <li>• Cálculo automático de hash SHA-256</li>
-              <li>• Validação de integridade em tempo real</li>
-              <li>• Rastreamento de alterações documentais</li>
+              <li>- Calculo automatico de hash SHA-256</li>
+              <li>- Validacao de integridade em tempo real</li>
+              <li>- Rastreamento de alteracoes documentais</li>
             </ul>
           </div>
 
@@ -55,12 +55,12 @@ export default function AplicacoesPage() {
               <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
-              Busca Avançada
+              Busca Avancada
             </h3>
             <ul className="text-sm text-gray-400 space-y-1">
-              <li>• Full-text search engine integrado</li>
-              <li>• Indexação automática de conteúdo</li>
-              <li>• Busca sem necessidade de download</li>
+              <li>- Full-text search engine integrado</li>
+              <li>- Indexacao automatica de conteudo</li>
+              <li>- Busca sem necessidade de download</li>
             </ul>
           </div>
 
@@ -69,12 +69,12 @@ export default function AplicacoesPage() {
               <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
               </svg>
-              Dashboard Analítico
+              Dashboard Analtico
             </h3>
             <ul className="text-sm text-gray-400 space-y-1">
-              <li>• Visualizações interativas de dados</li>
-              <li>• Métricas e KPIs em tempo real</li>
-              <li>• Relatórios customizáveis</li>
+              <li>- Visualizacoes interativas de dados</li>
+              <li>- Metricas e KPIs em tempo real</li>
+              <li>- Relatorios customizaveis</li>
             </ul>
           </div>
 
@@ -86,9 +86,9 @@ export default function AplicacoesPage() {
               Auditoria e Compliance
             </h3>
             <ul className="text-sm text-gray-400 space-y-1">
-              <li>• Sistema de logs detalhados</li>
-              <li>• Rastreamento de ações de usuários</li>
-              <li>• Conformidade com normas forenses</li>
+              <li>- Sistema de logs detalhados</li>
+              <li>- Rastreamento de acoes de usuarios</li>
+              <li>- Conformidade com normas forenses</li>
             </ul>
           </div>
         </div>
@@ -121,9 +121,9 @@ export default function AplicacoesPage() {
         </div>
         
         <p className="text-gray-300 mb-6 leading-relaxed">
-          Ferramenta de análise forense digital para extração e validação de metadados de arquivos e recursos web. 
-          Implementa algoritmos de detecção de manipulação por IA, análise temporal e geolocalização de origem, 
-          fornecendo relatórios técnicos detalhados para cadeia de custódia digital.
+          Ferramenta de analise forense digital para extracao e validacao de metadados de arquivos e recursos web. 
+          Implementa algoritmos de deteccao de manipulacao por IA, analise temporal e geolocalizacao de origem, 
+          fornecendo relatorios tecnicos detalhados para cadeia de custodia digital.
         </p>
 
         <div className="grid md:grid-cols-2 gap-4 mb-6">
@@ -132,12 +132,12 @@ export default function AplicacoesPage() {
               <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
               </svg>
-              Análise de Metadados
+              Analise de Metadados
             </h3>
             <ul className="text-sm text-gray-400 space-y-1">
-              <li>• Extração de EXIF, XMP e IPTC</li>
-              <li>• Timestamps de criação/modificação</li>
-              <li>• Informações de dispositivo e software</li>
+              <li>- Extracao de EXIF, XMP e IPTC</li>
+              <li>- Timestamps de criacao/modificacao</li>
+              <li>- Informacoes de dispositivo e software</li>
             </ul>
           </div>
 
@@ -146,12 +146,12 @@ export default function AplicacoesPage() {
               <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
-              Detecção de IA
+              Deteccao de IA
             </h3>
             <ul className="text-sm text-gray-400 space-y-1">
-              <li>• Identificação de conteúdo sintético</li>
-              <li>• Análise de padrões de geração</li>
-              <li>• Marcadores de manipulação digital</li>
+              <li>- Identificacao de conteudo sintetico</li>
+              <li>- Analise de padroes de geracao</li>
+              <li>- Marcadores de manipulacao digital</li>
             </ul>
           </div>
 
@@ -161,12 +161,12 @@ export default function AplicacoesPage() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
-              Geolocalização
+              Geolocalizacao
             </h3>
             <ul className="text-sm text-gray-400 space-y-1">
-              <li>• Coordenadas GPS embarcadas</li>
-              <li>• Mapeamento de origem geográfica</li>
-              <li>• Análise de dados de localização</li>
+              <li>- Coordenadas GPS embarcadas</li>
+              <li>- Mapeamento de origem geografica</li>
+              <li>- Analise de dados de localizacao</li>
             </ul>
           </div>
 
@@ -175,12 +175,12 @@ export default function AplicacoesPage() {
               <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
               </svg>
-              Verificação de Integridade
+              Verificacao de Integridade
             </h3>
             <ul className="text-sm text-gray-400 space-y-1">
-              <li>• Validação de hash criptográfico</li>
-              <li>• Detecção de alterações pós-criação</li>
-              <li>• Análise de consistência temporal</li>
+              <li>- Validacao de hash criptografico</li>
+              <li>- Deteccao de alteracoes pos-criacao</li>
+              <li>- Analise de consistencia temporal</li>
             </ul>
           </div>
         </div>
@@ -205,9 +205,9 @@ export default function AplicacoesPage() {
       <div className="mt-16 bg-gradient-to-r from-blue-900/30 to-slate-900/30 border border-blue-800/50 rounded-xl p-8 text-center">
         <h2 className="text-3xl font-bold mb-4">Solicite Acesso aos MVPs</h2>
         <p className="text-lg text-gray-300 mb-6 max-w-3xl mx-auto">
-          Para avaliar nossas soluções em ambiente de testes, solicitar demonstrações técnicas ou discutir 
-          casos de uso específicos, entre em contato com nossa equipe. Disponibilizamos ambientes sandbox 
-          para validação de funcionalidades e proof of concept.
+          Para avaliar nossas solucoes em ambiente de testes, solicitar demonstracoes tecnicas ou discutir 
+          casos de uso especificos, entre em contato com nossa equipe. Disponibilizamos ambientes sandbox 
+          para validacao de funcionalidades e proof of concept.
         </p>
         <a
           href="/contato"
