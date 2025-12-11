@@ -86,9 +86,9 @@ export default function PortfolioPage() {
                 Inglês avançado e forte foco em tecnologia e direito.
               </p>
               <p className="text-gray-300 leading-relaxed">
-                Diretor do GEPID (2025–atual) e Estagiário na Critéria (2025–atual).
-                Desenvolve automações, sistemas web e scripts aplicados a
-                investigações digitais.
+                Diretor do GEPID (2025–atual) e Estagiário na Critéria Financial 
+                Group (2025–atual).Desenvolve automações, sistemas web e scripts 
+                aplicados a investigações digitais.
               </p>
               
               {/* Links LinkedIn */}
