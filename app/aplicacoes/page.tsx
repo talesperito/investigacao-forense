@@ -2,15 +2,13 @@
 
 export default function AplicacoesPage() {
   return (
-        <div className="bg-black w-full">
-    <section className="py-16 px-4 md:px-8 max-w-5xl mx-auto text-white min-h-screen">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">    <section className="py-16 px-4 md:px-8 max-w-5xl mx-auto text-white min-h-screen">
       {/* TÍTULO E TEXTO GERAL */}
       <div className="mb-12">
         <h1 className="text-4xl md:text-5xl font-bold mb-6">Aplicações e MVPs</h1>
 
         <p className="text-lg text-gray-200 mb-8">
-          Nesta página apresentamos protótipos funcionais (MVPs) desenvolvidos para avaliação técnica,
-          testes exploratórios e demonstrações sob demanda. Cada aplicação aqui listada representa a
+                Nesta página apresentamos prototípos funcionais (MVPs - Minimum Viable Products) desenvovidos para avaliação técnica,          testes exploratórios e demonstrações sob demanda. Cada aplicação aqui listada representa a
           base de uma solução SaaS completa que está em evolução. Nosso objetivo é transformar esses
           protótipos em plataformas robustas com autenticação, escalabilidade, integração segura de dados
           e pipelines avançados de análise.
