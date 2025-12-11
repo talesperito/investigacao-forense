@@ -17,6 +17,16 @@ export default function CursosPage() {
       description: "Estude os princípios e práticas da medicina legal aplicada à investigação.",
       purchaseUrl: "https://go.hotmart.com/E60780435Q"
     }
+        {
+      title: "Perícia Digital (Em breve)",
+      description: "Explore principais técnicas de perícia de informática na investigação. Aprenda análise de malware, recuperação de dados deletados, análise de metadados e rastreamento digital.",
+      status: "coming-soon"
+    },
+    {
+      title: "Segurança da Informação (Em breve)",
+      description: "Descubra como identificar e prevenir deep fakes, engenharia social, phishing e outros ataques cibernéticos. Proteja-se contra ameaças digitais modernas.",
+      status: "coming-soon"
+    }
   ];
 
   return (
@@ -41,14 +51,20 @@ export default function CursosPage() {
                     <p className="text-gray-300 mb-6 text-lg">{course.description}</p>
                   </div>
                 </div>
-                <a 
-                  href={course.purchaseUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block bg-blue-600 text-white font-bold py-3 px-8 rounded hover:bg-blue-700 transition text-lg"
-                >
-                  Comprar Agora
-                </a>
+                                {course.status === "coming-soon" ? (
+                  <div className="inline-block bg-gray-700 text-white font-bold py-3 px-8 rounded">
+                    Em Breve
+                  </div>
+                ) : (
+                  <a
+                    href={course.purchaseUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block bg-blue-600 text-white font-bold py-3 px-8 rounded hover:bg-blue-700 transition"
+                  >
+                    Comprar Agora
+                  </a>
+                )}
               </div>
             ))}
           </div>
