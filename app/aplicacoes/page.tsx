@@ -2,8 +2,8 @@
 
 export default function AplicacoesPage() {
   return (
-    <section className="bg-black py-16 px-4 md:px-8 max-w-5xl mx-auto text-white min-h-screen">
-
+        <div className="bg-black w-full">
+    <section className="py-16 px-4 md:px-8 max-w-5xl mx-auto text-white min-h-screen">
       {/* TÍTULO E TEXTO GERAL */}
       <div className="mb-12">
         <h1 className="text-4xl md:text-5xl font-bold mb-6">Aplicações e MVPs</h1>
@@ -151,5 +151,6 @@ export default function AplicacoesPage() {
       </div>
 
     </section>
+              </div>
   );
 }
