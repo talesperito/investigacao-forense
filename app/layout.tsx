@@ -24,8 +24,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body
-        className="{`${geistSans.variable} ${geistMono.variable} antialiased !bg-white`}"        {/* Global Navigation */}
-        <nav className="bg-gray-900 text-white px-8 py-4 sticky top-0 z-50 shadow-lg">
+        className={`${geistSans.variable} ${geistMono.variable} antialiased !bg-white`}        <nav className="bg-gray-900 text-white px-8 py-4 sticky top-0 z-50 shadow-lg">
           <div className="max-w-6xl mx-auto flex items-center justify-between">
             <div className="text-2xl font-bold">InvestigacaoForense.com</div>
             <ul className="flex gap-6 text-sm font-semibold">
