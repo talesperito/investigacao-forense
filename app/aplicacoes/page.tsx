@@ -2,7 +2,7 @@
 
 export default function AplicacoesPage() {
   return (
-    <section className="py-16 px-4 md:px-8 max-w-5xl mx-auto text-white">
+    <section className="bg-black py-16 px-4 md:px-8 max-w-5xl mx-auto text-white min-h-screen">
 
       {/* TÍTULO E TEXTO GERAL */}
       <div className="mb-12">
@@ -18,9 +18,11 @@ export default function AplicacoesPage() {
 
         <div className="bg-blue-900 border border-blue-700 rounded-lg p-8 shadow-lg">
           <h2 className="text-2xl font-bold mb-4">Sobre os MVPs</h2>
+
           <p className="text-gray-200 mb-4">
             As aplicações em desenvolvimento utilizam tecnologias modernas para oferecer recursos como:
           </p>
+
           <ul className="list-disc list-inside space-y-2 text-gray-200 ml-2">
             <li>Gestão e processamento de documentos com validação criptográfica</li>
             <li>Armazenamento em nuvem com bancos de dados distribuídos</li>
@@ -50,10 +52,10 @@ export default function AplicacoesPage() {
 
           <p className="text-gray-200 mb-6">
             Sistema web desenvolvido como MVP de um SaaS destinado à gestão de laudos e documentos técnicos.
-            Inclui autenticação por credenciais controladas (email e senha), upload seguro de arquivos e integração 
-            direta com o <span className="font-semibold text-white">banco de dados Supabase</span> para armazenamento estruturado.
-            Cada documento possui <span className="font-semibold text-white">hash SHA-256</span> calculado automaticamente
-            para garantir integridade e rastreabilidade. O sistema inclui ainda:
+            Inclui autenticação por credenciais controladas (email e senha), upload seguro de arquivos e
+            integração direta com o <span className="font-semibold text-white">banco de dados Supabase</span>
+            para armazenamento estruturado. Cada documento possui <span className="font-semibold text-white">
+            hash SHA-256</span> calculado automaticamente para garantir integridade e rastreabilidade. O sistema inclui ainda:
           </p>
 
           <ul className="list-disc list-inside space-y-2 text-gray-200 ml-2 mb-6">
@@ -67,6 +69,7 @@ export default function AplicacoesPage() {
             <div className="text-sm text-gray-300">
               <span className="font-semibold text-white">Stack:</span> Next.js, Supabase PostgreSQL, SHA-256
             </div>
+
             <button
               disabled
               className="bg-gray-700 text-gray-300 font-semibold py-2 px-6 rounded-lg cursor-not-allowed flex items-center"
@@ -88,6 +91,7 @@ export default function AplicacoesPage() {
               </svg>
               MetaScope Forensic
             </h2>
+
             <span className="inline-block bg-blue-800 text-blue-200 text-sm font-semibold px-3 py-1 rounded-full border border-blue-600 whitespace-nowrap">
               MVP em Testes
             </span>
@@ -96,8 +100,7 @@ export default function AplicacoesPage() {
           <p className="text-gray-200 mb-6">
             Ferramenta criada para análise técnico-forense de arquivos e links. O sistema processa o conteúdo
             enviado e fornece informações estruturadas, incluindo metadados, verificação de integridade,
-            possíveis indícios de manipulação por ferramentas de IA e dados de geolocalização quando
-            disponíveis. Recursos planejados incluem:
+            possíveis indícios de manipulação por ferramentas de IA e dados de geolocalização quando disponíveis.
           </p>
 
           <ul className="list-disc list-inside space-y-2 text-gray-200 ml-2 mb-6">
@@ -111,6 +114,7 @@ export default function AplicacoesPage() {
             <div className="text-sm text-gray-300">
               <span className="font-semibold text-white">Stack:</span> Python, ExifTool, ML Models
             </div>
+
             <button
               disabled
               className="bg-gray-700 text-gray-300 font-semibold py-2 px-6 rounded-lg cursor-not-allowed flex items-center"
@@ -132,6 +136,7 @@ export default function AplicacoesPage() {
           </svg>
           Solicitar Acesso ou Demonstração
         </h2>
+
         <p className="text-lg text-gray-200 mb-6">
           Caso tenha interesse em explorar as funcionalidades, avaliar os MVPs ou discutir adaptações
           específicas para sua instituição, entre em contato.
@@ -144,6 +149,7 @@ export default function AplicacoesPage() {
           Entrar em Contato
         </a>
       </div>
+
     </section>
   );
 }
