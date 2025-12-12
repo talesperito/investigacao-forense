@@ -24,8 +24,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased !bg-white`}            <div className="text-2xl font-bold">InvestigacaoForense.com</div>
-            <ul className="flex gap-6 text-sm font-semibold">
+        className={[geistSans.variable, geistMono.variable, 'antialiased', '!bg-white'].join(' ')}            <ul className="flex gap-6 text-sm font-semibold">
 <li><a href="/" className="hover:text-blue-400 transition">Início</a></li>
                  <li><a href="/portfolio" className="hover:text-blue-400 transition">Portfólio</a></li>
                  <li><a href="/aplicacoes" className="hover:text-blue-400 transition">Aplicações</a></li>
