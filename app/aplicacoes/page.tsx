@@ -9,7 +9,7 @@ export default function AplicacoesPage() {
           <p className="text-lg text-gray-200 mb-4 leading-relaxed">
             Principais projetos
           </p>
-          <p className="text-lg text-gray-200 mb-8 leading-relaxed">
+          <p className="text-lg text-gray-200 mb-8 leading-rela xed">
             Ao longo dos últimos anos, desenvolvemos aplicações web, painéis de BI e ferramentas forenses que 
             apoiam a tomada de decisão, a análise de grandes volumes de dados e a padronização de processos técnicos 
             em investigações e perícias. Abaixo estão alguns dos trabalhos mais relevantes já executados em conjunto.
@@ -141,7 +141,6 @@ export default function AplicacoesPage() {
             Entrar em Contato
           </a>
         </div>
-      </section>
     </div>
   );
 }
