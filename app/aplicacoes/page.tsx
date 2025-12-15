@@ -5,7 +5,7 @@ export default function AplicacoesPage() {
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">
         {/* SEÇÃO: TÍTULO E INTRODUÇÃO */}
         <div className="mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb- text-white6">Aplicações e MVPs</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Aplicações e MVPs</h1>
           <p className="text-lg text-gray-200 mb-4 leading-relaxed">
             Principais projetos
           </p>
