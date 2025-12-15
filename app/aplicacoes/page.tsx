@@ -1,4 +1,4 @@
-'use client';
+text-4xl md:text-5xl font-bold mb-6">'use client';
 
 export default function AplicacoesPage() {
   return (
@@ -23,7 +23,7 @@ export default function AplicacoesPage() {
           </p>
 
           <div className="bg-blue-900 border border-blue-700 rounded-lg p-8 shadow-lg">
-            <h2 className="text-2xl font-bold mb-4">Características dos MVPs</h2>
+            <h2 className="text-2xl font-bold text-white mb-4">Características dos MVPs</h2>
             <p className="text-gray-200 mb-4">
               As aplicações em desenvolvimento utilizam tecnologias modernas para oferecer recursos como:
             </p>
@@ -42,7 +42,7 @@ export default function AplicacoesPage() {
           {/* CARD 1 — ECOFORENSICS */}
           <div className="bg-blue-950 border border-blue-700 rounded-xl p-8 hover:border-blue-500 transition-all duration-300 shadow">
             <div className="flex items-start justify-between mb-4">
-              <h2 className="text-3xl font-bold flex items-center">
+              <h2 className="text-3xl font-bold text-white flex items-center">
                 <svg className="w-8 h-8 mr-3 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
@@ -84,7 +84,7 @@ export default function AplicacoesPage() {
           {/* CARD 2 — METASCOPE */}
           <div className="bg-blue-950 border border-blue-700 rounded-xl p-8 hover:border-blue-500 transition-all duration-300 shadow">
             <div className="flex items-start justify-between mb-4">
-              <h2 className="text-3xl font-bold flex items-center">
+              <h2 className="text-3xl font-bold text-white flex items-center">
                 <svg className="w-8 h-8 mr-3 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg>
