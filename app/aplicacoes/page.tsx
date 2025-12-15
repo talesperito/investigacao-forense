@@ -1,4 +1,4 @@
-text-4xl md:text-5xl font-bold mb-6">'use client';
+'use client';
 
 export default function AplicacoesPage() {
   return (
