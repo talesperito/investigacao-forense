@@ -6,7 +6,7 @@ export default function AplicacoesPage() {
         {/* SEÇÃO: TÍTULO E INTRODUÇÃO */}
         <div className="mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Aplicações e MVPs</h1>
-          <p className="text-lg text-gray-200 mb-4 leading-relaxed">
+          <p className="text-lg text-gray-200 mb-8 leading-relaxed">
             Principais projetos
           </p>
           <p className="text-lg text-gray-200 mb-8 leading-rela xed">
