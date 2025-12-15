@@ -3,18 +3,6 @@
 export default function AplicacoesPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">
-      <section className="py-16 px-4 md:px-8 max-w-5xl mx-auto text-white min-h-screen">
-        {/* SEÇÃO: SOBRE NÓS */}
-        <div className="mb-16 pb-8 border-b border-blue-700">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-blue-300">Sobre nós</h2>
-          <p className="text-lg text-gray-200 leading-relaxed">
-            Unimos experiência em perícia criminal, ciência de dados e desenvolvimento de software para criar 
-            soluções digitais aplicadas à segurança pública, automação de rotinas investigativas e apoio à gestão 
-            em órgãos públicos e empresas privadas. Atuamos desde a concepção até a implementação prática, sempre 
-            com foco em resultados mensuráveis e robustez técnica.
-          </p>
-        </div>
-
         {/* SEÇÃO: TÍTULO E INTRODUÇÃO */}
         <div className="mb-12">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Aplicações e MVPs</h1>
