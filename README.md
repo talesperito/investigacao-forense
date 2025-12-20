@@ -1,126 +1,141 @@
-# 🔍 investigacao-forense.com
+🔎 Investigação Forense — Applied Data Science, AI & Digital Forensics
 
-> Um portal de expertise em ciência de dados, perícia digital e desenvolvimento tecnológico. Aqui conectamos soluções inovadoras com profissionais que dominam a intersecção entre investigação forense, IA e engenharia de software.
+A technical portal and experimental platform focused on data science, digital forensics, and investigative software engineering.
 
----
+This repository contains the source code of investigacaoforense.com, along with applied projects and experimental applications that sit at the intersection of AI, software engineering, and real-world forensic investigations.
 
-## 🎯 O Que Somos
+👉 Official website: https://investigacaoforense.com
 
-Somos uma **equipe multidisciplinar** de especialistas que unem décadas de experiência em perícia criminal, data science e desenvolvimento full-stack. Criamos soluções que transformam dados complexos em evidências precisas e sistemas que modernizam a investigação e a segurança pública.
+🚀 Tech Stack (Quick Overview)
+Layer	Technologies
+Frontend	Next.js (App Router), React, TypeScript, Tailwind CSS
+Backend	Node.js, Supabase, Python, SQL
+AI / ML	Python, Deep Learning, TensorFlow, OpenCV
+Data Science	Pandas, NumPy, Power BI
+Infrastructure	Vercel, GitHub Actions, CI/CD
 
-Neste espaço você encontra:
-- 📊 **Projetos de IA e Deep Learning** aplicados à forense digital
-- 🔐 **Soluções em segurança** e autenticidade digital
-- 💻 **Aplicações web** que operacionalizam investigações
-- 🎓 **Conhecimento compartilhado** sobre tecnologia e perícia
+🧠 Problem Space & Motivation
 
----
+Modern criminal and digital investigations operate under increasing complexity:
 
-## 🌐 Portal Principal
+Large volumes of heterogeneous data
 
-👉 **[investigacaoforense.com](https://www.investigacaoforense.com)**
+Multiple digital evidence sources
 
-Visualizar projetos, aplicações e formas de contato
+Strict requirements for traceability and auditability
 
----
+The need for technical validation of digital evidence
 
-## 🚀 Stack Tecnológico
+This project demonstrates how modern software engineering and applied AI can:
 
-| Área | Tecnologias |
-|------|-------------|
-| **Frontend** | Next.js, React, TypeScript, Tailwind CSS |
-| **Backend** | Node.js, Supabase, Python, SQL |
-| **Hosting & Deploy** | Vercel, GitHub Actions, CI/CD |
-| **AI/ML** | Deep Learning, Python (TensorFlow, OpenCV) |
-| **Data Science** | Pandas, NumPy, Power BI, análise forense |
+Operationalize forensic workflows
 
----
+Reduce investigation and analysis time
 
-## 🛠 Como Rodar Localmente
+Increase data reliability and audit trails
 
-```bash
-# Clone o repositório
+Integrate machine learning into mission-critical processes
+
+📦 Project Structure
+.
+├── app/                    # Routes and pages (Next.js App Router)
+│   ├── portfolio/          # Projects and technical showcases
+│   ├── aplicacoes/         # Demonstrative investigative applications
+│   ├── blog/               # Technical articles and insights
+│   ├── contato/            # Contact and outreach
+│   └── ...
+├── components/             # Reusable React components
+├── public/                 # Static assets
+├── styles/                 # Tailwind CSS configuration
+└── ...
+
+🛠️ Running Locally
+# Clone the repository
 git clone https://github.com/talesperito/investigacao-forense.git
 cd investigacao-forense
 
-# Instale as dependências
+# Install dependencies
 npm install
 
-# Rode em desenvolvimento
+# Start development server
 npm run dev
 
-# Acesse em http://localhost:3000
-```
 
----
+Access the application at:
+👉 http://localhost:3000
 
-## 👥 A Equipe
+🧩 Core Areas Demonstrated
 
-### 🔬 **Tales Vieira** — Especialista em Ciência de Dados & Perícia Digital
+📊 Applied AI & Machine Learning for Digital Forensics
 
-Peito Oficial da Polícia Civil de Minas Gerais com 20+ anos atuando na vanguarda da investigação criminal. Deep expertise em:
-- Análise forense digital e autenticação de evidências
-- Machine Learning aplicado a padrões criminais
-- Liderança e ensino de técnicas modernas de investigação
+🔐 Digital Evidence Authentication and Integrity Analysis
 
-**Conexões:**  
-[LinkedIn](https://www.linkedin.com/in/peritotales/) • [Newsletter](https://talesvieira.substack.com/) • [Instagram](https://www.instagram.com/investigacao_forense)
+💻 Investigative Web Applications
 
----
+📈 Business Intelligence for Public Security Operations
 
-### 💻 **Matheus Vieira** — Full Stack Developer & Automação Forense
+🧪 Applied Research and Scientific Experimentation
 
-Desenvolvedor apaixonado por criar soluções elegantes que transformam investigações complexas. Especialista em:
-- Arquitetura de aplicações forenses escaláveis
-- Automação de rotinas investigativas
-- Full-stack development (Frontend → Backend)
+Some applications are provided as demonstrations or operate under restricted access due to their investigative nature.
 
-**Conexões:**  
-[LinkedIn](https://www.linkedin.com/in/matheusvieira-dev/) • [Instagram](https://www.instagram.com/_matheus_vieira_)
+👥 Team
+🔬 Tales Vieira
 
----
+Data Science & Digital Forensics Specialist
+Official Forensic Expert — Civil Police of Minas Gerais (20+ years)
 
-## 💬 Vamos Conversar?
+Expertise includes:
 
-Se você busca **soluções em segurança digital**, **consultoria forense**, **desenvolvimento de aplicações investigativas** ou simplesmente quer conhecer nossos projetos:
+Digital forensics and evidence validation
 
-📧 **Email:** [talesperito@gmail.com](mailto:talesperito@gmail.com)  
-💬 **WhatsApp:** [+55 31 99241-9000](https://wa.me/5531992419000)  
-🌐 **Site:** [investigacaoforense.com](https://www.investigacaoforense.com)
+Machine learning applied to investigative patterns
 
----
+Data science for public security
 
-## 📦 Estrutura do Projeto
+Scientific research and technical education
 
-```
-.
-├── app/                    # Rotas e páginas Next.js
-│   ├── portfolio/         # Galeria de projetos
-│   ├── aplicacoes/        # Aplicações demonstrativas
-│   ├── blog/              # Artigos técnicos
-│   ├── contato/           # Formulário de contato
-│   └── ...
-├── components/            # Componentes React reutilizáveis
-├── public/                # Assets estáticos
-└── styles/                # Tailwind CSS
-```
+🔗 LinkedIn • Newsletter • Instagram
 
----
+💻 Matheus Vieira
 
-## 🎨 Design & Performance
+Full Stack Developer & Forensic Automation Engineer
 
-- **Framework:** Next.js 16 com App Router
-- **Styling:** Tailwind CSS para design moderno
-- **Hosting:** Vercel para deploys ultrarrápidos
-- **SEO:** Otimizado para buscadores
-- **Responsivo:** Mobile-first, funciona em qualquer dispositivo
+Expertise includes:
 
----
+Scalable investigative web applications
 
-## 📜 Licença
+Automation of forensic workflows
 
-Todos os direitos reservados © 2025 — investigacao-forense.com
+Full-stack software architecture
 
----
+🔗 LinkedIn • Instagram
 
-**Desenvolvido com ❤️ por uma equipe que acredita em inovação responsável.**
+📬 Contact
+
+📧 talesperito@gmail.com
+
+🌐 https://investigacaoforense.com
+
+📜 License
+
+All rights reserved © 2025 — investigacaoforense.com
+
+🎯 Final Notes for Technical Reviewers
+
+This repository reflects:
+
+Real-world investigative challenges
+
+Production-grade engineering decisions
+
+The application of AI beyond academic experiments
+
+A strong focus on reliability, traceability, and impact
+
+It is designed to be explored both as a technical codebase and as a professional engineering portfolio.
+
+
+
+
+
+O ChatGPT pode cometer erros. Confira info
