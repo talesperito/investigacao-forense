@@ -1,36 +1,126 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🔍 investigacao-forense.com
 
-## Getting Started
+> Um portal de expertise em ciência de dados, perícia digital e desenvolvimento tecnológico. Aqui conectamos soluções inovadoras com profissionais que dominam a intersecção entre investigação forense, IA e engenharia de software.
 
-First, run the development server:
+---
+
+## 🎯 O Que Somos
+
+Somos uma **equipe multidisciplinar** de especialistas que unem décadas de experiência em perícia criminal, data science e desenvolvimento full-stack. Criamos soluções que transformam dados complexos em evidências precisas e sistemas que modernizam a investigação e a segurança pública.
+
+Neste espaço você encontra:
+- 📊 **Projetos de IA e Deep Learning** aplicados à forense digital
+- 🔐 **Soluções em segurança** e autenticidade digital
+- 💻 **Aplicações web** que operacionalizam investigações
+- 🎓 **Conhecimento compartilhado** sobre tecnologia e perícia
+
+---
+
+## 🌐 Portal Principal
+
+👉 **[investigacaoforense.com](https://www.investigacaoforense.com)**
+
+Visualizar projetos, aplicações e formas de contato
+
+---
+
+## 🚀 Stack Tecnológico
+
+| Área | Tecnologias |
+|------|-------------|
+| **Frontend** | Next.js, React, TypeScript, Tailwind CSS |
+| **Backend** | Node.js, Supabase, Python, SQL |
+| **Hosting & Deploy** | Vercel, GitHub Actions, CI/CD |
+| **AI/ML** | Deep Learning, Python (TensorFlow, OpenCV) |
+| **Data Science** | Pandas, NumPy, Power BI, análise forense |
+
+---
+
+## 🛠 Como Rodar Localmente
 
 ```bash
+# Clone o repositório
+git clone https://github.com/talesperito/investigacao-forense.git
+cd investigacao-forense
+
+# Instale as dependências
+npm install
+
+# Rode em desenvolvimento
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Acesse em http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 👥 A Equipe
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 🔬 **Tales Vieira** — Especialista em Ciência de Dados & Perícia Digital
 
-## Learn More
+Peito Oficial da Polícia Civil de Minas Gerais com 20+ anos atuando na vanguarda da investigação criminal. Deep expertise em:
+- Análise forense digital e autenticação de evidências
+- Machine Learning aplicado a padrões criminais
+- Liderança e ensino de técnicas modernas de investigação
 
-To learn more about Next.js, take a look at the following resources:
+**Conexões:**  
+[LinkedIn](https://www.linkedin.com/in/peritotales/) • [Newsletter](https://talesvieira.substack.com/) • [Instagram](https://www.instagram.com/investigacao_forense)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 💻 **Matheus Vieira** — Full Stack Developer & Automação Forense
 
-## Deploy on Vercel
+Desenvolvedor apaixonado por criar soluções elegantes que transformam investigações complexas. Especialista em:
+- Arquitetura de aplicações forenses escaláveis
+- Automação de rotinas investigativas
+- Full-stack development (Frontend → Backend)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Conexões:**  
+[LinkedIn](https://www.linkedin.com/in/matheusvieira-dev/) • [Instagram](https://www.instagram.com/_matheus_vieira_)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 💬 Vamos Conversar?
+
+Se você busca **soluções em segurança digital**, **consultoria forense**, **desenvolvimento de aplicações investigativas** ou simplesmente quer conhecer nossos projetos:
+
+📧 **Email:** [talesperito@gmail.com](mailto:talesperito@gmail.com)  
+💬 **WhatsApp:** [+55 31 99241-9000](https://wa.me/5531992419000)  
+🌐 **Site:** [investigacaoforense.com](https://www.investigacaoforense.com)
+
+---
+
+## 📦 Estrutura do Projeto
+
+```
+.
+├── app/                    # Rotas e páginas Next.js
+│   ├── portfolio/         # Galeria de projetos
+│   ├── aplicacoes/        # Aplicações demonstrativas
+│   ├── blog/              # Artigos técnicos
+│   ├── contato/           # Formulário de contato
+│   └── ...
+├── components/            # Componentes React reutilizáveis
+├── public/                # Assets estáticos
+└── styles/                # Tailwind CSS
+```
+
+---
+
+## 🎨 Design & Performance
+
+- **Framework:** Next.js 16 com App Router
+- **Styling:** Tailwind CSS para design moderno
+- **Hosting:** Vercel para deploys ultrarrápidos
+- **SEO:** Otimizado para buscadores
+- **Responsivo:** Mobile-first, funciona em qualquer dispositivo
+
+---
+
+## 📜 Licença
+
+Todos os direitos reservados © 2025 — investigacao-forense.com
+
+---
+
+**Desenvolvido com ❤️ por uma equipe que acredita em inovação responsável.**
