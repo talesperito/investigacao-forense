@@ -8,19 +8,6 @@ export const metadata = {
 export default function PortfolioPage() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">
-      {/* SEÇÃO: SOBRE NÓS */}
-      <section className="py-16 px-4 bg-gradient-to-r from-gray-900 to-gray-800">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-blue-300">Sobre nós</h2>
-          <p className="text-lg text-gray-200 leading-relaxed">
-            Unimos experiência em perícia criminal, ciência de dados e desenvolvimento de software para criar 
-            soluções digitais aplicadas à segurança pública, automação de rotinas investigativas e apoio à gestão 
-            em órgãos públicos e empresas privadas. Atuamos desde a concepção até a implementação prática, sempre 
-            com foco em resultados mensuráveis e robustez técnica.
-          </p>
-        </div>
-      </section>
-
       {/* HERO SECTION */}
       <section className="py-20 px-4 bg-gradient-to-r from-gray-900 to-gray-800">
         <div className="max-w-5xl mx-auto text-center">
@@ -33,6 +20,7 @@ export default function PortfolioPage() {
           </p>
         </div>
       </section>
+
       {/* PERFIL TALES */}
       <section className="py-16 px-4 bg-gray-900/50">
         <div className="max-w-5xl mx-auto">
@@ -47,7 +35,7 @@ export default function PortfolioPage() {
                 />
               </div>
             </div>
-
+            
             <div className="md:col-span-2 space-y-4">
               <h2 className="text-3xl font-bold text-white mb-4">Tales Vieira</h2>
               <p className="text-gray-300 leading-relaxed">
@@ -63,7 +51,7 @@ export default function PortfolioPage() {
                 machine learning, integridade de provas digitais e desenvolvimento
                 de soluções tecnológicas para órgãos públicos.
               </p>
-
+              
               {/* Links LinkedIn */}
               <div className="pt-4">
                 <a 
@@ -90,12 +78,19 @@ export default function PortfolioPage() {
             <div className="md:col-span-2 space-y-4 md:order-1 order-2">
               <h2 className="text-3xl font-bold text-white mb-4">Matheus Vieira</h2>
               <p className="text-gray-300 leading-relaxed">
-                Graduando no último período em Análise e Desenvolvimento de Sistemas pelo Unilavras e discente do 3º período em Direito na Universidade Federal de Lavras (UFLA). Integrante e diretor do Grupo de Estudos em Perícia e Investigação Digital (GEPID), atuando no desenvolvimento de sistemas full stack, soluções de Business Intelligence (BI) e aplicações voltadas à segurança pública. Inglês avançado e forte foco em tecnologia e direito.
+                Graduado em Análise e Desenvolvimento de Sistemas pelo Unilavras e 
+                Graduando em Direito na Universidade Federal de Lavras (UFLA). 
+                Integrante e diretor do Grupo de Estudos em Perícia e Investigação 
+                Digital (GEPID), atua no desenvolvimento de sistemas, full stack, 
+                Businees Intelligence (BI) e soluções aplicadas à segurança pública.
+                Inglês avançado e forte foco em tecnologia e direito.
               </p>
               <p className="text-gray-300 leading-relaxed">
-                Diretor do GEPID (maio/2025 – atual) e estagiário na Critéria Financial Group (outubro/2025 – atual). Desenvolve automações, sistemas web e scripts aplicados a investigações digitais.
+                Diretor do GEPID (2025–atual) e Estagiário na Critéria Financial 
+                Group (2025–atual).Desenvolve automações, sistemas web e scripts 
+                aplicados a investigações digitais.
               </p>
-
+              
               {/* Links LinkedIn */}
               <div className="pt-4">
                 <a 
@@ -111,7 +106,7 @@ export default function PortfolioPage() {
                 </a>
               </div>
             </div>
-
+            
             <div className="flex justify-center md:order-2 order-1">
               <div className="relative w-64 h-64 rounded-xl overflow-hidden border-4 border-blue-500">
                 <Image
@@ -125,14 +120,16 @@ export default function PortfolioPage() {
           </div>
         </div>
       </section>
+
       {/* PROJETOS */}
       <section className="py-16 px-4 bg-gray-900/50">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-white mb-12 text-center">
             Projetos e Atuação
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
             <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all duration-300">
               <h3 className="text-xl font-bold text-white mb-3">
                 BI para Segurança Pública (2024)
@@ -213,9 +210,8 @@ export default function PortfolioPage() {
                 Criação do site em WordPress e posterior migração para HTML/CSS
                 estático, aprovado no Google Adsense e otimizado em SEO.
               </p>
-            </div>
-
-            <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all duration-300">
+                          </div>
+                          <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all duration-300">
               <h3 className="text-xl font-bold text-white mb-3">
                 Análise de Relatórios com Machine Learning
               </h3>
@@ -225,15 +221,13 @@ export default function PortfolioPage() {
                 da PCMG, utilizando NLP e análise de padrões.
               </p>
             </div>
-
-            <p className="text-center text-gray-400 italic mt-12">
-              Algumas dessas aplicações podem ser demonstradas ou testadas mediante
-              solicitação aos profissionais.
-            </p>
-          </div>
+          <p className="text-center text-gray-400 italic mt-12">
+            Algumas dessas aplicações podem ser demonstradas ou testadas mediante
+            solicitação aos profissionais.
+          </p>
         </div>
+                          </div>
       </section>
-
       <section className="py-16 px-4 bg-gradient-to-r from-blue-900 to-blue-700">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
