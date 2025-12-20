@@ -48,9 +48,9 @@ export default function PortfolioPage() {
                 Professor universitário e palestrante desde 2004.
               </p>
               <p className="text-gray-300 leading-relaxed">
-                Atua em perícias digitais, ciência de dados, segurança pública,
+                Atua em perícias digitais, ciência de dados, arquitetura de aplicações,
                 desenvolvimento de sistemas e automações aplicadas a processos
-                investigativos e institucionais.
+                investigativos e comerciais.
               </p>
 
               <div className="pt-4">
@@ -77,13 +77,14 @@ export default function PortfolioPage() {
                 Matheus Vieira
               </h2>
               <p className="text-gray-300 leading-relaxed">
-                Graduado em Análise e Desenvolvimento de Sistemas e graduando em
-                Direito pela UFLA. Diretor do Grupo de Estudos em Perícia e
-                Investigação Digital (GEPID).
+                Graduado em Análise e Desenvolvimento de Sistemas pelo Unilavras e 
+                graduando pelo 4° período em Direito pela UFLA. Estagiário de Performance
+                e Dados na Critéria Financial Group.
+                Diretor do Grupo de Estudos em Perícia e Investigação Digital (GEPID).
               </p>
               <p className="text-gray-300 leading-relaxed">
                 Atua com desenvolvimento full stack, BI, automações e soluções
-                aplicadas à segurança pública e investigação digital.
+                aplicadas a empresas e instituições diversas.
               </p>
 
               <div className="pt-4">
@@ -136,8 +137,10 @@ export default function PortfolioPage() {
               </div>
               <p className="text-gray-300 text-sm">
                 Plataforma de gestão pericial e análise de dados desenvolvida no
-                pós-doutorado em Ciência de Dados. Projeto apresentado na
-                conferência internacional INTERACT 2025 (Springer).
+                pós-doutorado em Ciência de Dados. A solução atacou problemas 
+                críticos de gestão de dados e processos na área pericial, 
+                transformando informações operacionais em dashboards analíticos estratégicos.
+                Projeto apresentado na conferência internacional INTERACT 2025 (Springer).
                 <br /><br />
                 <a
                   href="https://link.springer.com/chapter/10.1007/978-3-032-05008-3_17"
@@ -166,7 +169,10 @@ export default function PortfolioPage() {
               <p className="text-gray-300 text-sm">
                 Sistema em Python com Deep Learning e encodings faciais, alcançando
                 100% de acerto em rostos individuais e 88% em imagens com múltiplos
-                rostos.
+                rostos. projeto foi desenvolvido no pós-doutorado de Tales Vieira, 
+                com supervisão dos professores André Pimenta e Raphael Winckler, 
+                enquanto Matheus Vieira foi responsável pela modelagem do banco de dados, 
+                execução dos scripts e consolidação dos resultados experimentais
               </p>
             </div>
 
@@ -184,9 +190,11 @@ export default function PortfolioPage() {
                 </span>
               </div>
               <p className="text-gray-300 text-sm">
-                Aplicação web com autenticação e relatórios automatizados,
-                reduzindo em cerca de 50% o tempo de gestão e localização de
-                vestígios.
+                Aplicação web em fase de implantação, com autenticação de usuários, 
+                controle de acesso e geração automatizada de relatórios, voltado à gestão de 
+                unidades regionais de custódia. A aplicação trouxe ganhos expressivos de eficiência,
+                permitindo localizar vestígios com rapidez e organizar fluxos de trabalho, resultando
+                em processos cerca de 50% mais ágeis em comparação aos métodos anteriores.
               </p>
             </div>
 
@@ -204,8 +212,12 @@ export default function PortfolioPage() {
                 </span>
               </div>
               <p className="text-gray-300 text-sm">
-                Aplicação web para detecção de deepfakes e verificação de
-                autenticidade digital, com cerca de 75% de precisão em testes.
+                Ferramenta essencial para análise de deepfakes, verificação de 
+                autenticidade de arquivos digitais e links.Os testes experimentais
+                demonstraram aproximadamente 75% de precisão na identificação de 
+                imagens manipuladas por Inteligência Artificial.O projeto é relevante 
+                para contextos forenses, jurídicos e de segurança da informação, 
+                onde a confiabilidade da prova digital é crítica.
               </p>
             </div>
 
@@ -223,8 +235,11 @@ export default function PortfolioPage() {
                 </span>
               </div>
               <p className="text-gray-300 text-sm">
-                Sistema de ponto eletrônico com logs e geolocalização de alta
-                precisão, projetado para substituir bastões de ronda.
+                Aplicação promissora que visa substituir os tradicionais bastões 
+                de ronda, oferecendo um sistema de ponto eletrônico moderno, com 
+                controle administrativo, logs de acesso detalhados e geolocalização
+                de alta precisão. O sistema permite auditoria completa das atividades,
+                aumentando a confiabilidade dos registros e a transparência operacional.
               </p>
             </div>
 
@@ -242,8 +257,11 @@ export default function PortfolioPage() {
                 </span>
               </div>
               <p className="text-gray-300 text-sm">
-                Aplicação para identificação de links suspeitos e ataques
-                homográficos, com OCR para caracteres não latinos.
+                Aplicação em desenvolvimento focada na detecção de links suspeitos,
+                com ênfase em ataques homográficos — uma técnica comum em golpes digitais.
+                O sistema encontra-se em ajustes técnicos para ampliar a capacidade de 
+                leitura via OCR, incluindo caracteres não latinos, o que aumentará 
+                significativamente seu alcance e robustez contra ataques sofisticados.
               </p>
             </div>
 
@@ -258,8 +276,12 @@ export default function PortfolioPage() {
                 </span>
               </div>
               <p className="text-gray-300 text-sm">
-                Script em Python que reduziu o tempo de análise de relatórios de
-                3–4 dias para cerca de 8 horas.
+                Projeto de alto impacto que auxilia investigações na interpretação
+                automatizada de relatórios periciais.O script desenvolvido em Python 
+                identifica padrões e gera insights analíticos, reduzindo o tempo de 
+                análise de 3–4 dias para aproximadamente 8 horas. O projeto encontra-se 
+                em fase de ajustes para execução local, sem dependência de IDE, 
+                tornando-o mais acessível e operacional no dia a dia.
               </p>
             </div>
 
@@ -274,8 +296,11 @@ export default function PortfolioPage() {
                 </span>
               </div>
               <p className="text-gray-300 text-sm">
-                Atuação contínua em extração de dados e quebra de senhas utilizando
-                ferramentas forenses profissionais.
+                Atividade rotineira da Perícia Criminal, realizada exclusivamente 
+                pelo Perito Tales Vieira, envolvendo extração de dados, análise 
+                forense e quebra de senhas em dispositivos e mídias digitais.O serviço 
+                reflete cerca de 3 anos de experiência prática contínua, consolidando
+                expertise técnica em cenários reais de investigação criminal e judicial.
               </p>
             </div>
 
@@ -290,8 +315,12 @@ export default function PortfolioPage() {
                 </span>
               </div>
               <p className="text-gray-300 text-sm">
-                Site institucional desenvolvido com SEO avançado e excelente
-                posicionamento nos buscadores.
+                O site institucional anterior foi desenvolvido em WordPress, com 
+                todas as práticas avançadas de SEO, performance e indexação aplicadas
+                pelos dois profissionais. O projeto alcançou excelente posicionamento 
+                nos buscadores, gerando alta visibilidade orgânica. Atualmente, o site
+                foi reformulado com foco exclusivo em portfólio técnico e projetos, 
+                sem objetivo comercial direto.
               </p>
             </div>
 
