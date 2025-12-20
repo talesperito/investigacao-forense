@@ -6,13 +6,16 @@ This repository contains the source code of investigacaoforense.com, along with 
 
 👉 Official website: https://investigacaoforense.com
 
-🚀 Tech Stack (Quick Overview)
-Layer	Technologies
-Frontend	Next.js (App Router), React, TypeScript, Tailwind CSS
-Backend	Node.js, Supabase, Python, SQL
-AI / ML	Python, Deep Learning, TensorFlow, OpenCV
-Data Science	Pandas, NumPy, Power BI
-Infrastructure	Vercel, GitHub Actions, CI/CD
+## 🚀 Tech Stack (Quick Overview)
+
+| Layer | Technologies |
+|------|-------------|
+| Frontend | Next.js (App Router), React, TypeScript, Tailwind CSS |
+| Backend | Node.js, Supabase, Python, SQL |
+| AI / ML | Python, Deep Learning, TensorFlow, OpenCV |
+| Data Science | Pandas, NumPy, Power BI |
+| Infrastructure | Vercel, GitHub Actions, CI/CD |
+
 
 🧠 Problem Space & Motivation
 
