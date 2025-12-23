@@ -2,8 +2,7 @@
 
 export default function AplicacoesPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">
-        {/* SEÇÃO: TÍTULO E INTRODUÇÃO */}
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black px-4 md:px-8 lg:px-12">        {/* SEÇÃO: TÍTULO E INTRODUÇÃO */}
         <div className="mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Aplicações e MVPs</h1>
           <p className="text-lg text-gray-200 mb-8 leading-relaxed">
