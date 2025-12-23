@@ -122,8 +122,7 @@ export default function AplicacoesPage() {
         </div>
 
         {/* SEÇÃO FINAL */}
-        <div className="mt-16 bg-gradient-to-r from-blue-950 to-blue-900 border border-blue-700 rounded-xl p-8 shadow-xl">
-    <h2 className="text-3xl font-bold text-white mb-4 flex items-center">            <svg className="w-8 h-8 mr-3 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <div className="mt-16 mb-16 bg-gradient-to-r from-blue-950 to-blue-900 border border-blue-700 rounded-xl p-8 shadow-xl">    <h2 className="text-3xl font-bold text-white mb-4 flex items-center">            <svg className="w-8 h-8 mr-3 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
             </svg>
             Solicitar Acesso ou Demonstração
