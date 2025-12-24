@@ -137,6 +137,7 @@ export default function AplicacoesPage() {
             Entrar em Contato
           </a>
         </div>
+           <div className="h-16"></div>
           </div>
     </div>
   );
