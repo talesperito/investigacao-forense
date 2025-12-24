@@ -12,22 +12,22 @@ export default function MetaScopePage() {
     {
       src: '/images/metascope/screenshot-1.png',
       alt: 'MetaScope - Tela de Upload',
-      description: 'Interface de upload de arquivos'
+      description: 'Interface principal com upload de arquivos por arrastar/soltar e análise de links'
     },
     {
       src: '/images/metascope/screenshot-2.png',
-      alt: 'MetaScope - Análise de Metadados',
-      description: 'Painel técnico com metadados extraídos'
+      alt: 'MetaScope - Painel de Metadados',
+      description: 'Análise completa: data de criação, aparelho (iPhone 13), hash SHA-256 e conclusão forense'
     },
     {
       src: '/images/metascope/screenshot-3.png',
-      alt: 'MetaScope - Detecção de IA',
-      description: 'Indicadores de detecção de edição por IA'
+      alt: 'MetaScope - Detecção de IA Positiva',
+      description: 'Indícios de IA detectados: "Made with Google AI" identificado nos metadados com alta confiança'
     },
     {
       src: '/images/metascope/screenshot-4.png',
-      alt: 'MetaScope - Geolocalizacão',
-      description: 'Dados de geolocalizacão e mapa interativo'
+      alt: 'MetaScope - Análise de Localização',
+      description: 'Extração de coordenadas GPS com mapa interativo e análise geográfica detalhada'
     }
   ];
 
