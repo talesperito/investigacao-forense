@@ -15,8 +15,22 @@
 /.next/
 /out/
 
+# Public - Arquivos sensíveis (fotos pessoais, imagens, etc.)
+/public/images/
+/public/*.jpg
+/public/*.jpeg
+/public/*.png
+/public/*.PNG
+/public/*.gif
+/public/*.webp
+/public/*.bmp
+/public/*.ico
+# Manter apenas SVGs do template Next.js se necessário
+# !public/*.svg
+
 # Production
 /build
+/dist
 
 # Environment variables
 .env*
@@ -35,6 +49,7 @@ yarn-error.log*
 .DS_Store
 *.pem
 *.key
+Thumbs.db
 
 # Vercel
 .vercel
@@ -42,3 +57,66 @@ yarn-error.log*
 # TypeScript
 *.tsbuildinfo
 next-env.d.ts
+
+# IDE / Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# ESLint / Prettier cache
+.eslintcache
+.prettiercache
+
+# Turbo
+.turbo
+
+# Package managers lock files (keep only one)
+# Uncomment the ones you don't use:
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# Database (SQLite, dumps, etc.)
+*.db
+*.sqlite
+*.sqlite3
+*.sql
+*.dump
+
+# Backups
+*.backup
+*.bak
+*.old
+
+# Uploads de usuários
+/uploads/
+/temp/
+/tmp/
+
+# Documentação interna/sensível
+/docs/private/
+/notes/
+TODO.md
+NOTES.md
+
+# Arquivos de configuração local
+*.local
+*.local.*
+
+# Certificados e credenciais
+*.crt
+*.p12
+*.pfx
+secrets/
+credentials/
+
+# Arquivos grandes de mídia
+*.mp4
+*.avi
+*.mov
+*.mp3
+*.wav
+*.pdf
+

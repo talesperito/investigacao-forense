@@ -1,58 +1,60 @@
-🔎 Investigação Forense — Applied Data Science, AI & Digital Forensics
+# 🔎 Investigação Forense — Applied Data Science, AI & Digital Forensics
 
-A technical portal and experimental platform focused on data science, digital forensics, and investigative software engineering.
+A technical portal and experimental platform at the intersection of **data science**, **artificial intelligence**, and **digital forensics**. This repository showcases applied research, investigative software engineering, and real-world forensic solutions.
 
-This repository contains the source code of investigacaoforense.com, along with applied projects and experimental applications that sit at the intersection of AI, software engineering, and real-world forensic investigations.
+👉 **Live Website:** [investigacaoforense.com](https://investigacaoforense.com)
 
-👉 Official website: https://investigacaoforense.com
+---
 
-## 🚀 Tech Stack (Quick Overview)
+## 🚀 Technology Stack
 
 | Layer | Technologies |
-|------|-------------|
-| Frontend | Next.js (App Router), React, TypeScript, Tailwind CSS |
-| Backend | Node.js, Supabase, Python, SQL |
-| AI / ML | Python, Deep Learning, TensorFlow, OpenCV |
-| Data Science | Pandas, NumPy, Power BI |
-| Infrastructure | Vercel, GitHub Actions, CI/CD |
+|-------|-------------|
+| **Frontend** | Next.js 15, React 19, TypeScript, Tailwind CSS |
+| **Backend** | Node.js, Supabase (PostgreSQL), Python |
+| **AI / ML** | Deep Learning, TensorFlow, OpenCV, NLP |
+| **Data Science** | Pandas, NumPy, Power BI |
+| **Infrastructure** | Vercel, GitHub Actions, CI/CD |
 
+---
 
-🧠 Problem Space & Motivation
+## 🧠 Problem Space & Motivation
 
-Modern criminal and digital investigations operate under increasing complexity:
+Modern criminal and digital investigations face increasing complexity:
 
-Large volumes of heterogeneous data
+- 📊 Large volumes of heterogeneous data
+- 🔐 Multiple digital evidence sources requiring validation
+- 📋 Strict requirements for traceability and auditability
+- 🤖 Growing need for AI-powered analysis tools
 
-Multiple digital evidence sources
+This project demonstrates how **modern software engineering** and **applied AI** can:
 
-Strict requirements for traceability and auditability
+- Operationalize forensic workflows
+- Reduce investigation and analysis time
+- Increase data reliability and audit trails
+- Integrate machine learning into mission-critical processes
 
-The need for technical validation of digital evidence
+---
 
-This project demonstrates how modern software engineering and applied AI can:
+## 📦 Project Structure
 
-Operationalize forensic workflows
-
-Reduce investigation and analysis time
-
-Increase data reliability and audit trails
-
-Integrate machine learning into mission-critical processes
-
-📦 Project Structure
+```
 .
 ├── app/                    # Routes and pages (Next.js App Router)
-│   ├── portfolio/          # Projects and technical showcases
+│   ├── portfolio/          # Professional profiles and technical showcases
 │   ├── aplicacoes/         # Demonstrative investigative applications
 │   ├── blog/               # Technical articles and insights
-│   ├── contato/            # Contact and outreach
-│   └── ...
+│   └── contato/            # Contact and outreach
 ├── components/             # Reusable React components
 ├── public/                 # Static assets
-├── styles/                 # Tailwind CSS configuration
 └── ...
+```
 
-🛠️ Running Locally
+---
+
+## 🛠️ Running Locally
+
+```bash
 # Clone the repository
 git clone https://github.com/talesperito/investigacao-forense.git
 cd investigacao-forense
@@ -62,83 +64,101 @@ npm install
 
 # Start development server
 npm run dev
+```
 
+Access the application at: 👉 `http://localhost:3000`
 
-Access the application at:
-👉 http://localhost:3000
+---
 
-🧩 Core Areas Demonstrated
+## 🧩 Core Areas Demonstrated
 
-📊 Applied AI & Machine Learning for Digital Forensics
+| Area | Description |
+|------|-------------|
+| 📊 **Applied AI & ML** | Machine learning models for digital forensics and pattern recognition |
+| 🔐 **Evidence Authentication** | Digital evidence integrity analysis and validation |
+| 💻 **Investigative Apps** | Production-grade web applications for forensic workflows |
+| 📈 **Business Intelligence** | Data analytics for public security operations |
+| 🧪 **Applied Research** | Scientific experimentation with peer-reviewed publications |
 
-🔐 Digital Evidence Authentication and Integrity Analysis
+> ⚠️ Some applications operate under restricted access due to their investigative nature.
 
-💻 Investigative Web Applications
+---
 
-📈 Business Intelligence for Public Security Operations
+## 👥 Team
 
-🧪 Applied Research and Scientific Experimentation
+### 🔬 Tales Vieira — *Data Science & Digital Forensics Specialist*
 
-Some applications are provided as demonstrations or operate under restricted access due to their investigative nature.
+**Official Forensic Expert** at the Civil Police of Minas Gerais, Brazil (since 2005)
 
-👥 Team
-🔬 Tales Vieira
+- 🎓 **Education:** Ph.D. in Chemistry (UFLA), M.Sc. in Chemistry (UFMG), Postdoctoral Research in Data Science (UFLA)
+- 👨‍🏫 **Experience:** University professor and lecturer since 2004
+- 🔍 **Expertise:** Digital forensics, evidence validation, machine learning for investigative patterns, data science for public security
 
-Data Science & Digital Forensics Specialist
-Official Forensic Expert — Civil Police of Minas Gerais (20+ years)
+**Key Contributions:**
+- Lead researcher on BI platform for forensic management (presented at INTERACT 2025 — Springer)
+- Facial recognition system with Deep Learning achieving 100% accuracy on individual faces
+- 20+ years of hands-on experience in criminal investigations and digital evidence extraction
 
-Expertise includes:
+🔗 [LinkedIn](https://www.linkedin.com/in/peritotales/)
 
-Digital forensics and evidence validation
+---
 
-Machine learning applied to investigative patterns
+### 💻 Matheus Vieira — *Full Stack Developer & Forensic Automation Engineer*
 
-Data science for public security
+**Performance & Data Intern** at Critéria Financial Group | **Director** of GEPID (Digital Forensics & Investigation Study Group)
 
-Scientific research and technical education
+- 🎓 **Education:** B.Sc. in Systems Analysis & Development (Unilavras), Law Student at UFLA (4th semester)
+- 💼 **Expertise:** Full-stack development, business intelligence, automation, scalable web architectures
 
-🔗 LinkedIn • Newsletter • Instagram
+**Key Contributions:**
+- Database modeling and experimental execution for facial recognition research
+- Development of investigative web applications and forensic tools
+- Full-stack architecture for document management systems with SHA-256 integrity validation
 
-💻 Matheus Vieira
+🔗 [LinkedIn](https://www.linkedin.com/in/matheusvieira-dev/)
 
-Full Stack Developer & Forensic Automation Engineer
+---
 
-Expertise includes:
+## 🏆 Featured Projects
 
-Scalable investigative web applications
+| Project | Description | Technologies |
+|---------|-------------|--------------|
+| **BI for Public Security** | Forensic management platform developed during postdoctoral research; presented at INTERACT 2025 (Springer) | Power BI, Python, SQL |
+| **Facial Recognition with AI** | Deep learning system achieving 100% accuracy on individual faces, 88% on multiple faces | Python, TensorFlow, OpenCV |
+| **MetaScope Forensic** | Deepfake detection and digital file authenticity verification (~75% accuracy) | Python, ML Models, ExifTool |
+| **Evidence Management System** | Web application with authentication, access control, and automated reporting | Next.js, Supabase, PostgreSQL |
+| **ScamTrace** | Fraud detection focused on homograph attacks and suspicious links | Python, OCR, NLP |
 
-Automation of forensic workflows
+---
 
-Full-stack software architecture
+## 📬 Contact
 
-🔗 LinkedIn • Instagram
+- 📧 **Email:** talesperito@gmail.com
+- 🌐 **Website:** [investigacaoforense.com](https://investigacaoforense.com)
+- 🔗 **LinkedIn (Tales):** [linkedin.com/in/peritotales](https://www.linkedin.com/in/peritotales/)
+- 🔗 **LinkedIn (Matheus):** [linkedin.com/in/matheusvieira-dev](https://www.linkedin.com/in/matheusvieira-dev/)
 
-📬 Contact
+---
 
-📧 talesperito@gmail.com
+## 📜 License
 
-🌐 https://investigacaoforense.com
+All rights reserved © 2025 — [investigacaoforense.com](https://investigacaoforense.com)
 
-📜 License
+---
 
-All rights reserved © 2025 — investigacaoforense.com
-
-🎯 Final Notes for Technical Reviewers
+## 🎯 For Technical Reviewers
 
 This repository reflects:
 
-Real-world investigative challenges
+✅ Real-world investigative challenges  
+✅ Production-grade engineering decisions  
+✅ Applied AI beyond academic experiments  
+✅ Strong focus on reliability, traceability, and measurable impact
 
-Production-grade engineering decisions
+It is designed to be explored both as a **technical codebase** and as a **professional engineering portfolio**.
 
-The application of AI beyond academic experiments
+---
 
-A strong focus on reliability, traceability, and impact
-
-It is designed to be explored both as a technical codebase and as a professional engineering portfolio.
-
-
-
-
-
-O ChatGPT pode cometer erros. Confira info
+<p align="center">
+  <strong>🔎 Bridging Data Science, AI, and Digital Forensics</strong>
+</p>
