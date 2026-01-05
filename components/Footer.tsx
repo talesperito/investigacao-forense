@@ -5,33 +5,33 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const talesLinks = [
-    { 
-      icon: Linkedin, 
-      href: 'https://www.linkedin.com/in/peritotales/', 
-      label: 'LinkedIn Tales Vieira' 
+    {
+      icon: Linkedin,
+      href: 'https://www.linkedin.com/in/peritotales/',
+      label: 'LinkedIn Tales Vieira'
     },
-    { 
-      icon: BookOpen, 
-      href: 'https://talesvieira.substack.com/', 
-      label: 'Substack Tales Vieira' 
+    {
+      icon: BookOpen,
+      href: 'https://talesvieira.substack.com/',
+      label: 'Substack Tales Vieira'
     },
-    { 
-      icon: Instagram, 
-      href: 'https://www.instagram.com/investigacao_forense', 
-      label: 'Instagram Tales Vieira' 
+    {
+      icon: Instagram,
+      href: 'https://www.instagram.com/investigacao_forense',
+      label: 'Instagram Tales Vieira'
     },
   ];
 
   const matheusLinks = [
-    { 
-      icon: Linkedin, 
-      href: 'https://www.linkedin.com/in/matheusvieira-dev/', 
-      label: 'LinkedIn Matheus Vieira' 
+    {
+      icon: Linkedin,
+      href: 'https://www.linkedin.com/in/matheusvieira-dev/',
+      label: 'LinkedIn Matheus Vieira'
     },
-    { 
-      icon: Instagram, 
-      href: 'https://www.instagram.com/_matheus_vieira_', 
-      label: 'Instagram Matheus Vieira' 
+    {
+      icon: Instagram,
+      href: 'https://www.instagram.com/_matheus_vieira_',
+      label: 'Instagram Matheus Vieira'
     },
   ];
 
@@ -104,9 +104,12 @@ export default function Footer() {
               © {currentYear} Investigação Forense. Todos os direitos reservados.
             </p>
             <nav className="flex gap-6 text-sm">
-                               <Link href="/contato" className="text-gray-400 hover:text-white transition-colors duration-200">
-                   Contato
-                 </Link>
+              <Link href="/politica-de-privacidade" className="text-gray-400 hover:text-white transition-colors duration-200">
+                Política de Privacidade
+              </Link>
+              <Link href="/contato" className="text-gray-400 hover:text-white transition-colors duration-200">
+                Contato
+              </Link>
             </nav>
           </div>
         </div>
