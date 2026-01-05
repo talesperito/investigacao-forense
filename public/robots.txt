@@ -1,0 +1,8 @@
+# Robots.txt for investigacaoforense.com
+# Last updated: 2026-01-05
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.investigacaoforense.com/sitemap.xml
