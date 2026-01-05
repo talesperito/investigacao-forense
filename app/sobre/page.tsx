@@ -1,13 +1,18 @@
-'use client';
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Especialistas em Software para Ambientes Regulados e Dados Críticos | Investigação Forense",
+  description: "Empresa de tecnologia especializada no desenvolvimento de sistemas de dados, plataformas de documentos e infraestrutura de decisão para ambientes de alta responsabilidade.",
+};
 
 export default function SobrePage() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">
       {/* Header */}
       <section className="px-8 py-16 text-center">
-        <h1 className="text-5xl font-bold text-white mb-8">Perito Tales Vieira</h1>
+        <h1 className="text-5xl font-bold text-white mb-8">Especialistas em Tecnologia para Ambientes de Alta Responsabilidade</h1>
         <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-          Esse site foi criado com o intuito de apresentar as Ciências Forenses de uma forma simples e interativa.
+          A Investigação Forense é uma empresa de tecnologia especializada no desenvolvimento de sistemas de dados, plataformas de documentos e infraestrutura de decisão para ambientes onde confiabilidade, auditoria e integridade são requisitos essenciais — como jurídico, compliance, agronegócio, auditoria, setor público e investigação.
         </p>
       </section>
 

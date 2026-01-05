@@ -7,7 +7,7 @@ export default function AplicacoesPage() {
         <p className="text-lg text-gray-200 mb-8 leading-relaxed">
           Principais projetos
         </p>
-        <p className="text-lg text-gray-200 mb-8 leading-rela xed">
+        <p className="text-lg text-gray-200 mb-8 leading-relaxed">
           Ao longo dos últimos anos, desenvolvemos aplicações web, painéis de BI e ferramentas forenses que
           apoiam a tomada de decisão, a análise de grandes volumes de dados e a padronização de processos técnicos
           em investigações e perícias. Abaixo estão alguns dos trabalhos mais relevantes já executados em conjunto.
@@ -37,7 +37,87 @@ export default function AplicacoesPage() {
 
         {/* LISTA DE APLICAÇÕES */}
         <div className="space-y-10">
-          {/* CARD 1 — ECOFORENSICS */}
+
+          {/* CARD 1 — METASCOPE */}
+          <div className="bg-blue-950 border border-blue-700 rounded-xl p-8 hover:border-blue-500 transition-all duration-300 shadow">
+            <div className="flex items-start justify-between mb-4">
+              <h2 className="text-3xl font-bold text-white flex items-center">
+                <svg className="w-8 h-8 mr-3 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+                MetaScope Forensic
+              </h2>
+              <span className="inline-block bg-blue-800 text-blue-200 text-sm font-semibold px-3 py-1 rounded-full border border-blue-600 whitespace-nowrap">
+                MVP em Testes
+              </span>
+            </div>
+            <p className="text-gray-200 mb-6 leading-relaxed">
+              Ferramenta criada para análise técnico-forense de arquivos e links. O sistema processa o conteúdo
+              enviado e fornece informações estruturadas, incluindo metadados, verificação de integridade,
+              possíveis indícios de manipulação por ferramentas de IA e dados de geolocalização quando disponíveis.
+            </p>
+            <ul className="list-disc list-inside space-y-2 text-gray-200 ml-2 mb-6">
+              <li>Leitura precisa de metadados (EXIF, MIME, timestamps)</li>
+              <li>Detecção de edição ou processamento por inteligência artificial</li>
+              <li>Extração de origem geográfica se incorporada ao arquivo</li>
+              <li>Painel técnico consolidado com indicadores e validações</li>
+            </ul>
+            <div className="flex items-center justify-between pt-4 border-t border-blue-700">
+              <div className="text-sm text-gray-300">
+                <span className="font-semibold text-white">Stack:</span> Python, ExifTool, ML Models
+              </div>
+              <a href="/aplicacoes/metascope"
+                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors flex items-center"
+              >
+                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg>
+                🚀 Acesse aqui
+              </a>
+            </div>
+          </div>
+
+          {/* CARD 2 — CONDOHUB */}
+          <div className="bg-blue-950 border border-blue-700 rounded-xl p-8 hover:border-blue-500 transition-all duration-300 shadow">
+            <div className="flex items-start justify-between mb-4">
+              <h2 className="text-3xl font-bold text-white flex items-center">
+                <svg className="w-8 h-8 mr-3 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2-2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
+                CondoHub
+              </h2>
+              <span className="inline-block bg-blue-800 text-blue-200 text-sm font-semibold px-3 py-1 rounded-full border border-blue-600 whitespace-nowrap">
+                MVP em Testes
+              </span>
+            </div>
+            <p className="text-gray-200 mb-6 leading-relaxed">
+              O sistema definitivo para o controle inteligente de condomínios. O CondoHub centraliza a gestão condominial
+              com funções premium que transformam a experiência de síndicos e moradores: avisos em tempo real, marketplace
+              exclusivo, gestão de ocorrências e automações diversas. A plataforma inclui ainda agendamento simplificado
+              de espaços, registro seguro de visitantes e um inédito sistema automático de infrações.
+            </p>
+            <ul className="list-disc list-inside space-y-2 text-gray-200 ml-2 mb-6">
+              <li>Gestão completa de avisos, ocorrências e marketplace</li>
+              <li>Automações residenciais e prediais integradas</li>
+              <li>Agendamento de espaços comuns e controle de portaria</li>
+              <li>Sistema automático e auditável de registro de infrações</li>
+            </ul>
+            <div className="flex items-center justify-between pt-4 border-t border-blue-700">
+              <div className="text-sm text-gray-300">
+                <span className="font-semibold text-white">Stack:</span> Next.js, Automação, Real-time
+              </div>
+              <a href="/aplicacoes/condohub"
+                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors flex items-center"
+              >
+                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg>
+                🚀 Acesse aqui
+              </a>
+            </div>
+          </div>
+
+          {/* CARD 3 — ECOFORENSICS */}
           <div className="bg-blue-950 border border-blue-700 rounded-xl p-8 hover:border-blue-500 transition-all duration-300 shadow">
             <div className="flex items-start justify-between mb-4">
               <h2 className="text-3xl font-bold text-white flex items-center">
@@ -76,46 +156,6 @@ export default function AplicacoesPage() {
                 </svg>
                 Em Breve
               </button>
-            </div>
-          </div>
-
-          {/* CARD 2 — METASCOPE */}
-          <div className="bg-blue-950 border border-blue-700 rounded-xl p-8 hover:border-blue-500 transition-all duration-300 shadow">
-            <div className="flex items-start justify-between mb-4">
-              <h2 className="text-3xl font-bold text-white flex items-center">
-                <svg className="w-8 h-8 mr-3 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
-                MetaScope Forensic
-              </h2>
-              <span className="inline-block bg-blue-800 text-blue-200 text-sm font-semibold px-3 py-1 rounded-full border border-blue-600 whitespace-nowrap">
-                MVP em Testes
-              </span>
-            </div>
-            <p className="text-gray-200 mb-6 leading-relaxed">
-              Ferramenta criada para análise técnico-forense de arquivos e links. O sistema processa o conteúdo
-              enviado e fornece informações estruturadas, incluindo metadados, verificação de integridade,
-              possíveis indícios de manipulação por ferramentas de IA e dados de geolocalização quando disponíveis.
-            </p>
-            <ul className="list-disc list-inside space-y-2 text-gray-200 ml-2 mb-6">
-              <li>Leitura precisa de metadados (EXIF, MIME, timestamps)</li>
-              <li>Detecção de edição ou processamento por inteligência artificial</li>
-              <li>Extração de origem geográfica se incorporada ao arquivo</li>
-              <li>Painel técnico consolidado com indicadores e validações</li>
-            </ul>
-            <div className="flex items-center justify-between pt-4 border-t border-blue-700">
-              <div className="text-sm text-gray-300">
-                <span className="font-semibold text-white">Stack:</span> Python, ExifTool, ML Models
-              </div>
-              <a href="/aplicacoes/metascope"
-
-                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors flex items-center"
-              >
-                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                </svg>
-                🚀 Acesse aqui
-              </a>
             </div>
           </div>
         </div>
