@@ -65,15 +65,15 @@ export default function MetaScopePage() {
   const [imgOpacity, setImgOpacity] = useState(1);
   const [faqOpenIndex, setFaqOpenIndex] = useState<number | null>(0);
 
-  const metascopeUrl = process.env.NEXT_PUBLIC_METASCOPE_URL || '#';
+  const metascopeUrl = process.env.NEXT_PUBLIC_METASCOPE_URL || 'https://tally.so/r/lbrQ8p';
 
   const demoImages = useMemo(
     () => [
       {
-        src: '/images/metascope/screenshot-1.png',
+        src: '/images/metascope/screenshot-1-v2.png',
         alt: 'MetaScope - Tela de Upload',
         description:
-          'Envio por arrastar/soltar e análise por link, com validações técnicas consolidadas.',
+          'Painel principal unificado: escolha entre Validação Forense de Arquivos ou Análise de Ameaças Digitais.',
       },
       {
         src: '/images/metascope/screenshot-2.png',
@@ -92,6 +92,24 @@ export default function MetaScopePage() {
         alt: 'MetaScope - Análise de Localização',
         description:
           'Extração de geolocalização quando disponível no arquivo (EXIF GPS) e visualização.',
+      },
+      {
+        src: '/images/metascope/scan1.png',
+        alt: 'MetaScope - ScamTrace Input',
+        description:
+          'Análise de Ameaças: cole links suspeitos para verificação segura antes de qualquer interação.',
+      },
+      {
+        src: '/images/metascope/scan2.png',
+        alt: 'MetaScope - Detecção Homográfica',
+        description:
+          'Alerta de Homografia (Punycode): detecta ataques onde domínios falsos usam caracteres visuais idênticos aos oficiais.',
+      },
+      {
+        src: '/images/metascope/scan3.png',
+        alt: 'MetaScope - Phishing em Print',
+        description:
+          'Análise de Prints (OCR): detecta phishing e engenharia social em capturas de mensagens (WhatsApp/SMS/E-mail).',
       },
     ],
     []
@@ -224,49 +242,157 @@ export default function MetaScopePage() {
           </div>
         </Reveal>
       </div>
+      {/* Escolha uma ferramenta */}
+      <div className="container mx-auto px-4 pb-10">
+        <Reveal>
+          <div className="rounded-[28px] border border-slate-200 bg-white p-10 shadow-sm">
+            <h2 className="text-3xl md:text-4xl font-extrabold">Escolha uma ferramenta</h2>
+            <p className="mt-3 text-base md:text-lg text-slate-600 max-w-5xl">
+              Validação forense de arquivos e análise de links ou prints para identificar golpes e ameaças digitais.
+            </p>
+
+            <div className="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-5 items-stretch">
+              {/* Card 1: Arquivos */}
+              <div className="rounded-3xl border border-slate-200 bg-slate-50 p-8 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 flex flex-col h-full">
+                <div className="flex items-start gap-3">
+                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-blue-600 text-white shadow-md shadow-blue-600/20">
+                    🔎
+                  </span>
+                  <div>
+                    <h3 className="text-lg font-extrabold text-slate-900">Análise Forense de Arquivos</h3>
+                    <p className="mt-1 text-sm text-slate-600">
+                      Autenticidade e integridade: metadados, hash SHA-256 e detecção de indícios de IA em camadas, com relatório pericial em PDF.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="mt-4 rounded-2xl border border-blue-200 bg-blue-50 px-4 py-3 text-sm text-blue-900">
+                  <p className="font-extrabold">Privacidade total</p>
+                  <p className="mt-1">
+                    Processamento 100% local no seu navegador. Seus arquivos <span className="font-semibold">nunca</span> são enviados para a nuvem.
+                  </p>
+                </div>
+
+                <ul className="mt-4 space-y-2.5 leading-relaxed text-sm md:text-base text-slate-700">
+                  <li>• Imagens (JPG, PNG, WEBP) e vídeos (MP4, MOV, AVI) — até 100MB</li>
+                  <li>• Documentos (PDF, DOCX, XLSX) — até 25MB</li>
+                  <li>• EXIF/timestamps + hash SHA-256 (integridade)</li>
+                  <li>• Detecção em camadas + exportação de relatório em PDF</li>
+                </ul>
+
+                <div className="mt-auto pt-6">
+                  <a
+                    href={metascopeUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-blue-600 to-blue-700 px-6 py-4 text-white font-extrabold ring-1 ring-black/5 shadow-lg shadow-blue-700/25 hover:from-blue-700 hover:to-blue-800 hover:-translate-y-0.5 active:translate-y-0 transition-all"
+                  >
+                    Iniciar análise de arquivos
+                    <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
+                  </a>
+                </div>
+
+                <p className="mt-3 text-xs text-slate-500">
+                  * Resultados automatizados indicam sinais/indícios com base em evidências técnicas e podem não ser 100% conclusivos.
+                </p>
+              </div>
+
+              {/* Card 2: Ameaças */}
+              <div className="rounded-3xl border border-slate-200 bg-slate-50 p-8 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 flex flex-col h-full">
+                <div className="flex items-start gap-3">
+                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-emerald-600 text-white shadow-md shadow-emerald-600/20">
+                    🛡️
+                  </span>
+                  <div>
+                    <h3 className="text-lg font-extrabold text-slate-900">Análise de Ameaças Digitais</h3>
+                    <p className="mt-1 text-sm text-slate-600">
+                      Cole um link suspeito ou envie um print (OCR): detecte phishing, homografia/typosquatting e táticas de engenharia social — <span className="font-semibold">sem risco de clique</span>.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="mt-4 rounded-2xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-900">
+                  <p className="font-extrabold">Modo seguro (recomendado)</p>
+                  <p className="mt-1">
+                    Recomendação: <span className="font-semibold">não abra</span> links suspeitos. Copie o endereço (sem clicar) ou envie um print para análise.
+                  </p>
+                </div>
+
+                <ul className="mt-4 space-y-2.5 leading-relaxed text-sm md:text-base text-slate-700">
+                  <li>• Verificação de domínios: homografia (IDN) e typosquatting</li>
+                  <li>• Análise por link: sinais de risco e recomendações (“não interagir”)</li>
+                  <li>• Upload de print com OCR para extrair conteúdo e links</li>
+                  <li>• Corroboração por fontes externas (ex.: VirusTotal) quando disponível</li>
+                </ul>
+
+                <div className="mt-auto pt-6">
+                  <a
+                    href={metascopeUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-emerald-600 px-6 py-4 text-white font-extrabold ring-1 ring-black/5 shadow-lg shadow-emerald-600/20 hover:bg-emerald-700 hover:-translate-y-0.5 active:translate-y-0 transition-all"
+                  >
+                    Verificar link / print suspeito
+                    <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
+                  </a>
+                </div>
+
+                <p className="mt-3 text-xs text-slate-500">
+                  * Use a análise como apoio. Em situações críticas, confirme por meios adicionais e evite qualquer interação com mensagens suspeitas.
+                </p>
+              </div>
+            </div>
+          </div>
+        </Reveal>
+      </div>
 
       {/* Para quem é */}
       <div className="container mx-auto px-4 pb-10">
         <Reveal>
-          <div className="rounded-[28px] border border-slate-200 bg-white p-8 shadow-sm">
-            <h2 className="text-2xl md:text-3xl font-extrabold">Para quem é</h2>
-            <p className="mt-2 text-slate-600 max-w-3xl">
-              MetaScope é pensado para cenários onde evidência e confiança importam — com saída técnica clara e exportável.
+          <div className="rounded-[28px] border border-slate-200 bg-white p-10 shadow-sm">
+            <h2 className="text-3xl md:text-4xl font-extrabold">Para quem é</h2>
+            <p className="mt-3 text-base md:text-lg text-slate-600 max-w-4xl">
+              MetaScope é projetado para cenários onde a integridade da prova é fundamental e a dúvida não é uma opção.
             </p>
 
-            <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
               {[
                 {
-                  icon: <ShieldCheck className="h-5 w-5 text-blue-700" />,
-                  title: 'Perícia & Investigação',
-                  desc: 'Validação técnica, integridade e triagem rápida de evidências.',
+                  icon: <ShieldCheck className="h-6 w-6 text-blue-600" />,
+                  bg: 'bg-blue-50',
+                  title: 'Perícia Técnica',
+                  desc: 'Triagem inicial de evidências, validação de integridade e suporte a laudos técnicos.',
                 },
                 {
-                  icon: <Gavel className="h-5 w-5 text-blue-700" />,
+                  icon: <Gavel className="h-6 w-6 text-indigo-600" />,
+                  bg: 'bg-indigo-50',
                   title: 'Jurídico',
-                  desc: 'Apoio na análise técnica e documentação com relatório em PDF.',
+                  desc: 'Fundamentação técnica para peças jurídicas com relatórios exportáveis em PDF.',
                 },
                 {
-                  icon: <Lock className="h-5 w-5 text-blue-700" />,
-                  title: 'Segurança & Compliance',
-                  desc: 'Identificação de riscos em arquivos e links suspeitos.',
+                  icon: <Lock className="h-6 w-6 text-emerald-600" />,
+                  bg: 'bg-emerald-50',
+                  title: 'Segurança Corporativa',
+                  desc: 'Análise de arquivos suspeitos e prevenção de fraudes ou vazamento de dados.',
                 },
                 {
-                  icon: <Globe2 className="h-5 w-5 text-blue-700" />,
-                  title: 'OSINT & Curiosos',
-                  desc: 'Checagens técnicas quando dados (ex. GPS/EXIF) estão disponíveis.',
+                  icon: <Globe2 className="h-6 w-6 text-amber-600" />,
+                  bg: 'bg-amber-50',
+                  title: 'Jornalismo & Checagem',
+                  desc: 'Verificação de autenticidade de mídias (fakes/IA) e validação de fontes.',
                 },
               ].map((item, idx) => (
                 <Reveal key={item.title} delayMs={80 + idx * 80}>
-                  <div className="group rounded-3xl border border-slate-200 bg-slate-50 p-5 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200">
-                    <div className="flex items-center gap-2">
-                      <span className="inline-flex h-9 w-9 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_1px_0_rgba(15,23,42,0.04)]">
-                        {item.icon}
-                      </span>
-                      <p className="font-extrabold text-slate-900">{item.title}</p>
+                  <div className="group h-full rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm hover:shadow-md hover:-translate-y-1 hover:bg-white hover:border-blue-200 transition-all duration-300">
+                    <div className={`inline-flex h-12 w-12 items-center justify-center rounded-2xl ${item.bg} mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                      {item.icon}
                     </div>
-                    <p className="mt-3 text-sm text-slate-600">{item.desc}</p>
-                    <div className="mt-4 h-px w-full bg-gradient-to-r from-blue-200/50 via-slate-200 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <h3 className="text-lg font-extrabold text-slate-900 group-hover:text-blue-700 transition-colors">
+                      {item.title}
+                    </h3>
+                    <p className="mt-2 text-sm text-slate-600 leading-relaxed">
+                      {item.desc}
+                    </p>
                   </div>
                 </Reveal>
               ))}
@@ -276,44 +402,63 @@ export default function MetaScopePage() {
       </div>
 
       {/* Features */}
-      <div className="container mx-auto px-4 pb-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div className="container mx-auto px-4 pb-16">
+        <Reveal>
+          <div className="mb-10 text-center max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900">
+              Tecnologia de ponta para revelar o invisível
+            </h2>
+            <p className="mt-4 text-lg text-slate-600">
+              Transforme arquivos e links suspeitos em evidências técnicas claras com nosso motor de análise forense multi-camada.
+            </p>
+          </div>
+        </Reveal>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {[
             {
-              k: 'Metadados & Evidência',
-              title: 'Metadados e timestamps',
-              desc: 'Extração de metadados disponíveis (EXIF) e timestamps para apoiar análise de criação/modificação.',
-              icon: <FileText className="h-5 w-5 text-blue-700" />,
+              k: 'Proteção Antifraude',
+              bg: 'bg-emerald-50',
+              text: 'text-emerald-700',
+              title: 'Análise de Riscos & Phishing',
+              desc: 'Cole um link ou envie um print suspeito. Detectamos sites falsos, homografia e táticas de engenharia social antes do clique.',
+              icon: <ShieldCheck className="h-6 w-6 text-emerald-600" />,
             },
             {
-              k: 'Integridade',
-              title: 'Hash SHA-256',
-              desc: 'Cálculo de hash para verificação de integridade e rastreabilidade do arquivo analisado.',
-              icon: <ShieldCheck className="h-5 w-5 text-blue-700" />,
+              k: 'Validação Pericial',
+              bg: 'bg-blue-50',
+              text: 'text-blue-700',
+              title: 'Prova de Integridade',
+              desc: 'Garanta que sua evidência é irrefutável. Extração de metadados ocultos e cálculo de hash SHA-256 para validade jurídica.',
+              icon: <FileText className="h-6 w-6 text-blue-600" />,
             },
             {
-              k: 'Indícios de IA',
-              title: 'Detecção em camadas (score)',
-              desc: 'Análise automatizada por camadas com score e justificativas técnicas. Resultados indicam sinais compatíveis, não garantias absolutas.',
-              icon: <Sparkles className="h-5 w-5 text-blue-700" />,
+              k: 'Detector de Fakes',
+              bg: 'bg-indigo-50',
+              text: 'text-indigo-700',
+              title: 'Detector de Deepfakes & IA',
+              desc: 'Não seja enganado. Nossa IA analisa padrões invisíveis e ruídos digitais para apontar probabilidade de manipulação sintética.',
+              icon: <Sparkles className="h-6 w-6 text-indigo-600" />,
             },
             {
-              k: 'Geolocalização',
-              title: 'GPS quando disponível',
-              desc: 'Extração de coordenadas quando presentes nos metadados do arquivo (EXIF GPS).',
-              icon: <Globe2 className="h-5 w-5 text-blue-700" />,
+              k: 'Rastreabilidade',
+              bg: 'bg-amber-50',
+              text: 'text-amber-700',
+              title: 'Rastreio de Origem (GPS)',
+              desc: 'Mapeie o local exato da captura. Visualização interativa de coordenadas GPS quando disponíveis nos metadados do arquivo.',
+              icon: <Globe2 className="h-6 w-6 text-amber-600" />,
             },
           ].map((card, idx) => (
             <Reveal key={card.title} delayMs={60 + idx * 80}>
-              <div className="rounded-[28px] border border-slate-200 bg-white p-7 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200">
-                <div className="flex items-center gap-2">
-                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-2xl bg-blue-50 border border-blue-100">
+              <div className="group h-full rounded-[28px] border border-slate-200 bg-white p-8 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className={`inline-flex h-12 w-12 items-center justify-center rounded-2xl ${card.bg} group-hover:scale-110 transition-transform duration-300`}>
                     {card.icon}
                   </span>
-                  <p className="text-sm font-semibold text-blue-700">{card.k}</p>
+                  <p className={`text-sm font-bold uppercase tracking-wide ${card.text}`}>{card.k}</p>
                 </div>
-                <h3 className="mt-3 text-xl font-extrabold">{card.title}</h3>
-                <p className="mt-2 text-slate-600">{card.desc}</p>
+                <h3 className="text-xl font-extrabold text-slate-900 mb-3 group-hover:text-blue-700 transition-colors">{card.title}</h3>
+                <p className="text-slate-600 leading-relaxed">{card.desc}</p>
               </div>
             </Reveal>
           ))}
@@ -321,27 +466,42 @@ export default function MetaScopePage() {
       </div>
 
       {/* Como funciona */}
-      <div className="container mx-auto px-4 pb-10">
+      <div className="container mx-auto px-4 pb-16">
         <Reveal>
-          <div className="rounded-[28px] border border-slate-200 bg-white p-8 shadow-sm">
-            <h2 className="text-2xl md:text-3xl font-extrabold">Como funciona</h2>
+          <div className="rounded-[28px] border border-slate-200 bg-white p-10 shadow-sm">
+            <h2 className="text-3xl md:text-4xl font-extrabold mb-8">Como funciona</h2>
 
-            <div className="mt-6 relative">
-              <div className="hidden md:block absolute left-6 right-6 top-6 h-px bg-gradient-to-r from-blue-200 via-slate-200 to-blue-200" />
+            <div className="relative">
+              {/* Linha conectora (Desktop) */}
+              <div className="hidden md:block absolute left-8 right-8 top-8 h-1 bg-slate-100 rounded-full overflow-hidden">
+                <div className="h-full w-1/2 bg-gradient-to-r from-blue-500/20 to-transparent" />
+              </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {[
-                  { step: '1', title: 'Envie arquivo ou link', desc: 'Upload, drag & drop ou link direto.' },
-                  { step: '2', title: 'Análise técnica automatizada', desc: 'Metadados, hash SHA-256 e detecção em camadas.' },
-                  { step: '3', title: 'Exporte o relatório em PDF', desc: 'Achados e validações consolidados para documentação.' },
+                  {
+                    step: '1',
+                    title: 'Envie ou Cole',
+                    desc: 'Arraste seu arquivo ou cole o link suspeito. Sem instalações complexas, direto no navegador.'
+                  },
+                  {
+                    step: '2',
+                    title: 'Raio-X Automático',
+                    desc: 'Nossos algoritmos varrem mais de 50 pontos de dados, metadados e indícios visuais em segundos.'
+                  },
+                  {
+                    step: '3',
+                    title: 'Relatório Pronto',
+                    desc: 'Baixe um relatório PDF profissional e completo, pronto para anexar em processos ou dossiês.'
+                  },
                 ].map((s, idx) => (
                   <Reveal key={s.step} delayMs={80 + idx * 80}>
-                    <div className="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200">
-                      <div className="relative z-10 h-10 w-10 rounded-2xl bg-blue-600 text-white shadow-md shadow-blue-600/20 flex items-center justify-center font-extrabold">
+                    <div className="relative bg-white rounded-3xl p-6 border border-slate-100 shadow-sm hover:shadow-md hover:border-blue-100 transition-all duration-300 h-full">
+                      <div className="relative z-10 h-14 w-14 rounded-2xl bg-blue-600 text-white shadow-lg shadow-blue-600/30 flex items-center justify-center text-xl font-black mb-6 group-hover:scale-110 transition-transform">
                         {s.step}
                       </div>
-                      <p className="mt-4 font-extrabold text-slate-900">{s.title}</p>
-                      <p className="mt-2 text-sm text-slate-600">{s.desc}</p>
+                      <h3 className="text-xl font-extrabold text-slate-900 mb-3">{s.title}</h3>
+                      <p className="text-slate-600 leading-relaxed">{s.desc}</p>
                     </div>
                   </Reveal>
                 ))}
@@ -366,8 +526,8 @@ export default function MetaScopePage() {
                   a: 'Não. Ele é uma ferramenta de apoio técnico para triagem, validação e documentação. Em casos críticos, recomenda-se análise especializada complementar.',
                 },
                 {
-                  q: 'Quais arquivos e tamanhos são suportados?',
-                  a: 'Imagens e vídeos até 100MB e documentos até 25MB. Envio por upload, arrastar/soltar ou link.',
+                  q: 'Como analisar links com segurança (sem risco de clique)?',
+                  a: 'Use o “modo seguro”: copie o endereço do link sem abrir (clique com o botão direito → “Copiar endereço do link”) e cole para análise. Alternativamente, envie um print da mensagem para OCR e avaliação. Isso reduz o risco de abrir conteúdo malicioso.',
                 },
                 {
                   q: 'O MetaScope “confirma” se algo foi feito por IA?',
@@ -386,8 +546,8 @@ export default function MetaScopePage() {
                   a: 'É uma “impressão digital” do arquivo. Serve para verificar integridade e apoiar a rastreabilidade do material analisado.',
                 },
                 {
-                  q: 'Qual é o diferencial na análise de links?',
-                  a: 'Você pode analisar links suspeitos sem abrir o conteúdo diretamente — reduzindo o risco de clique. O MetaScope avalia o link de forma segura e traz sinais de risco para apoiar sua decisão.',
+                  q: 'O que o MetaScope verifica em links e prints suspeitos?',
+                  a: 'Ele busca sinais de phishing e fraude (ex.: homografia/IDN, typosquatting, urgência artificial e manipulação por engenharia social). Quando disponível, pode cruzar informações com fontes externas de reputação para corroboração.',
                 },
                 {
                   q: 'Como faço para obter acesso?',
