@@ -146,15 +146,15 @@ export default function MetaScopePage() {
               <div className="lg:col-span-7">
                 <div className="inline-flex items-center gap-2 rounded-full bg-blue-50 text-blue-700 px-4 py-2 text-sm font-semibold border border-blue-100 shadow-[0_1px_0_rgba(15,23,42,0.04)]">
                   <ShieldCheck className="h-4 w-4" />
-                  Análise técnico-forense de arquivos e links
+                  Apoio à análise forense de arquivos e links
                 </div>
 
                 <h1 className="mt-6 text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900">
-                  Verifique autenticidade, integridade e indícios de manipulação em minutos.
+                  Analise autenticidade, integridade e indícios de manipulação em minutos.
                 </h1>
 
                 <p className="mt-5 text-lg md:text-xl text-slate-600 leading-relaxed">
-                  O MetaScope analisa imagens, vídeos e documentos, extraindo metadados e evidências técnicas,
+                  Ferramenta de apoio à decisão forense. O MetaScope analisa imagens, vídeos e documentos, extraindo metadados e evidências técnicas,
                   calculando hash <span className="font-semibold text-slate-800">SHA-256</span> e aplicando detecção de
                   indícios de IA em camadas. Ao final, gere um{' '}
                   <span className="font-semibold text-slate-800">relatório pericial em PDF</span>.
@@ -267,9 +267,9 @@ export default function MetaScopePage() {
                 </div>
 
                 <div className="mt-4 rounded-2xl border border-blue-200 bg-blue-50 px-4 py-3 text-sm text-blue-900">
-                  <p className="font-extrabold">Privacidade total</p>
+                  <p className="font-extrabold">Privacidade preservada</p>
                   <p className="mt-1">
-                    Processamento 100% local no seu navegador. Seus arquivos <span className="font-semibold">nunca</span> são enviados para a nuvem.
+                    Processamento totalmente local no seu navegador. Seus arquivos <span className="font-semibold">nunca</span> são enviados para a nuvem.
                   </p>
                 </div>
 
@@ -421,7 +421,7 @@ export default function MetaScopePage() {
               bg: 'bg-emerald-50',
               text: 'text-emerald-700',
               title: 'Análise de Riscos & Phishing',
-              desc: 'Cole um link ou envie um print suspeito. Detectamos sites falsos, homografia e táticas de engenharia social antes do clique.',
+              desc: 'Cole um link ou envie um print suspeito. Identifique indícios de sites falsos, homografia e táticas de engenharia social antes do clique.',
               icon: <ShieldCheck className="h-6 w-6 text-emerald-600" />,
             },
             {
@@ -429,7 +429,7 @@ export default function MetaScopePage() {
               bg: 'bg-blue-50',
               text: 'text-blue-700',
               title: 'Prova de Integridade',
-              desc: 'Garanta que sua evidência é irrefutável. Extração de metadados ocultos e cálculo de hash SHA-256 para validade jurídica.',
+              desc: 'Reforce a fundamentação técnica da sua evidência. Extração de metadados ocultos e cálculo de hash SHA-256 para validade jurídica.',
               icon: <FileText className="h-6 w-6 text-blue-600" />,
             },
             {
@@ -437,7 +437,7 @@ export default function MetaScopePage() {
               bg: 'bg-indigo-50',
               text: 'text-indigo-700',
               title: 'Detector de Deepfakes & IA',
-              desc: 'Não seja enganado. Nossa IA analisa padrões invisíveis e ruídos digitais para apontar probabilidade de manipulação sintética.',
+              desc: 'Avalie a autenticidade. Nossa IA analisa padrões invisíveis e ruídos digitais para apontar probabilidade de manipulação sintética.',
               icon: <Sparkles className="h-6 w-6 text-indigo-600" />,
             },
             {
