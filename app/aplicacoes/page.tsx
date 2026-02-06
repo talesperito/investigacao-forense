@@ -3,37 +3,52 @@
 export default function AplicacoesPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black px-4 md:px-8 lg:px-12">        {/* SEÇÃO: TÍTULO E INTRODUÇÃO */}
-      <div className="max-w-7xl mx-auto pb-16">     <div className="mb-12">          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Aplicações e MVPs</h1>
-        <p className="text-lg text-gray-200 mb-8 leading-relaxed">
-          Principais projetos
-        </p>
-        <p className="text-lg text-gray-200 mb-8 leading-relaxed">
-          Ao longo dos últimos anos, desenvolvemos aplicações web, painéis de BI e ferramentas forenses que
-          apoiam a tomada de decisão, a análise de grandes volumes de dados e a padronização de processos técnicos
-          em investigações e perícias. Abaixo estão alguns dos trabalhos mais relevantes já executados em conjunto.
-        </p>
-        <p className="text-gray-300 mb-6 leading-relaxed">
-          Nesta página apresentamos prototípos funcionais (MVPs - Minimum Viable Products) desenvolvidos para
-          avaliação técnica, testes exploratórios e demonstrações sob demanda. Cada aplicação aqui listada
-          representa a base de uma solução SaaS completa que está em evolução. Nosso objetivo é transformar
-          esses protótipos em plataformas robustas com autenticação, escalabilidade, integração segura de dados
-          e pipelines avançados de análise.
-        </p>
-
-        <div className="bg-blue-900 border border-blue-700 rounded-lg p-8 shadow-lg">
-          <h2 className="text-2xl font-bold text-white mb-4">Características dos MVPs</h2>
-          <p className="text-gray-200 mb-4">
-            As aplicações em desenvolvimento utilizam tecnologias modernas para oferecer recursos como:
+      <div className="max-w-7xl mx-auto pb-16 pt-12">
+        <div className="mb-16">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Ecossistema de Soluções</h1>
+          <p className="text-lg text-gray-200 mb-6 leading-relaxed max-w-3xl">
+            Desenvolvemos tecnologias que unem Ciência de Dados, IA e Segurança Digital.
+            Nossas plataformas variam de ferramentas de análise forense a sistemas de gestão inteligente,
+            sempre com foco em compliance, automação e confiabilidade técnica.
           </p>
-          <ul className="list-disc list-inside space-y-2 text-gray-200 ml-2">
-            <li>Gestão e processamento de documentos com validação criptográfica</li>
-            <li>Armazenamento em nuvem com bancos de dados distribuídos</li>
-            <li>Dashboards interativos baseados em métricas reais</li>
-            <li>Mecanismos de auditoria e trilhas de acesso</li>
-            <li>Integrações com machine learning e análise automatizada</li>
-          </ul>
+
+          <div className="bg-blue-950/40 border border-blue-800 rounded-xl p-8 shadow-lg backdrop-blur-sm">
+            <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
+              <svg className="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>
+              Nossa Abordagem Tecnológica
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="flex gap-4">
+                <div className="mt-1 bg-blue-900/50 p-2 rounded-lg text-blue-400"><svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg></div>
+                <div>
+                  <h3 className="text-white font-semibold">Segurança e Compliance</h3>
+                  <p className="text-gray-400 text-sm mt-1">Arquiteturas projetadas para proteção de dados sensíveis e conformidade legal.</p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <div className="mt-1 bg-blue-900/50 p-2 rounded-lg text-blue-400"><svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg></div>
+                <div>
+                  <h3 className="text-white font-semibold">Integridade e Validação</h3>
+                  <p className="text-gray-400 text-sm mt-1">Hashing SHA-256 e logs imutáveis para garantir autenticidade da prova.</p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <div className="mt-1 bg-blue-900/50 p-2 rounded-lg text-blue-400"><svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg></div>
+                <div>
+                  <h3 className="text-white font-semibold">Inteligência Artificial</h3>
+                  <p className="text-gray-400 text-sm mt-1">Automação inteligente para detectar padrões complexos e otimizar rotinas.</p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <div className="mt-1 bg-blue-900/50 p-2 rounded-lg text-blue-400"><svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg></div>
+                <div>
+                  <h3 className="text-white font-semibold">Transparência</h3>
+                  <p className="text-gray-400 text-sm mt-1">Dashboards analíticos em tempo real para controle total e auditoria.</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
 
         {/* LISTA DE APLICAÇÕES */}
         <div className="space-y-10">
@@ -47,24 +62,19 @@ export default function AplicacoesPage() {
                 </svg>
                 MetaScope Forensic
               </h2>
-              <span className="inline-block bg-blue-800 text-blue-200 text-sm font-semibold px-3 py-1 rounded-full border border-blue-600 whitespace-nowrap">
-                MVP em Testes
-              </span>
             </div>
             <p className="text-gray-200 mb-6 leading-relaxed">
-              Ferramenta criada para análise técnico-forense de arquivos e links. O sistema processa o conteúdo
-              enviado e fornece informações estruturadas, incluindo metadados, verificação de integridade,
-              possíveis indícios de manipulação por ferramentas de IA e dados de geolocalização quando disponíveis.
+              Plataforma avançada de perícia digital que une validação forense e análise de ameaças. O sistema verifica a integridade de arquivos, detecta deepfakes e identifica riscos em links ou prints, gerando laudos técnicos automáticos.
             </p>
             <ul className="list-disc list-inside space-y-2 text-gray-200 ml-2 mb-6">
-              <li>Leitura precisa de metadados (EXIF, MIME, timestamps)</li>
-              <li>Detecção de edição ou processamento por inteligência artificial</li>
-              <li>Extração de origem geográfica se incorporada ao arquivo</li>
-              <li>Painel técnico consolidado com indicadores e validações</li>
+              <li>Validação Forense: Metadados, hash SHA-256 e geolocalização</li>
+              <li>IA & Deepfakes: Detecção de manipulação sintética em camadas</li>
+              <li>Ameaças Digitais: Análise de phishing e OCR em prints suspeitos</li>
+              <li>Relatórios Técnicos: Exportação de relatório técnico completo em PDF</li>
             </ul>
             <div className="flex items-center justify-between pt-4 border-t border-blue-700">
               <div className="text-sm text-gray-300">
-                <span className="font-semibold text-white">Stack:</span> Python, ExifTool, ML Models
+                <span className="font-semibold text-white">Stack:</span> IA & ML Models, OCR, SHA-256, PDF Report
               </div>
               <a href="/aplicacoes/metascope"
                 className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors flex items-center"
@@ -160,12 +170,49 @@ export default function AplicacoesPage() {
           </div>
         </div>
 
-        {/* SEÇÃO FINAL */}
-        <div className="mt-16 mb-16 bg-gradient-to-r from-blue-950 to-blue-900 border border-blue-700 rounded-xl p-8 shadow-xl">    <h2 className="text-3xl font-bold text-white mb-4 flex items-center">            <svg className="w-8 h-8 mr-3 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-        </svg>
-          Solicitar Acesso ou Demonstração
-        </h2>
+
+        {/* SEÇÃO: SOLUÇÕES CORPORATIVAS & DADOS (Incorporado de /plataforma-dados-criticos) */}
+        <div className="mb-20 pt-24 border-t border-gray-800">
+          <h2 className="text-3xl font-bold text-white mb-8 text-center">Soluções Corporativas & Dados</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-blue-500 transition-all">
+              <div className="text-blue-400 mb-3 text-3xl">📁</div>
+              <h3 className="text-xl font-bold text-white mb-2">Gestão de Documentos</h3>
+              <p className="text-gray-300 text-sm">Controle de versão, histórico de alterações e repositório seguro para arquivos críticos.</p>
+            </div>
+            <div className="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-blue-500 transition-all">
+              <div className="text-blue-400 mb-3 text-3xl">📋</div>
+              <h3 className="text-xl font-bold text-white mb-2">Auditoria & Compliance</h3>
+              <p className="text-gray-300 text-sm">Rastreabilidade total com logs de acesso e trilhas de auditoria para fins regulatórios.</p>
+            </div>
+            <div className="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-blue-500 transition-all">
+              <div className="text-blue-400 mb-3 text-3xl">📊</div>
+              <h3 className="text-xl font-bold text-white mb-2">BI & Analytics</h3>
+              <p className="text-gray-300 text-sm">Dashboards interativos para transformar dados complexos em inteligência acionável.</p>
+            </div>
+          </div>
+        </div>
+
+        {/* SEÇÃO: SETORES ATENDIDOS (Incorporado de /solucoes) */}
+        <div className="mb-20">
+          <h2 className="text-3xl font-bold text-white mb-8 text-center">Setores Atendidos</h2>
+          <div className="flex flex-wrap justify-center gap-4">
+            {['⚖️ Jurídico', '🔍 Investigação', '👮 Segurança Pública', '🏢 Corporativo', '🌾 Agronegócio', '🏛️ Setor Público'].map((setor) => (
+              <span key={setor} className="bg-gray-800 text-gray-200 px-6 py-3 rounded-full border border-gray-700 font-semibold hover:bg-gray-700 hover:text-white transition-colors cursor-default">
+                {setor}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* SEÇÃO FINAL CTA */}
+        <div className="mt-16 mb-16 bg-gradient-to-r from-blue-950 to-blue-900 border border-blue-700 rounded-xl p-8 shadow-xl">
+          <h2 className="text-3xl font-bold text-white mb-4 flex items-center">
+            <svg className="w-8 h-8 mr-3 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002-2v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            Solicitar Acesso ou Demonstração
+          </h2>
           <p className="text-lg text-gray-200 mb-6 leading-relaxed">
             Caso tenha interesse em explorar as funcionalidades, avaliar os MVPs ou discutir adaptações
             específicas para sua instituição, entre em contato.
