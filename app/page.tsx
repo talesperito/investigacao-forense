@@ -25,16 +25,16 @@ export default function HomePage() {
       </section>
 
       {/* QUEM SOMOS */}
-      <section className="py-20 px-4 bg-gray-900/50">
+      <section className="py-20 px-4 bg-gray-100">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
+          <p className="text-lg md:text-xl text-gray-800 leading-relaxed mb-8">
             Somos uma empresa de tecnologia especializada no desenvolvimento de software, plataformas de dados e sistemas para ambientes que exigem controle, auditoria e rastreabilidade. Atuamos com SaaS, BI, automações e integrações para setores regulados e de alta responsabilidade.
           </p>
-          <div className="flex flex-col md:flex-row gap-4 justify-center">
-            <a href="/plataforma-dados-criticos" className="text-blue-400 hover:text-blue-300 font-semibold transition-colors">
+          <div className="flex flex-col md:flex-row gap-6 justify-center">
+            <a href="/plataforma-dados-criticos" className="text-black hover:text-blue-700 font-bold text-lg transition-colors">
               → Conheça nossa Plataforma de Dados
             </a>
-            <a href="/solucoes" className="text-blue-400 hover:text-blue-300 font-semibold transition-colors">
+            <a href="/solucoes" className="text-black hover:text-blue-700 font-bold text-lg transition-colors">
               → Veja nossas Soluções
             </a>
           </div>

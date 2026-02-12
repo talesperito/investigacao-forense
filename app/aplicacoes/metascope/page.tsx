@@ -346,7 +346,312 @@ export default function MetaScopePage() {
         </Reveal>
       </div>
 
-      {/* Para quem é */}
+      {/* Real Cases Section (Social Proof) */}
+      <div className="py-20 bg-white relative overflow-hidden">
+        <div className="container mx-auto px-4 relative z-10">
+          <Reveal>
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <div className="inline-flex items-center gap-2 rounded-full bg-blue-50 border border-blue-100 px-4 py-1.5 text-sm font-medium text-blue-700 mb-6">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                </span>
+                Casos Investigados
+              </div>
+              <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-6 text-slate-900">
+                Casos reais, resultados comprovados
+              </h2>
+              <p className="text-lg text-slate-600 leading-relaxed">
+                Confira investigações onde o MetaScope foi decisivo. Exemplos práticos de como nossa tecnologia fundamenta laudos e detecta fraudes em cenários reais.
+              </p>
+            </div>
+          </Reveal>
+
+          {/* FEATURED CASE: Golpe Oficial de Justiça (Flow Completo) - SEPARADO DO GRID */}
+          <div className="mb-16">
+            <Reveal delayMs={100}>
+              <div className="group relative bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden hover:border-blue-500/50 transition-all duration-300 shadow-xl hover:shadow-2xl hover:shadow-blue-900/20">
+                <div className="absolute top-4 right-4 z-20 flex gap-2">
+                  <span className="px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs font-bold border border-blue-500/30 uppercase tracking-wide">
+                    Fluxo Completo
+                  </span>
+                  <span className="px-3 py-1 rounded-full bg-red-500/20 text-red-300 text-xs font-bold border border-red-500/30 uppercase tracking-wide">
+                    Golpe Detectado
+                  </span>
+                </div>
+
+                <div className="p-8 pb-2">
+                  <div className="w-full">
+                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">
+                      Do recebimento ao laudo técnico
+                    </h3>
+                    <p className="text-slate-400 text-base mb-6 leading-relaxed">
+                      Análise completa de golpe via WhatsApp. O sistema processa as evidências e entrega um <span className="text-slate-200 font-semibold">relatório pericial pronto para uso.</span>
+                    </p>
+                  </div>
+                </div>
+
+                <div className="mx-4 mb-4 p-4 rounded-2xl border border-slate-700 bg-slate-950/50 relative">
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-3 h-48 md:h-64">
+                    {/* Evidence 1 */}
+                    <div className="relative rounded-xl overflow-hidden border border-slate-800 bg-black/20 group/item">
+                      <div className="absolute top-2 left-2 z-10 bg-black/60 backdrop-blur px-2 py-0.5 rounded text-[10px] font-bold text-white">1. EVIDÊNCIA</div>
+                      <Image
+                        src="/images/metascope/cases/Case1_Oficial-Justiça.png"
+                        alt="Print conversa criminosa"
+                        fill
+                        className="object-contain p-1 opacity-80 group-hover/item:opacity-100 transition-opacity"
+                      />
+                    </div>
+                    {/* Evidence 2 */}
+                    <div className="relative rounded-xl overflow-hidden border border-slate-800 bg-black/20 group/item">
+                      <div className="absolute top-2 left-2 z-10 bg-black/60 backdrop-blur px-2 py-0.5 rounded text-[10px] font-bold text-white">2. DOCUMENTO</div>
+                      <Image
+                        src="/images/metascope/cases/Case1a_Oficial-justiça.jpg"
+                        alt="Mandado falso recebido"
+                        fill
+                        className="object-contain p-1 opacity-80 group-hover/item:opacity-100 transition-opacity"
+                      />
+                    </div>
+                    {/* Result */}
+                    <div className="relative rounded-xl overflow-hidden border border-slate-800 bg-slate-900/50 group/item">
+                      <div className="absolute top-2 left-2 z-10 bg-red-600 px-2 py-0.5 rounded text-[10px] font-bold text-white shadow-lg">3. ANÁLISE</div>
+                      <Image
+                        src="/images/metascope/cases/result_case1_.png"
+                        alt="Dashboard com veredito"
+                        fill
+                        className="object-contain p-1 opacity-90 group-hover/item:opacity-100 transition-opacity"
+                      />
+                    </div>
+                    {/* Report */}
+                    <div className="relative rounded-xl overflow-hidden border border-blue-900/30 bg-blue-900/10 group/item shadow-[0_0_30px_rgba(37,99,235,0.1)]">
+                      <div className="absolute top-2 left-2 z-10 bg-blue-600 px-2 py-0.5 rounded text-[10px] font-bold text-white shadow-lg">4. RELATÓRIO</div>
+                      <Image
+                        src="/images/metascope/cases/report_case1.png"
+                        alt="Relatório PDF final"
+                        fill
+                        className="object-contain p-2 opacity-90 group-hover/item:opacity-100 transition-opacity scale-95 group-hover/item:scale-100 duration-300"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="mt-4 flex items-center justify-between border-t border-slate-800 pt-3">
+                    <div className="flex items-center gap-2">
+                      <div className="h-2 w-2 rounded-full bg-blue-500 animate-pulse" />
+                      <span className="text-xs font-semibold text-blue-200">Ciclo forense completo em minutos.</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Reveal>
+          </div>
+
+          {/* MOSAICO DOS OUTROS CASOS (2x2) */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Case 3: Fraude Veicular (ATPV-e) */}
+            <Reveal delayMs={150}>
+              <div className="group relative bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden hover:border-red-500/50 transition-all duration-300 shadow-lg hover:shadow-2xl hover:shadow-red-900/20 h-full flex flex-col">
+                <div className="absolute top-4 right-4 z-20">
+                  <span className="px-3 py-1 rounded-full bg-red-500/20 text-red-300 text-xs font-bold border border-red-500/30 uppercase tracking-wide">
+                    Documento Adulterado
+                  </span>
+                </div>
+
+                <div className="p-8 pb-0">
+                  <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-red-400 transition-colors">
+                    Fraude em ATPV-e
+                  </h3>
+                  <p className="text-slate-400 text-sm mb-6 min-h-[40px]">
+                    Documento veicular digital com indícios de edição. Análise de metadados e estrutura PDF revelou manipulação.
+                  </p>
+                </div>
+
+                <div className="mt-auto relative rounded-t-2xl overflow-hidden mx-4 mb-4 border border-slate-700 bg-slate-950">
+                  <div className="grid grid-cols-2 h-64 md:h-72">
+                    <div className="relative border-r border-slate-700 group/img bg-black/20">
+                      <div className="absolute top-2 left-2 z-10 bg-black/60 backdrop-blur px-2 py-0.5 rounded text-[10px] font-bold text-white">EVIDÊNCIA</div>
+                      <Image
+                        src="/images/metascope/cases/Case3_ATPVe.png"
+                        alt="ATPV-e suspeito"
+                        fill
+                        className="object-contain p-2 opacity-90 group-hover/img:opacity-100 transition-opacity"
+                      />
+                    </div>
+                    <div className="relative group/res bg-slate-900/50">
+                      <div className="absolute top-2 left-2 z-10 bg-red-600 px-2 py-0.5 rounded text-[10px] font-bold text-white shadow-lg">ANÁLISE</div>
+                      <Image
+                        src="/images/metascope/cases/result_case3.png"
+                        alt="Resultado fraude documento"
+                        fill
+                        className="object-contain object-top p-1 opacity-90 group-hover/res:opacity-100 transition-opacity"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="bg-red-900/20 p-3 border-t border-red-900/30 flex items-center gap-3">
+                    <div className="h-2 w-2 rounded-full bg-red-500 animate-pulse" />
+                    <span className="text-xs font-semibold text-red-200">
+                      Veredito: Edição digital confirmada pós-assinatura.
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </Reveal>
+
+
+            {/* Case 5: Deepfake Maduro */}
+            <Reveal delayMs={200}>
+              <div className="group relative bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden hover:border-amber-500/50 transition-all duration-300 shadow-lg hover:shadow-2xl hover:shadow-amber-900/20 h-full flex flex-col">
+                <div className="absolute top-4 right-4 z-20">
+                  <span className="px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 text-xs font-bold border border-amber-500/30 uppercase tracking-wide">
+                    IA Detectada
+                  </span>
+                </div>
+
+                <div className="p-8 pb-0">
+                  <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-amber-400 transition-colors">
+                    Viral: Real ou Fake?
+                  </h3>
+                  <p className="text-slate-400 text-sm mb-6 min-h-[40px]">
+                    Imagem viral circulando em redes sociais globais. Análise técnica para identificar manipulação sintética.
+                  </p>
+                </div>
+
+                <div className="mt-auto relative rounded-t-2xl overflow-hidden mx-4 mb-4 border border-slate-700 bg-slate-950">
+                  <div className="grid grid-cols-2 h-64 md:h-72">
+                    <div className="relative border-r border-slate-700 group/img bg-black/20">
+                      <div className="absolute top-2 left-2 z-10 bg-black/60 backdrop-blur px-2 py-0.5 rounded text-[10px] font-bold text-white">EVIDÊNCIA</div>
+                      <Image
+                        src="/images/metascope/cases/Case5_maduro.jpg"
+                        alt="Foto viral suspeita"
+                        fill
+                        className="object-contain p-2 opacity-90 group-hover/img:opacity-100 transition-opacity"
+                      />
+                    </div>
+                    <div className="relative group/res bg-slate-900/50">
+                      <div className="absolute top-2 left-2 z-10 bg-amber-600 px-2 py-0.5 rounded text-[10px] font-bold text-white shadow-lg">ANÁLISE</div>
+                      <Image
+                        src="/images/metascope/cases/result_case5.png"
+                        alt="Resultado detecção de IA"
+                        fill
+                        className="object-contain object-top p-1 opacity-90 group-hover/res:opacity-100 transition-opacity"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="bg-amber-900/20 p-3 border-t border-amber-900/30 flex items-center gap-3">
+                    <div className="h-2 w-2 rounded-full bg-amber-500 animate-pulse" />
+                    <span className="text-xs font-semibold text-amber-200">
+                      Veredito: Fortes indícios de geração por IA.
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </Reveal>
+
+            {/* Case 6: Pedido de Socorro (Fraude) */}
+            <Reveal delayMs={300}>
+              <div className="group relative bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden hover:border-orange-500/50 transition-all duration-300 shadow-lg hover:shadow-2xl hover:shadow-orange-900/20 h-full flex flex-col">
+                <div className="absolute top-4 right-4 z-20">
+                  <span className="px-3 py-1 rounded-full bg-orange-500/20 text-orange-300 text-xs font-bold border border-orange-500/30 uppercase tracking-wide">
+                    Phishing / Smishing
+                  </span>
+                </div>
+
+                <div className="p-8 pb-0">
+                  <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-orange-400 transition-colors">
+                    Golpe do Rastreio Falso
+                  </h3>
+                  <p className="text-slate-400 text-sm mb-6 min-h-[40px]">
+                    Mensagem sobre entrega retida ou taxa pendente. Análise técnica revelou link falso simulando site oficial.
+                  </p>
+                </div>
+
+                <div className="mt-auto relative rounded-t-2xl overflow-hidden mx-4 mb-4 border border-slate-700 bg-slate-950">
+                  <div className="grid grid-cols-2 h-64 md:h-72">
+                    <div className="relative border-r border-slate-700 group/img bg-black/20">
+                      <div className="absolute top-2 left-2 z-10 bg-black/60 backdrop-blur px-2 py-0.5 rounded text-[10px] font-bold text-white">EVIDÊNCIA</div>
+                      <Image
+                        src="/images/metascope/cases/Case6_print_whats_rastreio.png"
+                        alt="Print pedido socorro"
+                        fill
+                        className="object-contain p-2 opacity-90 group-hover/img:opacity-100 transition-opacity"
+                      />
+                    </div>
+                    <div className="relative group/res bg-slate-900/50">
+                      <div className="absolute top-2 left-2 z-10 bg-orange-600 px-2 py-0.5 rounded text-[10px] font-bold text-white shadow-lg">ANÁLISE</div>
+                      <Image
+                        src="/images/metascope/cases/result_case6.png"
+                        alt="Resultado análise link falso"
+                        fill
+                        className="object-contain object-left-top p-1 opacity-90 group-hover/res:opacity-100 transition-opacity"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="bg-orange-900/20 p-3 border-t border-orange-900/30 flex items-center gap-3">
+                    <div className="h-2 w-2 rounded-full bg-orange-500 animate-pulse" />
+                    <span className="text-xs font-semibold text-orange-200">
+                      Veredito: Link malicioso e tática de urgência.
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </Reveal>
+
+            {/* Case 4: Autenticação Londres */}
+            <Reveal delayMs={400}>
+              <div className="group relative bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden hover:border-emerald-500/50 transition-all duration-300 shadow-lg hover:shadow-2xl hover:shadow-emerald-900/20 h-full flex flex-col">
+                <div className="absolute top-4 right-4 z-20">
+                  <span className="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-bold border border-emerald-500/30 uppercase tracking-wide">
+                    Autêntico
+                  </span>
+                </div>
+
+                <div className="p-8 pb-0">
+                  <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-emerald-400 transition-colors">
+                    Validação de Local
+                  </h3>
+                  <p className="text-slate-400 text-sm mb-6 min-h-[40px]">
+                    Foto enviada por perito para validar álibi em Londres. Necessária confirmação de metadados e GPS original.
+                  </p>
+                </div>
+
+                <div className="mt-auto relative rounded-t-2xl overflow-hidden mx-4 mb-4 border border-slate-700 bg-slate-950">
+                  <div className="grid grid-cols-2 h-64 md:h-72">
+                    <div className="relative border-r border-slate-700 group/img bg-black/20">
+                      <div className="absolute top-2 left-2 z-10 bg-black/60 backdrop-blur px-2 py-0.5 rounded text-[10px] font-bold text-white">EVIDÊNCIA</div>
+                      <Image
+                        src="/images/metascope/cases/Case4_London.jpeg"
+                        alt="Foto Londres original"
+                        fill
+                        className="object-contain p-2 opacity-90 group-hover/img:opacity-100 transition-opacity"
+                      />
+                    </div>
+                    <div className="relative group/res bg-slate-900/50">
+                      <div className="absolute top-2 left-2 z-10 bg-emerald-600 px-2 py-0.5 rounded text-[10px] font-bold text-white shadow-lg">ANÁLISE</div>
+                      <Image
+                        src="/images/metascope/cases/result_case4.png"
+                        alt="Resultado validação GPS"
+                        fill
+                        className="object-contain object-top p-1 opacity-90 group-hover/res:opacity-100 transition-opacity"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="bg-emerald-900/20 p-3 border-t border-emerald-900/30 flex items-center gap-3">
+                    <div className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+                    <span className="text-xs font-semibold text-emerald-200">
+                      Veredito: Autêntico. GPS e metadados confirmados.
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </div>
+
       <div className="container mx-auto px-4 pb-10">
         <Reveal>
           <div className="rounded-[28px] border border-slate-200 bg-white p-10 shadow-sm">
@@ -617,9 +922,9 @@ export default function MetaScopePage() {
       <div id="exemplos" className="container mx-auto px-4 pb-12">
         <Reveal>
           <div className="rounded-[28px] border border-slate-200 bg-white p-8 shadow-sm">
-            <h2 className="text-2xl md:text-3xl font-extrabold text-center">Exemplos reais de análise</h2>
+            <h2 className="text-2xl md:text-3xl font-extrabold text-center">Por dentro da plataforma</h2>
             <p className="mt-3 text-slate-600 text-center max-w-3xl mx-auto">
-              Prints do fluxo e do painel de achados. (Os resultados variam conforme o arquivo e os metadados disponíveis.)
+              Interface projetada para agilidade pericial. Navegue pelos dashboards, visualização de metadados e ferramentas de análise.
             </p>
 
             <div className="mt-8">
