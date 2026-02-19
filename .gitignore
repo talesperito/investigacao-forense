@@ -110,3 +110,5 @@ credentials/
 *.wav
 *.pdf
 
+# Planos Internos
+PLANO_METASCOPE_PROVAS_SOCIAIS.md

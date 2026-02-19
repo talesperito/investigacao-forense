@@ -28,7 +28,7 @@ export default function ServicosPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             
             {/* SERVIÇO 1 */}
-            <div className="bg-gray-800/50 border border-gray-700 rounded-xl p-8 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl">
+            <div className="bg-gray-800/50 border border-gray-700 rounded-xl p-8 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl flex flex-col">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
                 Desenvolvimento de Sistemas e Aplicações Sob Medida
               </h2>
@@ -36,7 +36,7 @@ export default function ServicosPage() {
                 Sistemas Personalizados com Foco em Segurança
               </h3>
               <p className="text-gray-300 mb-6 leading-relaxed">
-                Desenvolvemos soluções tecnológicas customizadas que priorizam a proteção e integridade dos seus dados. Nossos sistemas são projetados para ambientes que exigem controle rigoroso de documentos, rastreabilidade completa de operações e verificação de autenticidade de arquivos. Utilizamos criptografia avançada, logs auditáveis e arquiteturas resilientes para garantir que suas informações estejam sempre protegidas e acessíveis apenas para quem deve ter acesso. Ideal para organizações que lidam com dados sensíveis, documentação legal, registros médicos ou qualquer operação onde segurança e confiabilidade são innegoáveis.
+                Desenvolvemos soluções tecnológicas sob medida com foco em proteção e integridade dos dados. Os sistemas são projetados para ambientes que exigem controle de documentos, rastreabilidade de operações e verificação de autenticidade de arquivos. Aplicamos criptografia, logs auditáveis e arquitetura resiliente para garantir acesso seguro e governança das informações em contextos de alta responsabilidade.
               </p>
               <ul className="space-y-2 mb-6">
                 <li className="text-gray-400 flex items-start">
@@ -58,14 +58,14 @@ export default function ServicosPage() {
               </ul>
               <Link 
                 href="/contato"
-                className="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200"
+                className="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200 mt-auto"
               >
                 Solicitar Orçamento
               </Link>
             </div>
 
             {/* SERVIÇO 2 */}
-            <div className="bg-gray-800/50 border border-gray-700 rounded-xl p-8 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl">
+            <div className="bg-gray-800/50 border border-gray-700 rounded-xl p-8 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl flex flex-col">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
                 Criação de Plataformas SaaS para Negócios e Operações
               </h2>
@@ -73,7 +73,7 @@ export default function ServicosPage() {
                 Plataformas Escaláveis que Impulsionam Seu Negócio
               </h3>
               <p className="text-gray-300 mb-6 leading-relaxed">
-                Transforme sua ideia em uma plataforma robusta e lucrativa. Desenvolvemos soluções SaaS completas, desde o conceito até o lançamento, com foco em escalabilidade, experiência do usuário e receita recorrente. Nossas plataformas incluem sistemas de gestão documental, dashboards analíticos inteligentes, automações que economizam horas de trabalho manual e integrações com ferramentas que seu time já usa. Entregamos soluções prontas para conquistar clientes, com infraestrutura na nuvem, segurança de ponta a ponta e suporte técnico especializado. Ideal para empreendedores digitais, escritórios de advocacia, clínicas, empresas do agronegócio e condomínios que buscam digitalizar processos e gerar valor através da tecnologia.
+                Transforme sua ideia em uma plataforma robusta e lucrativa. Desenvolvemos soluções SaaS completas, do conceito ao lançamento, com foco em escalabilidade, experiência do usuário e receita recorrente. A solução pode incluir gestão documental, dashboards analíticos, automações e integrações com ferramentas já usadas pelo seu time. Entregamos infraestrutura em nuvem com segurança ponta a ponta e suporte técnico especializado para acelerar a digitalização de processos.
               </p>
               <ul className="space-y-2 mb-6">
                 <li className="text-gray-400 flex items-start">
@@ -95,14 +95,14 @@ export default function ServicosPage() {
               </ul>
               <Link 
                 href="/contato"
-                className="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200"
+                className="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200 mt-auto"
               >
                 Solicitar Orçamento
               </Link>
             </div>
 
             {/* SERVIÇO 3 */}
-            <div className="bg-gray-800/50 border border-gray-700 rounded-xl p-8 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl">
+            <div className="bg-gray-800/50 border border-gray-700 rounded-xl p-8 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl flex flex-col">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
                 Consultoria Técnica em Perícias, Auditoria e Rastreabilidade
               </h2>
@@ -110,7 +110,7 @@ export default function ServicosPage() {
                 Expertise Forense Aplicada à Tecnologia
               </h3>
               <p className="text-gray-300 mb-6 leading-relaxed">
-                Com mais de 20 anos de experiência em segurança pública, investigação e gestão operacional, oferecemos consultoria especializada para organizações que precisam de rigor técnico e metodologia investigativa aplicados à tecnologia. Atuamos em auditorias de sistemas, análise de conformidade, elaboração de laudos técnicos, implementação de controles de rastreabilidade e preparação de ambientes para certificações. Nossa vivência em ambientes de alta criticidade nos permite identificar vulnerabilidades, propor soluções práticas e desenhar processos que resistem à análise mais rigorosa. Ideal para empresas que passam por auditorias, precisam implementar compliance, estão sob investigação ou simplesmente querem garantir que seus processos tecnológicos sejam à prova de falhas.
+                Com mais de 20 anos de experiência em segurança pública, investigação e gestão operacional, oferecemos consultoria para organizações que precisam de rigor técnico aplicado à tecnologia. Atuamos com auditoria de sistemas, conformidade, laudos técnicos e implantação de controles de rastreabilidade. A proposta é identificar vulnerabilidades, estruturar processos robustos e preparar ambientes para auditorias e certificações.
               </p>
               <ul className="space-y-2 mb-6">
                 <li className="text-gray-400 flex items-start">
@@ -136,14 +136,14 @@ export default function ServicosPage() {
               </ul>
               <Link 
                 href="/contato"
-                className="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200"
+                className="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200 mt-auto"
               >
                 Solicitar Orçamento
               </Link>
             </div>
 
             {/* SERVIÇO 4 */}
-            <div className="bg-gray-800/50 border border-gray-700 rounded-xl p-8 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl">
+            <div className="bg-gray-800/50 border border-gray-700 rounded-xl p-8 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl flex flex-col">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
                 Gestão de Projetos, Processos e Integrações Tecnológicas
               </h2>
@@ -151,7 +151,7 @@ export default function ServicosPage() {
                 Orquestramos Tecnologia, Conectamos Ecossistemas
               </h3>
               <p className="text-gray-300 mb-6 leading-relaxed">
-                Tecnologia só gera valor quando funciona em harmonia. Atuamos como maestros da transformação digital, coordenando equipes, integrando sistemas legados com soluções modernas e desenhando processos que fazem sentido para quem executa. Não entregamos apenas código: entregamos operações funcionais. Mapeamos seu fluxo de trabalho atual, identificamos gargalos, propomos automações inteligentes e garantimos que diferentes plataformas conversem entre si sem fricção. Gerenciamos a implementação do início ao fim, capacitamos sua equipe e permanecemos ao seu lado até que a solução esteja rodando de forma autônoma. Transformamos caos tecnológico em sinfonia operacional.
+                Tecnologia só gera valor quando funciona em harmonia. Coordenamos equipes, integramos sistemas legados com soluções modernas e desenhamos processos práticos para a operação do dia a dia. Mapeamos fluxos, identificamos gargalos, propomos automações e garantimos integração entre plataformas sem fricção. Também conduzimos a implementação de ponta a ponta, com capacitação da equipe para uma operação autônoma.
               </p>
               <ul className="space-y-2 mb-6">
                 <li className="text-gray-400 flex items-start">
@@ -177,7 +177,7 @@ export default function ServicosPage() {
               </ul>
               <Link 
                 href="/contato"
-                className="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200"
+                className="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200 mt-auto"
               >
                 Solicitar Orçamento
               </Link>

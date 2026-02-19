@@ -36,7 +36,6 @@ export default function RootLayout({
               <li><a href="/portfolio" className="hover:text-blue-400 transition">Portfólio</a></li>
               {/* Dropdown Soluções */}
               <li><a href="/aplicacoes" className="hover:text-blue-400 transition">Soluções</a></li>
-              <li><a href="/cursos" className="hover:text-blue-400 transition">Cursos</a></li>
               <li><a href="/servicos" className="hover:text-blue-400 transition">Serviços</a></li>
               <li><a href="/contato" className="hover:text-blue-400 transition">Contato</a></li>
             </ul>
