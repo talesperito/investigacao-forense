@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Footer from '@/components/Footer';
 import CookieBanner from '@/components/CookieBanner';
+import TopNav from '@/components/TopNav';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,20 +28,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className="antialiased bg-black">
-        {/* Global Navigation */}
-        <nav className="bg-gray-900 text-white px-8 py-4 sticky top-0 z-50 shadow-lg">
-          <div className="max-w-6xl mx-auto flex items-center justify-between">
-            <div className="text-2xl font-bold">InvestigacaoForense.com</div>
-            <ul className="flex gap-6 text-sm font-semibold items-center">
-              <li><a href="/" className="hover:text-blue-400 transition">Início</a></li>
-              <li><a href="/portfolio" className="hover:text-blue-400 transition">Portfólio</a></li>
-              {/* Dropdown Soluções */}
-              <li><a href="/aplicacoes" className="hover:text-blue-400 transition">Soluções</a></li>
-              <li><a href="/servicos" className="hover:text-blue-400 transition">Serviços</a></li>
-              <li><a href="/contato" className="hover:text-blue-400 transition">Contato</a></li>
-            </ul>
-          </div>
-        </nav>
+        <TopNav />
         {children}
         <Footer />
         <CookieBanner />

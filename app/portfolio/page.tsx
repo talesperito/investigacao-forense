@@ -6,6 +6,52 @@ export const metadata: Metadata = {
   description: "Plataforma de tecnologia para perícia digital, investigação forense e análise de dados. Desenvolvemos software, BI e sistemas de evidências para órgãos públicos, escritórios e compliance.",
 };
 
+function DemoSeal() {
+  return (
+    <div
+      className="absolute top-3 right-3 z-10 flex flex-col items-center gap-0.5 pointer-events-none"
+      title="Demonstração disponível"
+      aria-label="Demonstração disponível"
+    >
+      <svg
+        width="34"
+        height="40"
+        viewBox="0 0 44 52"
+        role="img"
+        aria-hidden="true"
+        className="drop-shadow-[0_3px_8px_rgba(14,165,233,0.30)]"
+      >
+        <defs>
+          <linearGradient id="demoShield" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stopColor="#67e8f9" />
+            <stop offset="100%" stopColor="#0284c7" />
+          </linearGradient>
+        </defs>
+        <path
+          d="M22 2L38 8v13c0 11-7.2 20-16 23-8.8-3-16-12-16-23V8l16-6z"
+          fill="url(#demoShield)"
+          stroke="#e0f2fe"
+          strokeWidth="1.5"
+        />
+        <circle cx="22" cy="21" r="9" fill="rgba(2,6,23,0.35)" />
+        <path
+          d="M18.5 21.2l2.6 2.8 4.4-5"
+          fill="none"
+          stroke="#ecfeff"
+          strokeWidth="2.2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+      <span className="text-[9px] leading-[1.05] text-cyan-200/90 font-semibold text-center tracking-[0.01em] drop-shadow-[0_1px_3px_rgba(0,0,0,0.6)]">
+        Disponível
+        <br />
+        para teste
+      </span>
+    </div>
+  );
+}
+
 export default function PortfolioPage() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">
@@ -125,17 +171,21 @@ export default function PortfolioPage() {
               <h3 className="text-xl font-bold text-white mb-2">
                 BI para Segurança Pública e Investigação Forense (2024)
               </h3>
-              <div className="flex gap-2 mb-3">
+              <div className="flex gap-2 mb-3 flex-wrap">
                 <span className="text-xs px-2 py-1 rounded bg-yellow-600/20 text-yellow-400">
                   Pesquisa Científica
                 </span>
                 <span className="text-xs px-2 py-1 rounded bg-blue-600/20 text-blue-400">
                   Análise de Dados Forenses
                 </span>
+                <span className="text-xs px-2 py-1 rounded border border-emerald-400/30 bg-emerald-500/15 text-emerald-300 font-semibold">
+                  Estágio: Produção Interna
+                </span>
               </div>
               <p className="text-gray-300 text-sm">
-                Plataforma de análise de dados forenses e operacionais usada para apoiar decisões investigativas, auditoria e inteligência criminal. Desenvolvida no pós-doutorado em Ciência de Dados, a solução transformou informações operacionais em dashboards analíticos com rastreabilidade completa.
-                Projeto apresentado na conferência internacional INTERACT 2025 (Springer).
+                Projeto concluído com dashboards construídos para apoiar a gestão pericial e decisões operacionais na segurança pública. A solução organiza dados de múltiplas frentes em painéis de análise com foco em rastreabilidade e leitura gerencial.
+                <br /><br />
+                Resultado prático: ganho superior a 60% na agilidade das análises de gestão. Aplicação direcionada ao contexto institucional da PCMG.
                 <br /><br />
                 <a
                   href="https://link.springer.com/chapter/10.1007/978-3-032-05008-3_17"
@@ -149,110 +199,149 @@ export default function PortfolioPage() {
             </div>
 
             {/* 2 */}
-            <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all">
-              <h3 className="text-xl font-bold text-white mb-2">
-                Reconhecimento Facial para Investigação Forense (2024)
+            <div className="relative bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all">
+              <DemoSeal />
+              <h3 className="text-xl font-bold text-white mb-2 pr-16">
+                FaceID Forense
+                <br />
+                Reconhecimento Facial
               </h3>
-              <div className="flex gap-2 mb-3">
+              <div className="flex gap-2 mb-3 flex-wrap">
                 <span className="text-xs px-2 py-1 rounded bg-blue-600/20 text-blue-400">
                   IA / Deep Learning
                 </span>
                 <span className="text-xs px-2 py-1 rounded bg-purple-600/20 text-purple-400">
                   Perícia Digital
                 </span>
+                <span className="text-xs px-2 py-1 rounded border border-amber-400/30 bg-amber-500/15 text-amber-300 font-semibold">
+                  Estágio: Piloto Avançado
+                </span>
               </div>
               <p className="text-gray-300 text-sm">
-                Sistema de análise de evidências digitais com Deep Learning para identificação facial forense, alcançando 100% de acerto em rostos individuais e 88% em imagens com múltiplos rostos. Ferramenta aplicável em investigação criminal, compliance e auditoria de imagens.
+                Script de reconhecimento facial forense com uso real em bases de dados da PCMG, desenvolvido para apoiar triagem e validação de evidências visuais em cenários investigativos.
+                <br /><br />
+                Desempenho atual: 100% de acerto em rostos individuais e acima de 85% em imagens com múltiplos rostos. Está em fase final de desenvolvimento para operação prática ampliada.
               </p>
             </div>
 
             {/* 3 */}
-            <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all">
-              <h3 className="text-xl font-bold text-white mb-2">
-                Sistema de Gestão de Evidências e Vestígios
+            <div className="relative bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all">
+              <DemoSeal />
+              <h3 className="text-xl font-bold text-white mb-2 pr-16">
+                EvidenceOS: Gestão de Evidências e Vestígios
               </h3>
-              <div className="flex gap-2 mb-3">
+              <div className="flex gap-2 mb-3 flex-wrap">
                 <span className="text-xs px-2 py-1 rounded bg-green-600/20 text-green-400">
                   Software Forense
                 </span>
                 <span className="text-xs px-2 py-1 rounded bg-purple-600/20 text-purple-400">
                   Rastreabilidade
                 </span>
+                <span className="text-xs px-2 py-1 rounded border border-emerald-400/30 bg-emerald-500/15 text-emerald-300 font-semibold">
+                  Estágio: Produção Interna
+                </span>
               </div>
               <p className="text-gray-300 text-sm">
-                Plataforma de gestão de evidências digitais e físicas com rastreabilidade completa, auditoria de acesso e geração automatizada de laudos periciais. Sistema voltado à custódia de vestígios com compliance e integridade por hash, resultando em processos 50% mais ágeis.
+                Aplicação já em funcionamento interno na unidade regional de custódia para gestão de vestígios, consulta estruturada e controle do fluxo de objetos sob responsabilidade pericial.
+                <br /><br />
+                O sistema emite relatórios e alertas, permite agendamento de retirada e opera com MySQL. Está em fase de hospedagem e deploy (Hostinger) para compartilhamento regional.
               </p>
             </div>
 
             {/* 4 */}
-            <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all">
-              <h3 className="text-xl font-bold text-white mb-2">
+            <div className="relative bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all">
+              <DemoSeal />
+              <h3 className="text-xl font-bold text-white mb-2 pr-16">
                 MetaScope — Software de Perícia Digital
               </h3>
-              <div className="flex gap-2 mb-3">
+              <div className="flex gap-2 mb-3 flex-wrap">
                 <span className="text-xs px-2 py-1 rounded bg-purple-600/20 text-purple-400">
                   Perícia Digital
                 </span>
                 <span className="text-xs px-2 py-1 rounded bg-blue-600/20 text-blue-400">
                   Análise de Evidências
                 </span>
+                <span className="text-xs px-2 py-1 rounded border border-amber-400/30 bg-amber-500/15 text-amber-300 font-semibold">
+                  Estágio: Piloto com Parceiros
+                </span>
               </div>
               <p className="text-gray-300 text-sm">
-                Software de perícia digital para análise de deepfakes, verificação de autenticidade e integridade de arquivos. Ferramenta essencial para investigação forense, compliance e validação de evidências digitais com 75% de precisão na detecção de manipulação por IA.
+                Solução mais avançada do portfólio para análise de deepfakes, verificação de autenticidade e validação de integridade de arquivos digitais em contextos sensíveis.
+                <br /><br />
+                Atualmente em fase de testes com comunidades e parceiros, com evolução contínua do motor analítico e aplicação em cenários de perícia, compliance, advocacia e jornalismo investigativo.
               </p>
             </div>
 
             {/* 5 */}
-            <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all">
-              <h3 className="text-xl font-bold text-white mb-2">
+            <div className="relative bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all">
+              <DemoSeal />
+              <h3 className="text-xl font-bold text-white mb-2 pr-16">
                 CondoHub & Sistema de Auditoria Geolocalizada
               </h3>
-              <div className="flex gap-2 mb-3">
+              <div className="flex gap-2 mb-3 flex-wrap">
                 <span className="text-xs px-2 py-1 rounded bg-green-600/20 text-green-400">
                   Gestão Corporativa
                 </span>
                 <span className="text-xs px-2 py-1 rounded bg-gray-600/20 text-gray-300">
                   Compliance
                 </span>
+                <span className="text-xs px-2 py-1 rounded border border-emerald-400/30 bg-emerald-500/15 text-emerald-300 font-semibold">
+                  Estágio: Produção
+                </span>
               </div>
               <p className="text-gray-300 text-sm">
-                Duas plataformas complementares para gestão de condomínios e empresas. O CondoHub oferece controle de reservas, comunicados, infrações e marketplace. O Sistema de Auditoria inclui geolocalização, logs e rastreabilidade para compliance operacional.
+                Plataforma com banco de dados SQL implantado e foco em gestão condominial com trilhas de compliance e governança documental para operações do dia a dia.
+                <br /><br />
+                Inclui ponto eletrônico, integridade de documentos, agendamentos, atas, ocorrências e recursos de auditoria geolocalizada, com posicionamento voltado a condomínios e administradoras.
               </p>
             </div>
 
             {/* 6 */}
-            <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all">
-              <h3 className="text-xl font-bold text-white mb-2">
-                ScamTrace — Investigação de Fraudes Digitais
+            <div className="relative bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all">
+              <DemoSeal />
+              <h3 className="text-xl font-bold text-white mb-2 pr-16">
+                ScamTrace — Investigação de Fraudes
               </h3>
-              <div className="flex gap-2 mb-3">
+              <div className="flex gap-2 mb-3 flex-wrap">
                 <span className="text-xs px-2 py-1 rounded bg-blue-600/20 text-blue-400">
                   Investigação Forense
                 </span>
                 <span className="text-xs px-2 py-1 rounded bg-green-600/20 text-green-400">
                   Análise de Evidências
                 </span>
+                <span className="text-xs px-2 py-1 rounded border border-amber-400/30 bg-amber-500/15 text-amber-300 font-semibold">
+                  Estágio: Piloto com Parceiros
+                </span>
               </div>
               <p className="text-gray-300 text-sm">
-                Plataforma de investigação forense para detecção de fraudes digitais e ataques homográficos. Sistema com análise de links suspeitos, OCR avançado e rastreabilidade de evidências para compliance e segurança da informação.
+                Plataforma de investigação forense para detecção de fraudes digitais e ataques homográficos, com arquitetura pensada para reduzir exposição do usuário a riscos durante a análise.
+                <br /><br />
+                Combina análise de links suspeitos, OCR avançado e rastreabilidade de evidências, com acurácia superior a 90% em cenários de validação de fraude e suporte a compliance.
               </p>
             </div>
 
             {/* 7 */}
             <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all">
               <h3 className="text-xl font-bold text-white mb-2">
-                Análise de Laudos Periciais com IA
+                Análise e Integridade
+                <br />
+                de Laudos e Documentos
               </h3>
-              <div className="flex gap-2 mb-3">
+              <div className="flex gap-2 mb-3 flex-wrap">
                 <span className="text-xs px-2 py-1 rounded bg-blue-600/20 text-blue-400">
                   Análise de Dados Forenses
                 </span>
                 <span className="text-xs px-2 py-1 rounded bg-purple-600/20 text-purple-400">
                   Automação
                 </span>
+                <span className="text-xs px-2 py-1 rounded border border-amber-400/30 bg-amber-500/15 text-amber-300 font-semibold">
+                  Estágio: Piloto Inicial
+                </span>
               </div>
               <p className="text-gray-300 text-sm">
-                Sistema de análise automatizada de laudos periciais com Machine Learning. Ferramenta de investigação forense que identifica padrões em evidências digitais, reduzindo o tempo de análise de 3-4 dias para 8 horas com auditoria completa.
+                Análise assistida por IA para laudos periciais e outros documentos, com foco em triagem técnica e identificação de padrões relevantes.
+                <br /><br />
+                Projeto em parceria com outros desenvolvedores. A arquitetura em camadas reduz consumo de tokens de LLM e acelera o fluxo com rastreabilidade.
               </p>
             </div>
 
@@ -261,16 +350,21 @@ export default function PortfolioPage() {
               <h3 className="text-xl font-bold text-white mb-2">
                 Perícia Digital em Dispositivos Móveis
               </h3>
-              <div className="flex gap-2 mb-3">
+              <div className="flex gap-2 mb-3 flex-wrap">
                 <span className="text-xs px-2 py-1 rounded bg-purple-600/20 text-purple-400">
                   Perícia Digital
                 </span>
                 <span className="text-xs px-2 py-1 rounded bg-blue-600/20 text-blue-400">
                   Extração de Evidências
                 </span>
+                <span className="text-xs px-2 py-1 rounded border border-fuchsia-400/30 bg-fuchsia-500/15 text-fuchsia-300 font-semibold">
+                  Estágio: P&D Inicial
+                </span>
               </div>
               <p className="text-gray-300 text-sm">
-                Serviço especializado de perícia digital com extração forense de dados, análise de evidências e quebra de senhas em smartphones e mídias digitais. Expertise consolidada em investigação criminal e validação de provas digitais para uso judicial.
+                Atuação especializada em extração forense de dados, análise de evidências e tratamento técnico de informações oriundas de smartphones e mídias digitais.
+                <br /><br />
+                Projeto em parceria com outros desenvolvedores para interpretar relatórios com grafos, padrões de repetição e análise comportamental. Meta: reduzir análises de 12 horas para cerca de 2 horas.
               </p>
             </div>
 
@@ -279,13 +373,18 @@ export default function PortfolioPage() {
               <h3 className="text-xl font-bold text-white mb-2">
                 Plataforma InvestigacaoForense.com
               </h3>
-              <div className="flex gap-2 mb-3">
+              <div className="flex gap-2 mb-3 flex-wrap">
                 <span className="text-xs px-2 py-1 rounded bg-gray-600/20 text-gray-300">
                   Forensic Data Platform
                 </span>
+                <span className="text-xs px-2 py-1 rounded border border-emerald-400/30 bg-emerald-500/15 text-emerald-300 font-semibold">
+                  Estágio: Produção
+                </span>
               </div>
               <p className="text-gray-300 text-sm">
-                Plataforma de tecnologia para investigação forense e perícia digital. Portal técnico com software, análise de dados forenses e sistemas de evidências desenvolvidos para apoiar peritos, investigadores e equipes de compliance.
+                Plataforma institucional construída integralmente com TypeScript e React para posicionamento técnico-comercial, autoridade de marca e geração de oportunidades de parceria.
+                <br /><br />
+                Projeto com SEO estruturado e indexação completa no Google, incluindo aprovação no Google AdSense, resultado de implementação cuidadosa de conteúdo, arquitetura e qualidade técnica.
               </p>
             </div>
 
