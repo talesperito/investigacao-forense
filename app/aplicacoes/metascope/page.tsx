@@ -150,14 +150,13 @@ export default function MetaScopePage() {
                 </div>
 
                 <h1 className="mt-6 text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900">
-                  Analise autenticidade, integridade e indícios de manipulação em minutos.
+                  Perícia digital em minutos para validar autenticidade e integridade de arquivos.
                 </h1>
 
                 <p className="mt-5 text-lg md:text-xl text-slate-600 leading-relaxed">
-                  Ferramenta de apoio à decisão forense. O MetaScope analisa imagens, vídeos e documentos, extraindo metadados e evidências técnicas,
-                  calculando hash <span className="font-semibold text-slate-800">SHA-256</span> e aplicando detecção de
-                  indícios de IA em camadas. Ao final, gere um{' '}
-                  <span className="font-semibold text-slate-800">relatório pericial em PDF</span>.
+                  O MetaScope apoia decisões forenses em imagens, vídeos e documentos. Extraia metadados e evidências
+                  técnicas, calcule hash <span className="font-semibold text-slate-800">SHA-256</span>, detecte indícios
+                  de IA em camadas e gere um <span className="font-semibold text-slate-800">relatório técnico em PDF</span>.
                 </p>
 
                 <div className="mt-8 flex flex-col sm:flex-row gap-3">
@@ -166,9 +165,9 @@ export default function MetaScopePage() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="group inline-flex justify-center items-center gap-2 rounded-2xl bg-gradient-to-r from-blue-600 to-blue-700 px-7 py-4 text-white font-extrabold shadow-lg shadow-blue-700/25 ring-1 ring-blue-500/40 hover:shadow-xl hover:shadow-blue-700/30 hover:from-blue-700 hover:to-blue-800 transition-all duration-200"
-                    aria-label="Solicitar acesso / Teste (vai para o login)"
+                    aria-label="Solicitar acesso ao MetaScope"
                   >
-                    Solicitar acesso / Teste
+                    Solicitar acesso ao MetaScope
                     <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
                   </a>
 
@@ -185,6 +184,17 @@ export default function MetaScopePage() {
                   imagens e vídeos até <span className="font-semibold text-slate-800">100MB</span> • documentos até{' '}
                   <span className="font-semibold text-slate-800">25MB</span> • envio por upload, arrastar/soltar ou link.
                 </div>
+                <p className="mt-3 text-sm text-slate-600">
+                  Privacidade e conformidade: veja nossa{' '}
+                  <a href="/politica-de-privacidade" className="font-semibold text-slate-800 underline decoration-slate-300 underline-offset-4 hover:decoration-slate-600">
+                    Política de Privacidade
+                  </a>{' '}
+                  ou{' '}
+                  <a href="/contato" className="font-semibold text-slate-800 underline decoration-slate-300 underline-offset-4 hover:decoration-slate-600">
+                    fale com especialista
+                  </a>
+                  .
+                </p>
               </div>
 
               {/* Right (card lateral para “preencher” largura e aumentar percepção premium) */}
@@ -1002,7 +1012,7 @@ export default function MetaScopePage() {
             <div className="max-w-3xl">
               <h2 className="text-2xl md:text-3xl font-extrabold">Quer testar com seu próprio material?</h2>
               <p className="mt-3 text-blue-100">
-                O acesso é controlado (sem cadastro público). Clique abaixo para ir ao login e solicitar credenciais de teste.
+                O acesso é controlado (sem cadastro público). Clique abaixo para solicitar suas credenciais de avaliação.
               </p>
 
               <div className="mt-6 flex flex-col sm:flex-row gap-3">
@@ -1012,7 +1022,7 @@ export default function MetaScopePage() {
                   rel="noopener noreferrer"
                   className="group inline-flex items-center justify-center gap-2 rounded-2xl bg-white px-7 py-4 font-extrabold text-blue-700 hover:bg-blue-50 transition-all duration-200 shadow-md"
                 >
-                  Solicitar acesso / Teste
+                  Solicitar acesso ao MetaScope
                   <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
                 </a>
 
@@ -1028,6 +1038,13 @@ export default function MetaScopePage() {
                 Limites atuais: imagens/vídeos até <span className="font-semibold text-white">100MB</span> • documentos até{' '}
                 <span className="font-semibold text-white">25MB</span>.
               </p>
+              <p className="mt-2 text-sm text-blue-100">
+                Dúvidas sobre segurança ou uso jurídico?{' '}
+                <a href="/contato" className="font-semibold text-white underline decoration-white/50 underline-offset-4 hover:decoration-white">
+                  Fale com nossa equipe
+                </a>
+                .
+              </p>
             </div>
           </div>
         </Reveal>
@@ -1042,7 +1059,7 @@ export default function MetaScopePage() {
             rel="noopener noreferrer"
             className="group w-full inline-flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-blue-600 to-blue-700 px-5 py-3 text-white font-extrabold shadow-lg shadow-blue-700/25"
           >
-            Solicitar acesso / Teste
+            Solicitar acesso ao MetaScope
             <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
           </a>
         </div>
