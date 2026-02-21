@@ -5,9 +5,9 @@ const pageUrl = "https://www.investigacaoforense.com/portfolio";
 const ogImage = "https://www.investigacaoforense.com/tales.PNG";
 
 export const metadata: Metadata = {
-  title: "Portfolio de Aplicacoes e Projetos | Investigacao Forense",
+  title: "Portfólio de Aplicações e Projetos | Investigação Forense",
   description:
-    "Conheca o portfolio de aplicacoes e projetos de tecnologia desenvolvidos por Tales e Matheus Vieira: pericia digital, BI, automacao, compliance e solucoes de dados.",
+    "Conheça o portfólio de aplicações e projetos de tecnologia desenvolvidos por Tales e Matheus Vieira: perícia digital, BI, automação, compliance e soluções de dados.",
   alternates: {
     canonical: pageUrl,
     languages: {
@@ -18,24 +18,24 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pt_BR",
     url: pageUrl,
-    title: "Portfolio de Aplicacoes e Projetos | Investigacao Forense",
+    title: "Portfólio de Aplicações e Projetos | Investigação Forense",
     description:
-      "Projetos e aplicacoes de tecnologia em pericia digital, dados, automacao e compliance para setores publico e privado.",
-    siteName: "Investigacao Forense",
+      "Projetos e aplicações de tecnologia em perícia digital, dados, automação e compliance para setores público e privado.",
+    siteName: "Investigação Forense",
     images: [
       {
         url: ogImage,
         width: 1200,
         height: 630,
-        alt: "Portfolio de aplicacoes e projetos - Investigacao Forense",
+        alt: "Portfólio de aplicações e projetos - Investigação Forense",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Portfolio de Aplicacoes e Projetos | Investigacao Forense",
+    title: "Portfólio de Aplicações e Projetos | Investigação Forense",
     description:
-      "Aplicacoes e projetos de tecnologia com foco em pericia digital, BI, automacao e compliance.",
+      "Aplicações e projetos de tecnologia com foco em perícia digital, BI, automação e compliance.",
     images: [ogImage],
   },
 };
@@ -43,10 +43,10 @@ export const metadata: Metadata = {
 const collectionPageSchema = {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
-  name: "Portfolio de Aplicacoes e Projetos",
+  name: "Portfólio de Aplicações e Projetos",
   url: pageUrl,
   description:
-    "Portfolio com aplicacoes e projetos de tecnologia em pericia digital, investigacao, BI e compliance.",
+    "Portfólio com aplicações e projetos de tecnologia em perícia digital, investigação, BI e compliance.",
 };
 
 const peopleSchema = [
@@ -71,9 +71,9 @@ const peopleSchema = [
 const projectListSchema = {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  name: "Projetos e aplicacoes do portfolio",
+  name: "Projetos e aplicações do portfólio",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "BI para Seguranca Publica e Investigacao Forense" },
+    { "@type": "ListItem", position: 1, name: "BI para Segurança Pública e Investigação Forense" },
     { "@type": "ListItem", position: 2, name: "FaceID Forense" },
     { "@type": "ListItem", position: 3, name: "EvidenceOS" },
     { "@type": "ListItem", position: 4, name: "MetaScope" },
