@@ -395,7 +395,7 @@ export default function PortfolioPage() {
           </p>
           <p className="text-center mt-4">
             <a href="/aplicacoes" className="text-blue-400 hover:text-blue-300 font-semibold transition-colors">
-              🚀 Acesse aqui os MVPs em fase final de desenvolvimento
+              🚀 Ver aplicacoes em fase final de desenvolvimento
             </a>
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center mt-6">

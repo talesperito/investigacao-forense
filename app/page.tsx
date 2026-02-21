@@ -4,7 +4,7 @@ const homeUrl = 'https://www.investigacaoforense.com/';
 const homeOgImage = 'https://www.investigacaoforense.com/images/metascope/screenshot-1-v2.png';
 
 export const metadata: Metadata = {
-  title: 'Investigação Forense | Software, Perícia Digital e Dados Críticos',
+  title: 'Aplicações e Portfólio de Tecnologia | Investigação Forense',
   description:
     'Desenvolvimento de software para dados críticos, perícia digital e operações reguladas com auditoria, rastreabilidade, integridade e compliance.',
   alternates: {
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'pt_BR',
     url: homeUrl,
-    title: 'Investigação Forense | Software, Perícia Digital e Dados Críticos',
+    title: 'Aplicações e Portfólio de Tecnologia | Investigação Forense',
     description:
       'Soluções de software para dados críticos, documentos, perícia digital e decisões de alto impacto.',
     siteName: 'Investigação Forense',
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Investigação Forense | Software, Perícia Digital e Dados Críticos',
+    title: 'Aplicações e Portfólio de Tecnologia | Investigação Forense',
     description: 'Software para dados críticos, perícia digital e operações reguladas.',
     images: [homeOgImage],
   },
@@ -77,7 +77,7 @@ export default function HomePage() {
 
         <div className="relative h-full min-h-[68vh] md:min-h-[74vh] flex flex-col items-center justify-center px-4 text-center text-slate-900">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-5 md:mb-6 leading-[1.08] tracking-[-0.02em] max-w-[22ch]">
-            Software para Dados Críticos, Perícia Digital e Decisões Críticas
+            Aplicações e Portfólio de Tecnologia para Operações Críticas
           </h1>
           <p className="text-lg sm:text-xl md:text-[1.95rem] mb-10 md:mb-12 max-w-[42ch] text-slate-700 leading-[1.4]">
             Construímos plataformas de software, inteligência analítica e automação para organizações que operam com dados sensíveis e processos regulados, com foco em rastreabilidade, integridade, auditoria e compliance.
