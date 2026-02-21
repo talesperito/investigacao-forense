@@ -1,12 +1,12 @@
-import type { Metadata } from 'next';
+Ôªøimport type { Metadata } from 'next';
 
 const pageUrl = 'https://www.investigacaoforense.com/cursos';
 const ogImage = 'https://www.investigacaoforense.com/tales.PNG';
 
 export const metadata: Metadata = {
-  title: 'Cursos de PerÌcia Criminal e InvestigaÁ„o Forense | InvestigaÁ„o Forense',
+  title: 'Cursos de Per√≠cia Criminal e Investiga√ß√£o Forense | Investiga√ß√£o Forense',
   description:
-    'Cursos especializados em perÌcia criminal, toxicologia forense e medicina legal. FormaÁ„o aplicada para profissionais e estudantes da ·rea forense.',
+    'Cursos especializados em per√≠cia criminal, toxicologia forense e medicina legal. Forma√ß√£o aplicada para profissionais e estudantes da √°rea forense.',
   alternates: {
     canonical: pageUrl,
     languages: {
@@ -17,24 +17,24 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'pt_BR',
     url: pageUrl,
-    title: 'Cursos de PerÌcia Criminal e InvestigaÁ„o Forense | InvestigaÁ„o Forense',
+    title: 'Cursos de Per√≠cia Criminal e Investiga√ß√£o Forense | Investiga√ß√£o Forense',
     description:
-      'Acesse cursos com foco pr·tico em investigaÁ„o forense e desenvolvimento tÈcnico para atuaÁ„o profissional.',
-    siteName: 'InvestigaÁ„o Forense',
+      'Acesse cursos com foco pr√°tico em investiga√ß√£o forense e desenvolvimento t√©cnico para atua√ß√£o profissional.',
+    siteName: 'Investiga√ß√£o Forense',
     images: [
       {
         url: ogImage,
         width: 1200,
         height: 630,
-        alt: 'Cursos de perÌcia criminal e investigaÁ„o forense',
+        alt: 'Cursos de per√≠cia criminal e investiga√ß√£o forense',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Cursos de PerÌcia Criminal e InvestigaÁ„o Forense | InvestigaÁ„o Forense',
+    title: 'Cursos de Per√≠cia Criminal e Investiga√ß√£o Forense | Investiga√ß√£o Forense',
     description:
-      'FormaÁ„o forense com cursos aplicados em criminalÌstica, toxicologia e medicina legal.',
+      'Forma√ß√£o forense com cursos aplicados em criminal√≠stica, toxicologia e medicina legal.',
     images: [ogImage],
   },
 };
@@ -48,33 +48,33 @@ type Course = {
 
 const courses: Course[] = [
   {
-    title: 'Curso de CriminalÌstica',
+    title: 'Curso de Criminal√≠stica',
     description:
-      'Fundamentos e tÈcnicas avanÁadas de criminalÌstica para atuaÁ„o em investigaÁ„o e produÁ„o de prova tÈcnica.',
+      'Fundamentos e t√©cnicas avan√ßadas de criminal√≠stica para atua√ß√£o em investiga√ß√£o e produ√ß√£o de prova t√©cnica.',
     purchaseUrl: 'https://go.hotmart.com/G95791521G?dp=1',
   },
   {
     title: 'Curso de Toxicologia Forense',
     description:
-      'EspecializaÁ„o em an·lise toxicolÛgica e identificaÁ„o de subst‚ncias em contextos periciais.',
+      'Especializa√ß√£o em an√°lise toxicol√≥gica e identifica√ß√£o de subst√¢ncias em contextos periciais.',
     purchaseUrl: 'https://pay.hotmart.com/B60779024B?off=p8pznmfb',
   },
   {
     title: 'Curso de Medicina Legal',
     description:
-      'PrincÌpios e pr·ticas de medicina legal aplicados ‡ investigaÁ„o forense e ao contexto jurÌdico.',
+      'Princ√≠pios e pr√°ticas de medicina legal aplicados √† investiga√ß√£o forense e ao contexto jur√≠dico.',
     purchaseUrl: 'https://go.hotmart.com/E60780435Q',
   },
   {
-    title: 'PerÌcia Digital (Em breve)',
+    title: 'Per√≠cia Digital (Em breve)',
     description:
-      'TÈcnicas de perÌcia em inform·tica: an·lise de malware, recuperaÁ„o de dados, metadados e rastreamento digital.',
+      'T√©cnicas de per√≠cia em inform√°tica: an√°lise de malware, recupera√ß√£o de dados, metadados e rastreamento digital.',
     status: 'coming-soon',
   },
   {
-    title: 'SeguranÁa da InformaÁ„o (Em breve)',
+    title: 'Seguran√ßa da Informa√ß√£o (Em breve)',
     description:
-      'Defesa contra phishing, engenharia social, deepfakes e outras ameaÁas digitais em ambientes reais.',
+      'Defesa contra phishing, engenharia social, deepfakes e outras amea√ßas digitais em ambientes reais.',
     status: 'coming-soon',
   },
 ];
@@ -83,10 +83,10 @@ export default function CursosPage() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">
       <section className="px-8 py-16 text-center">
-        <h1 className="text-5xl font-bold text-white mb-8">Cursos de PerÌcia Criminal e InvestigaÁ„o Forense</h1>
+        <h1 className="text-5xl font-bold text-white mb-8">Cursos de Per√≠cia Criminal e Investiga√ß√£o Forense</h1>
         <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-          FormaÁ„o tÈcnica com foco pr·tico para quem deseja atuar com rigor cientÌfico em perÌcia criminal,
-          investigaÁ„o forense e an·lise de evidÍncias.
+          Forma√ß√£o t√©cnica com foco pr√°tico para quem deseja atuar com rigor cient√≠fico em per√≠cia criminal,
+          investiga√ß√£o forense e an√°lise de evid√™ncias.
         </p>
       </section>
 
@@ -119,17 +119,18 @@ export default function CursosPage() {
       </section>
 
       <section className="px-8 pb-16 text-center">
-        <h2 className="text-3xl font-bold text-white mb-6">Conte˙do completo na Hotmart</h2>
+        <h2 className="text-3xl font-bold text-white mb-6">Conte√∫do completo na Hotmart</h2>
         <p className="text-gray-300 mb-8 max-w-2xl mx-auto text-lg">
-          Os cursos incluem videoaulas, materiais de apoio e certificado de conclus„o. Use o bot„o do curso desejado
-          para acessar a p·gina oficial de matrÌcula.
+          Os cursos incluem videoaulas, materiais de apoio e certificado de conclus√£o. Use o bot√£o do curso desejado
+          para acessar a p√°gina oficial de matr√≠cula.
         </p>
         <div className="text-gray-300 space-y-2">
-          <p>Qualidade tÈcnica e did·tica aplicada</p>
-          <p>Suporte para evoluÁ„o profissional</p>
-          <p>Certificado ao final de cada formaÁ„o</p>
+          <p>Qualidade t√©cnica e did√°tica aplicada</p>
+          <p>Suporte para evolu√ß√£o profissional</p>
+          <p>Certificado ao final de cada forma√ß√£o</p>
         </div>
       </section>
     </main>
   );
 }
+
