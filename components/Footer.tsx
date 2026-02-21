@@ -110,7 +110,7 @@ export default function Footer() {
               <Link href="/contato" className="text-gray-400 hover:text-white transition-colors duration-200">
                 Contato
               </Link>
-              <Link href="https://www.investigacaoforense.com/cursos" className="text-gray-400 hover:text-white transition-colors duration-200">
+              <Link href="/cursos" className="text-gray-400 hover:text-white transition-colors duration-200">
                 Cursos
               </Link>
             </nav>

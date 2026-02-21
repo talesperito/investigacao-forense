@@ -1,213 +1,183 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
+
+const pageUrl = 'https://www.investigacaoforense.com/servicos';
+const ogImage = 'https://www.investigacaoforense.com/images/metascope/screenshot-1-v2.png';
+
+export const metadata: Metadata = {
+  title: 'Serviços e Modelos de Entrega | Investigação Forense',
+  description:
+    'Entenda como trabalhamos: projeto fechado, squad sob demanda, evolução contínua e consultoria técnica para operações críticas.',
+  alternates: {
+    canonical: pageUrl,
+    languages: {
+      'pt-BR': pageUrl,
+    },
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'pt_BR',
+    url: pageUrl,
+    title: 'Serviços e Modelos de Entrega | Investigação Forense',
+    description:
+      'Veja como contratamos e executamos projetos: escopo, governança, rastreabilidade e modelos de entrega.',
+    siteName: 'Investigação Forense',
+    images: [
+      {
+        url: ogImage,
+        width: 1200,
+        height: 630,
+        alt: 'Serviços e modelos de entrega - Investigação Forense',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Serviços e Modelos de Entrega | Investigação Forense',
+    description:
+      'Entenda o modelo de contratação e execução para projetos de software em operações críticas.',
+    images: [ogImage],
+  },
+};
+
+const deliveryModels = [
+  {
+    name: 'Projeto fechado por escopo',
+    when:
+      'Ideal para demandas com objetivo claro, prazo definido e entregáveis bem delimitados.',
+    includes: [
+      'Levantamento técnico e escopo formal',
+      'Cronograma com marcos e critérios de aceite',
+      'Entrega homologada e transferência de conhecimento',
+    ],
+  },
+  {
+    name: 'Squad especializado sob demanda',
+    when:
+      'Para organizações que precisam acelerar backlog e manter cadência de evolução técnica.',
+    includes: [
+      'Apoio contínuo em produto, engenharia e dados',
+      'Planejamento iterativo e priorização por impacto',
+      'Ritmo de entrega com visibilidade executiva',
+    ],
+  },
+  {
+    name: 'Evolução contínua de produto',
+    when:
+      'Quando a plataforma já existe e precisa ganhar robustez, segurança e escala operacional.',
+    includes: [
+      'Roadmap evolutivo orientado a risco e valor',
+      'Refino de arquitetura e integrações críticas',
+      'Melhoria contínua de performance e confiabilidade',
+    ],
+  },
+  {
+    name: 'Consultoria técnica e compliance',
+    when:
+      'Para cenários com alta exigência de rastreabilidade, auditoria, perícia e governança.',
+    includes: [
+      'Diagnóstico técnico de processos e sistemas',
+      'Recomendações priorizadas e plano de adequação',
+      'Suporte em validação técnica e documentação',
+    ],
+  },
+];
+
+const steps = [
+  {
+    title: '1. Diagnóstico inicial',
+    text: 'Mapeamos contexto, risco operacional, requisitos técnicos e objetivo de negócio.',
+  },
+  {
+    title: '2. Estratégia de execução',
+    text: 'Definimos modelo de entrega, escopo, governança e indicadores de acompanhamento.',
+  },
+  {
+    title: '3. Entrega com rastreabilidade',
+    text: 'Executamos com documentação técnica, checkpoints e validação objetiva dos resultados.',
+  },
+];
 
 export default function ServicosPage() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">
-      {/* SEÇÃO 1: HERO/HEADER */}
       <section className="px-4 md:px-8 py-20 text-center bg-gradient-to-br from-gray-900 via-gray-800 to-black">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-          Nossos Serviços
+          Serviços e Modelos de Entrega
         </h1>
-        <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
-          Soluções tecnológicas personalizadas para transformar seu negócio
+        <p className="text-lg md:text-xl text-gray-300 max-w-4xl mx-auto">
+          Esta página explica como contratamos e executamos projetos. Para conhecer as aplicações e
+          soluções disponíveis, acesse a página de Soluções.
         </p>
       </section>
 
-      {/* SEÇÃO 2: INTRODUÇÃO */}
       <section className="px-4 md:px-8 py-12 bg-gray-900/50">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="text-base md:text-lg text-gray-300 leading-relaxed">
-            Combinamos expertise técnica, experiência operacional e visão estratégica para entregar soluções que resolvem problemas reais. Cada projeto é desenhado sob medida, com foco em segurança, performance e impacto mensurável no seu dia a dia.
-          </p>
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+          {steps.map((step) => (
+            <div key={step.title} className="rounded-xl border border-gray-700 bg-gray-800/50 p-6">
+              <h2 className="text-xl font-bold text-white mb-3">{step.title}</h2>
+              <p className="text-gray-300 leading-relaxed">{step.text}</p>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* SEÇÃO 3: GRID DE SERVIÇOS */}
       <section className="px-4 md:px-8 py-16">
         <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center">
+            Escolha o modelo de entrega mais aderente
+          </h2>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            
-            {/* SERVIÇO 1 */}
-            <div className="bg-gray-800/50 border border-gray-700 rounded-xl p-8 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl flex flex-col">
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
-                Desenvolvimento de Sistemas e Aplicações Sob Medida
-              </h2>
-              <h3 className="text-lg text-blue-400 mb-4 font-semibold">
-                Sistemas Personalizados com Foco em Segurança
-              </h3>
-              <p className="text-gray-300 mb-6 leading-relaxed">
-                Desenvolvemos soluções tecnológicas sob medida com foco em proteção e integridade dos dados. Os sistemas são projetados para ambientes que exigem controle de documentos, rastreabilidade de operações e verificação de autenticidade de arquivos. Aplicamos criptografia, logs auditáveis e arquitetura resiliente para garantir acesso seguro e governança das informações em contextos de alta responsabilidade.
-              </p>
-              <ul className="space-y-2 mb-6">
-                <li className="text-gray-400 flex items-start">
-                  <span className="mr-2">•</span>
-                  <span>Verificação de integridade de arquivos e documentos</span>
-                </li>
-                <li className="text-gray-400 flex items-start">
-                  <span className="mr-2">•</span>
-                  <span>Sistemas com trilha de auditoria completa</span>
-                </li>
-                <li className="text-gray-400 flex items-start">
-                  <span className="mr-2">•</span>
-                  <span>Criptografia e controle de acesso granular</span>
-                </li>
-                <li className="text-gray-400 flex items-start">
-                  <span className="mr-2">•</span>
-                  <span>Conformidade com LGPD e normas de segurança</span>
-                </li>
-              </ul>
-              <Link 
-                href="/contato"
-                className="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200 mt-auto"
+            {deliveryModels.map((model) => (
+              <article
+                key={model.name}
+                className="bg-gray-800/50 border border-gray-700 rounded-xl p-8 shadow-lg flex flex-col"
               >
-                Solicitar Orçamento
-              </Link>
-            </div>
+                <h3 className="text-2xl font-bold text-white mb-3">{model.name}</h3>
+                <p className="text-blue-300 font-semibold mb-4">Quando usar</p>
+                <p className="text-gray-300 mb-6 leading-relaxed">{model.when}</p>
 
-            {/* SERVIÇO 2 */}
-            <div className="bg-gray-800/50 border border-gray-700 rounded-xl p-8 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl flex flex-col">
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
-                Criação de Plataformas SaaS para Negócios e Operações
-              </h2>
-              <h3 className="text-lg text-blue-400 mb-4 font-semibold">
-                Plataformas Escaláveis que Impulsionam Seu Negócio
-              </h3>
-              <p className="text-gray-300 mb-6 leading-relaxed">
-                Transforme sua ideia em uma plataforma robusta e lucrativa. Desenvolvemos soluções SaaS completas, do conceito ao lançamento, com foco em escalabilidade, experiência do usuário e receita recorrente. A solução pode incluir gestão documental, dashboards analíticos, automações e integrações com ferramentas já usadas pelo seu time. Entregamos infraestrutura em nuvem com segurança ponta a ponta e suporte técnico especializado para acelerar a digitalização de processos.
-              </p>
-              <ul className="space-y-2 mb-6">
-                <li className="text-gray-400 flex items-start">
-                  <span className="mr-2">•</span>
-                  <span>Arquitetura multi-tenant escalável</span>
-                </li>
-                <li className="text-gray-400 flex items-start">
-                  <span className="mr-2">•</span>
-                  <span>Dashboards e relatórios em tempo real</span>
-                </li>
-                <li className="text-gray-400 flex items-start">
-                  <span className="mr-2">•</span>
-                  <span>Modelo de receita recorrente (MRR)</span>
-                </li>
-                <li className="text-gray-400 flex items-start">
-                  <span className="mr-2">•</span>
-                  <span>Integrações com sistemas legados e APIs</span>
-                </li>
-              </ul>
-              <Link 
-                href="/contato"
-                className="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200 mt-auto"
-              >
-                Solicitar Orçamento
-              </Link>
-            </div>
+                <p className="text-white font-semibold mb-3">O que está incluído</p>
+                <ul className="space-y-2 mb-8">
+                  {model.includes.map((item) => (
+                    <li key={item} className="text-gray-300">
+                      - {item}
+                    </li>
+                  ))}
+                </ul>
 
-            {/* SERVIÇO 3 */}
-            <div className="bg-gray-800/50 border border-gray-700 rounded-xl p-8 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl flex flex-col">
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
-                Consultoria Técnica em Perícias, Auditoria e Rastreabilidade
-              </h2>
-              <h3 className="text-lg text-blue-400 mb-4 font-semibold">
-                Expertise Forense Aplicada à Tecnologia
-              </h3>
-              <p className="text-gray-300 mb-6 leading-relaxed">
-                Com mais de 20 anos de experiência em segurança pública, investigação e gestão operacional, oferecemos consultoria para organizações que precisam de rigor técnico aplicado à tecnologia. Atuamos com auditoria de sistemas, conformidade, laudos técnicos e implantação de controles de rastreabilidade. A proposta é identificar vulnerabilidades, estruturar processos robustos e preparar ambientes para auditorias e certificações.
-              </p>
-              <ul className="space-y-2 mb-6">
-                <li className="text-gray-400 flex items-start">
-                  <span className="mr-2">•</span>
-                  <span>Análise forense de sistemas e dados</span>
-                </li>
-                <li className="text-gray-400 flex items-start">
-                  <span className="mr-2">•</span>
-                  <span>Elaboração de laudos e pareceres técnicos</span>
-                </li>
-                <li className="text-gray-400 flex items-start">
-                  <span className="mr-2">•</span>
-                  <span>Implementação de trilhas de auditoria</span>
-                </li>
-                <li className="text-gray-400 flex items-start">
-                  <span className="mr-2">•</span>
-                  <span>Preparação para certificações (ISO, SOC2, etc)</span>
-                </li>
-                <li className="text-gray-400 flex items-start">
-                  <span className="mr-2">•</span>
-                  <span>Mais de duas décadas em ambientes críticos</span>
-                </li>
-              </ul>
-              <Link 
-                href="/contato"
-                className="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200 mt-auto"
-              >
-                Solicitar Orçamento
-              </Link>
-            </div>
-
-            {/* SERVIÇO 4 */}
-            <div className="bg-gray-800/50 border border-gray-700 rounded-xl p-8 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl flex flex-col">
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
-                Gestão de Projetos, Processos e Integrações Tecnológicas
-              </h2>
-              <h3 className="text-lg text-blue-400 mb-4 font-semibold">
-                Orquestramos Tecnologia, Conectamos Ecossistemas
-              </h3>
-              <p className="text-gray-300 mb-6 leading-relaxed">
-                Tecnologia só gera valor quando funciona em harmonia. Coordenamos equipes, integramos sistemas legados com soluções modernas e desenhamos processos práticos para a operação do dia a dia. Mapeamos fluxos, identificamos gargalos, propomos automações e garantimos integração entre plataformas sem fricção. Também conduzimos a implementação de ponta a ponta, com capacitação da equipe para uma operação autônoma.
-              </p>
-              <ul className="space-y-2 mb-6">
-                <li className="text-gray-400 flex items-start">
-                  <span className="mr-2">•</span>
-                  <span>Integração entre sistemas (ERPs, CRMs, legados)</span>
-                </li>
-                <li className="text-gray-400 flex items-start">
-                  <span className="mr-2">•</span>
-                  <span>Mapeamento e otimização de processos</span>
-                </li>
-                <li className="text-gray-400 flex items-start">
-                  <span className="mr-2">•</span>
-                  <span>Gestão ágil de projetos tecnológicos</span>
-                </li>
-                <li className="text-gray-400 flex items-start">
-                  <span className="mr-2">•</span>
-                  <span>Migração de dados e modernização de sistemas</span>
-                </li>
-                <li className="text-gray-400 flex items-start">
-                  <span className="mr-2">•</span>
-                  <span>Capacitação de equipes e transferência de conhecimento</span>
-                </li>
-              </ul>
-              <Link 
-                href="/contato"
-                className="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200 mt-auto"
-              >
-                Solicitar Orçamento
-              </Link>
-            </div>
-
+                <Link
+                  href="/contato"
+                  className="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200 mt-auto"
+                >
+                  Conversar sobre este modelo
+                </Link>
+              </article>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* SEÇÃO 4: CALL TO ACTION FINAL */}
-      <section className="px-4 md:px-8 py-16 bg-gradient-to-r from-blue-900 to-blue-700">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Vamos Conversar Sobre Seu Projeto?
-          </h2>
-          <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed">
-            Agende uma conversa sem compromisso e descubra como podemos ajudar sua organização a alcançar novos patamares através da tecnologia.
+      <section className="px-4 md:px-8 pb-16">
+        <div className="max-w-4xl mx-auto rounded-xl border border-blue-700 bg-gradient-to-r from-blue-950 to-blue-900 p-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Precisa de orientação inicial?</h2>
+          <p className="text-white/90 mb-8">
+            Se ainda estiver avaliando o melhor caminho, podemos indicar a combinação entre aplicação,
+            serviço e modelo de entrega para o seu cenário.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
+            <Link
               href="/contato"
               className="bg-white hover:bg-gray-100 text-blue-900 px-8 py-3 rounded-lg font-bold transition-colors duration-200 inline-block"
             >
               Falar com Especialista
             </Link>
-            <Link 
+            <Link
               href="/aplicacoes"
               className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded-lg font-bold transition-all duration-200 inline-block"
             >
-              Ver Aplicações
+              Ver Soluções
             </Link>
           </div>
         </div>
@@ -215,3 +185,4 @@ export default function ServicosPage() {
     </main>
   );
 }
+

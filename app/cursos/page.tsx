@@ -1,60 +1,107 @@
-'use client';
+import type { Metadata } from 'next';
+
+const pageUrl = 'https://www.investigacaoforense.com/cursos';
+const ogImage = 'https://www.investigacaoforense.com/tales.PNG';
+
+export const metadata: Metadata = {
+  title: 'Cursos de Perícia Criminal e Investigação Forense | Investigação Forense',
+  description:
+    'Cursos especializados em perícia criminal, toxicologia forense e medicina legal. Formação aplicada para profissionais e estudantes da área forense.',
+  alternates: {
+    canonical: pageUrl,
+    languages: {
+      'pt-BR': pageUrl,
+    },
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'pt_BR',
+    url: pageUrl,
+    title: 'Cursos de Perícia Criminal e Investigação Forense | Investigação Forense',
+    description:
+      'Acesse cursos com foco prático em investigação forense e desenvolvimento técnico para atuação profissional.',
+    siteName: 'Investigação Forense',
+    images: [
+      {
+        url: ogImage,
+        width: 1200,
+        height: 630,
+        alt: 'Cursos de perícia criminal e investigação forense',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Cursos de Perícia Criminal e Investigação Forense | Investigação Forense',
+    description:
+      'Formação forense com cursos aplicados em criminalística, toxicologia e medicina legal.',
+    images: [ogImage],
+  },
+};
+
+type Course = {
+  title: string;
+  description: string;
+  purchaseUrl?: string;
+  status?: 'coming-soon';
+};
+
+const courses: Course[] = [
+  {
+    title: 'Curso de Criminalística',
+    description:
+      'Fundamentos e técnicas avançadas de criminalística para atuação em investigação e produção de prova técnica.',
+    purchaseUrl: 'https://go.hotmart.com/G95791521G?dp=1',
+  },
+  {
+    title: 'Curso de Toxicologia Forense',
+    description:
+      'Especialização em análise toxicológica e identificação de substâncias em contextos periciais.',
+    purchaseUrl: 'https://pay.hotmart.com/B60779024B?off=p8pznmfb',
+  },
+  {
+    title: 'Curso de Medicina Legal',
+    description:
+      'Princípios e práticas de medicina legal aplicados à investigação forense e ao contexto jurídico.',
+    purchaseUrl: 'https://go.hotmart.com/E60780435Q',
+  },
+  {
+    title: 'Perícia Digital (Em breve)',
+    description:
+      'Técnicas de perícia em informática: análise de malware, recuperação de dados, metadados e rastreamento digital.',
+    status: 'coming-soon',
+  },
+  {
+    title: 'Segurança da Informação (Em breve)',
+    description:
+      'Defesa contra phishing, engenharia social, deepfakes e outras ameaças digitais em ambientes reais.',
+    status: 'coming-soon',
+  },
+];
 
 export default function CursosPage() {
-  const courses = [
-    {
-      title: "Curso de Criminalistica",
-      description: "Aprenda os fundamentos e tÃ©cnicas avanÃ§adas da criminalistica forense.",
-      purchaseUrl: "https://go.hotmart.com/G95791521G?dp=1"
-    },
-    {
-      title: "Curso de Toxicologia Forense",
-      description: "EspecializaÃ§Ã£o em anÃ¡lise toxicolÃ³gica e detecÃ§Ã£o de substÃ¢ncias em casos forenses.",
-      purchaseUrl: "https://pay.hotmart.com/B60779024B?off=p8pznmfb"
-    },
-    {
-      title: "Curso de Medicina Legal",
-      description: "Estude os princÃ­pios e prÃ¡ticas da medicina legal aplicada Ã  investigaÃ§Ã£o.",
-      purchaseUrl: "https://go.hotmart.com/E60780435Q"
-    },
-        {
-      title: "PerÃ­cia Digital (Em breve)",
-      description: "Explore principais tÃ©cnicas de perÃ­cia de informÃ¡tica na investigaÃ§Ã£o. Aprenda anÃ¡lise de malware, recuperaÃ§Ã£o de dados deletados, anÃ¡lise de metadados e rastreamento digital.",
-      status: "coming-soon"
-    },
-    {
-      title: "SeguranÃ§a da InformaÃ§Ã£o (Em breve)",
-      description: "Descubra como identificar e prevenir deep fakes, engenharia social, phishing e outros ataques cibernÃ©ticos. Proteja-se contra ameaÃ§as digitais modernas.",
-      status: "coming-soon"
-    }
-  ];
-
   return (
     <main className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">
-      {/* Header */}
       <section className="px-8 py-16 text-center">
-        <h1 className="text-5xl font-bold text-white mb-8">Nossos Cursos</h1>
-        <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-          Desenvolva suas habilidades em investigaÃ§Ã£o forense com nossos cursos especializados oferecidos na plataforma Hotmart.
+        <h1 className="text-5xl font-bold text-white mb-8">Cursos de Perícia Criminal e Investigação Forense</h1>
+        <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          Formação técnica com foco prático para quem deseja atuar com rigor científico em perícia criminal,
+          investigação forense e análise de evidências.
         </p>
       </section>
 
-      {/* Courses Grid */}
       <section className="px-8 py-16">
         <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-8">
-            {courses.map((course, index) => (
-              <div key={index} className="bg-gray-white/5 rounded-lg p-8 hover:bg-gray-white/10 transition border border-gray-700">
-                <div className="flex items-start justify-between">
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-white mb-4">{course.title}</h3>
-                    <p className="text-gray-300 mb-6 text-lg">{course.description}</p>
-                  </div>
-                </div>
-                                {course.status === "coming-soon" ? (
-                  <div className="inline-block bg-gray-700 text-white font-bold py-3 px-8 rounded">
-                    Em Breve
-                  </div>
+          <div className="grid grid-cols-1 gap-8">
+            {courses.map((course) => (
+              <article key={course.title} className="rounded-lg p-8 transition border border-gray-700 bg-gray-900/50 hover:border-blue-500">
+                <h2 className="text-2xl font-bold text-white mb-4">{course.title}</h2>
+                <p className="text-gray-300 mb-6 text-lg">{course.description}</p>
+
+                {course.status === 'coming-soon' ? (
+                  <span className="inline-block bg-gray-700 text-white font-bold py-3 px-8 rounded">
+                    Em breve
+                  </span>
                 ) : (
                   <a
                     href={course.purchaseUrl}
@@ -62,25 +109,25 @@ export default function CursosPage() {
                     rel="noopener noreferrer"
                     className="inline-block bg-blue-600 text-white font-bold py-3 px-8 rounded hover:bg-blue-700 transition"
                   >
-                    Comprar Agora
+                    Acessar curso
                   </a>
                 )}
-              </div>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Info Section */}
-      <section className="bg-gray-white/5 px-8 py-16 text-center">
-        <h2 className="text-3xl font-bold text-white mb-6">Todos os Cursos DisponÃ­veis na Hotmart</h2>
-        <p className="text-gray-400 mb-8 max-w-2xl mx-auto text-lg">
-          Acesse os cursos completos com videoaulas, materiais de apoio e certificado de conclusÃ£o. Clique no botÃ£o "Comprar Agora" para ir Ã  pÃ¡gina de vendas.
+      <section className="px-8 pb-16 text-center">
+        <h2 className="text-3xl font-bold text-white mb-6">Conteúdo completo na Hotmart</h2>
+        <p className="text-gray-300 mb-8 max-w-2xl mx-auto text-lg">
+          Os cursos incluem videoaulas, materiais de apoio e certificado de conclusão. Use o botão do curso desejado
+          para acessar a página oficial de matrícula.
         </p>
-        <div className="text-gray-400">
-          <p>ðŸŒŸ Qualidade garantida</p>
-          <p>ðŸ’« Suporte ao aluno</p>
-          <p>ðŸŽ¯ Certificado ao final</p>
+        <div className="text-gray-300 space-y-2">
+          <p>Qualidade técnica e didática aplicada</p>
+          <p>Suporte para evolução profissional</p>
+          <p>Certificado ao final de cada formação</p>
         </div>
       </section>
     </main>

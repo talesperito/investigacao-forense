@@ -22,12 +22,6 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.investigacaoforense.com/solucoes</loc>
-    <lastmod>2026-01-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
     <loc>https://www.investigacaoforense.com/aplicacoes</loc>
     <lastmod>2026-01-05</lastmod>
     <changefreq>monthly</changefreq>
@@ -70,32 +64,6 @@
     <lastmod>2026-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-  </url>
-  
-  <!-- Blog -->
-  <url>
-    <loc>https://www.investigacaoforense.com/blog</loc>
-    <lastmod>2026-01-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.investigacaoforense.com/blog/ia-pericia-criminal</loc>
-    <lastmod>2026-01-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.investigacaoforense.com/blog/tecnologia-pericia</loc>
-    <lastmod>2026-01-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.investigacaoforense.com/blog/desafios-eticos</loc>
-    <lastmod>2026-01-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
   </url>
   
   <!-- Legal Pages -->
