@@ -52,6 +52,15 @@ function DemoSeal() {
   );
 }
 
+function CardCta({ href = "/contato", label = "Solicitar detalhes do projeto" }: { href?: string; label?: string }) {
+  return (
+    <div className="mt-5 pt-3 border-t border-gray-700/70">
+      <a href={href} className="text-sm font-semibold text-blue-300 hover:text-blue-200 transition-colors">
+        {label}
+      </a>
+    </div>
+  );
+}
 export default function PortfolioPage() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">
@@ -59,10 +68,16 @@ export default function PortfolioPage() {
       <section className="py-20 px-4 bg-gradient-to-r from-gray-900 to-gray-800">
         <div className="max-w-5xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Plataforma de Tecnologia para Investigação e Perícia Digital
+            Portfólio de Projetos em Perícia Digital e Investigação Forense
           </h1>
           <p className="text-xl text-gray-300 mb-6">
-            Desenvolvemos software e plataformas de dados para investigação forense, perícia digital e análise de evidências. Nossas soluções combinam engenharia de software, BI, automação e ciência de dados para apoiar equipes periciais, jurídicas e de auditoria em ambientes de alta responsabilidade.
+            Reunimos projetos executados e em evolução nas áreas de perícia digital, investigação forense, análise de evidências, BI e automação. Desenvolvemos soluções para equipes periciais, jurídicas e de compliance que precisam de rastreabilidade, integridade e apoio à decisão em ambientes críticos.
+            <br /><br />
+            Para conhecer as soluções disponíveis para contratação e demonstração, acesse a página de{" "}
+            <a href="/aplicacoes" className="underline underline-offset-4 decoration-gray-400 hover:decoration-blue-300 transition-colors">
+              Soluções
+            </a>
+            .
           </p>
         </div>
       </section>
@@ -88,13 +103,15 @@ export default function PortfolioPage() {
               </h2>
               <p className="text-blue-400 font-semibold mb-4">Especialista em Perícia Digital e Ciência de Dados Forense</p>
               <p className="text-gray-300 leading-relaxed">
-                Perito Oficial da Polícia Civil de Minas Gerais desde 2005.
-                Possui graduação e mestrado em Química pela UFMG, doutorado
-                em Química pela UFLA e Pós-Doutorado em Ciência de Dados pela UFLA.
-                Professor universitário e palestrante desde 2004.
+                Perito Oficial da Polícia Civil de Minas Gerais desde 2005, com
+                mestrado em Química Analítica pela UFMG, doutorado em Química pela UFLA e
+                pós-doutorado em Ciência de Dados pela UFLA.
               </p>
               <p className="text-gray-300 leading-relaxed">
-                Pesquisador e perito atuando no desenvolvimento de métodos computacionais, IA e sistemas para investigação forense e validação de evidências digitais. Especializado em análise de dados forenses, rastreabilidade de provas e auditoria técnica.
+                Atua em perícia digital, investigação forense e validação de
+                evidências, com foco em métodos computacionais, IA aplicada e
+                rastreabilidade técnica. Desde 2019, exerce gestão regional da
+                perícia, integrando liderança operacional e inovação tecnológica.
               </p>
 
               <div className="pt-4">
@@ -120,15 +137,18 @@ export default function PortfolioPage() {
               <h2 className="text-3xl font-bold text-white mb-2">
                 Matheus Vieira
               </h2>
-              <p className="text-blue-400 font-semibold mb-4">Engenheiro de Software Forense</p>
+              <p className="text-blue-400 font-semibold mb-4">Desenvolvedor Full Stack</p>
               <p className="text-gray-300 leading-relaxed">
-                Graduado em Análise e Desenvolvimento de Sistemas pelo Unilavras e
-                graduando pelo 4° período em Direito pela UFLA. Estagiário de Performance
-                e Dados na Critéria Financial Group.
-                Diretor do Grupo de Estudos em Perícia e Investigação Digital (GEPID).
+                Desenvolvedor Full Stack com foco em software para perícia
+                digital, investigação forense e análise de dados.
               </p>
               <p className="text-gray-300 leading-relaxed">
-                Desenvolvedor full-stack especializado em plataformas de investigação forense, análise de dados, automação de evidências e sistemas de laudos periciais. Atua com BI, compliance e soluções de rastreabilidade para instituições públicas e privadas.
+                Atua no desenvolvimento de plataformas SaaS, BI e automação para
+                governança documental, auditoria e compliance. Estagiário de
+                Performance e Dados na Critéria Financial Group e diretor do
+                Grupo de Estudos em Perícia e Investigação Digital (GEPID), com
+                experiência prática em arquitetura, integrações e produtos para
+                ambientes críticos.
               </p>
 
               <div className="pt-4">
@@ -161,13 +181,13 @@ export default function PortfolioPage() {
       <section className="py-16 px-4 bg-gray-900/50">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-white mb-12 text-center">
-            Projetos e Atuação
+            Projetos em Produção e Evolução
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
             {/* 1 */}
-            <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all">
+            <div className="order-9 bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all flex flex-col">
               <h3 className="text-xl font-bold text-white mb-2">
                 BI para Segurança Pública e Investigação Forense (2024)
               </h3>
@@ -183,10 +203,10 @@ export default function PortfolioPage() {
                 </span>
               </div>
               <p className="text-gray-300 text-sm">
-                Projeto concluído com dashboards construídos para apoiar a gestão pericial e decisões operacionais na segurança pública. A solução organiza dados de múltiplas frentes em painéis de análise com foco em rastreabilidade e leitura gerencial.
+                Projeto concluído com dashboards para apoiar a gestão pericial e decisões operacionais na segurança pública. A solução organiza dados de múltiplas frentes em painéis com foco em rastreabilidade e leitura gerencial.
                 <br /><br />
-                Resultado prático: ganho superior a 60% na agilidade das análises de gestão. Aplicação direcionada ao contexto institucional da PCMG.
-                <br /><br />
+                Resultado prático: ganho superior a 60% na agilidade das análises institucionais da PCMG.
+                <br />
                 <a
                   href="https://link.springer.com/chapter/10.1007/978-3-032-05008-3_17"
                   target="_blank"
@@ -196,11 +216,13 @@ export default function PortfolioPage() {
                   Ver publicação científica
                 </a>
               </p>
+              <div className="mt-auto">
+                <CardCta />
+              </div>
             </div>
 
             {/* 2 */}
-            <div className="relative bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all">
-              <DemoSeal />
+            <div className="order-8 relative bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all flex flex-col">
               <h3 className="text-xl font-bold text-white mb-2 pr-16">
                 FaceID Forense
                 <br />
@@ -222,10 +244,13 @@ export default function PortfolioPage() {
                 <br /><br />
                 Desempenho atual: 100% de acerto em rostos individuais e acima de 85% em imagens com múltiplos rostos. Está em fase final de desenvolvimento para operação prática ampliada.
               </p>
+              <div className="mt-auto">
+                <CardCta />
+              </div>
             </div>
 
             {/* 3 */}
-            <div className="relative bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all">
+            <div className="order-5 relative bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all flex flex-col">
               <DemoSeal />
               <h3 className="text-xl font-bold text-white mb-2 pr-16">
                 EvidenceOS: Gestão de Evidências e Vestígios
@@ -246,10 +271,13 @@ export default function PortfolioPage() {
                 <br /><br />
                 O sistema emite relatórios e alertas, permite agendamento de retirada e opera com MySQL. Está em fase de hospedagem e deploy (Hostinger) para compartilhamento regional.
               </p>
+              <div className="mt-auto">
+                <CardCta />
+              </div>
             </div>
 
             {/* 4 */}
-            <div className="relative bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all">
+            <div className="order-1 relative bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all flex flex-col">
               <DemoSeal />
               <h3 className="text-xl font-bold text-white mb-2 pr-16">
                 MetaScope — Software de Perícia Digital
@@ -270,10 +298,13 @@ export default function PortfolioPage() {
                 <br /><br />
                 Atualmente em fase de testes com comunidades e parceiros, com evolução contínua do motor analítico e aplicação em cenários de perícia, compliance, advocacia e jornalismo investigativo.
               </p>
+              <div className="mt-auto">
+                <CardCta />
+              </div>
             </div>
 
             {/* 5 */}
-            <div className="relative bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all">
+            <div className="order-6 relative bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all flex flex-col">
               <DemoSeal />
               <h3 className="text-xl font-bold text-white mb-2 pr-16">
                 CondoHub & Sistema de Auditoria Geolocalizada
@@ -294,10 +325,13 @@ export default function PortfolioPage() {
                 <br /><br />
                 Inclui ponto eletrônico, integridade de documentos, agendamentos, atas, ocorrências e recursos de auditoria geolocalizada, com posicionamento voltado a condomínios e administradoras.
               </p>
+              <div className="mt-auto">
+                <CardCta />
+              </div>
             </div>
 
             {/* 6 */}
-            <div className="relative bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all">
+            <div className="order-7 relative bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all flex flex-col">
               <DemoSeal />
               <h3 className="text-xl font-bold text-white mb-2 pr-16">
                 ScamTrace — Investigação de Fraudes
@@ -318,10 +352,13 @@ export default function PortfolioPage() {
                 <br /><br />
                 Combina análise de links suspeitos, OCR avançado e rastreabilidade de evidências, com acurácia superior a 90% em cenários de validação de fraude e suporte a compliance.
               </p>
+              <div className="mt-auto">
+                <CardCta />
+              </div>
             </div>
 
             {/* 7 */}
-            <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all">
+            <div className="order-11 bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all flex flex-col">
               <h3 className="text-xl font-bold text-white mb-2">
                 Análise e Integridade
                 <br />
@@ -343,10 +380,13 @@ export default function PortfolioPage() {
                 <br /><br />
                 Projeto em parceria com outros desenvolvedores. A arquitetura em camadas reduz consumo de tokens de LLM e acelera o fluxo com rastreabilidade.
               </p>
+              <div className="mt-auto">
+                <CardCta />
+              </div>
             </div>
 
             {/* 8 */}
-            <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all">
+            <div className="order-10 bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all flex flex-col">
               <h3 className="text-xl font-bold text-white mb-2">
                 Perícia Digital em Dispositivos Móveis
               </h3>
@@ -366,10 +406,13 @@ export default function PortfolioPage() {
                 <br /><br />
                 Projeto em parceria com outros desenvolvedores para interpretar relatórios com grafos, padrões de repetição e análise comportamental. Meta: reduzir análises de 12 horas para cerca de 2 horas.
               </p>
+              <div className="mt-auto">
+                <CardCta />
+              </div>
             </div>
 
             {/* 9 */}
-            <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all">
+            <div className="order-12 bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all flex flex-col">
               <h3 className="text-xl font-bold text-white mb-2">
                 Plataforma InvestigacaoForense.com
               </h3>
@@ -386,6 +429,103 @@ export default function PortfolioPage() {
                 <br /><br />
                 Projeto com SEO estruturado e indexação completa no Google, incluindo aprovação no Google AdSense, resultado de implementação cuidadosa de conteúdo, arquitetura e qualidade técnica.
               </p>
+              <div className="mt-auto">
+                <CardCta />
+              </div>
+            </div>
+
+            {/* 10 */}
+            <div className="order-2 bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all flex flex-col">
+              <h3 className="text-xl font-bold text-white mb-2">
+                Inspecta Manager
+                <br />
+                Gestão e Auditoria Documental
+              </h3>
+              <div className="flex gap-2 mb-3 flex-wrap">
+                <span className="text-xs px-2 py-1 rounded bg-green-600/20 text-green-400">
+                  SaaS Documental
+                </span>
+                <span className="text-xs px-2 py-1 rounded bg-blue-600/20 text-blue-400">
+                  Integridade
+                </span>
+                <span className="text-xs px-2 py-1 rounded bg-purple-600/20 text-purple-400">
+                  Auditoria
+                </span>
+                <span className="text-xs px-2 py-1 rounded border border-amber-400/30 bg-amber-500/15 text-amber-300 font-semibold">
+                  Estágio: Fase Final de Desenvolvimento
+                </span>
+              </div>
+              <p className="text-gray-300 text-sm">
+                Sistema para gestão de documentos com versionamento, controle de integridade e trilhas completas de auditoria em ambientes de alta responsabilidade.
+                <br /><br />
+                Desenvolvido em colaboração com outros devs seniors, está em fase final de evolução com foco em governança, conformidade e confiabilidade operacional.
+              </p>
+              <div className="mt-auto">
+                <CardCta />
+              </div>
+            </div>
+
+            {/* 11 */}
+            <div className="order-3 bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all flex flex-col">
+              <h3 className="text-xl font-bold text-white mb-2">
+                SynapseOS
+                <br />
+                Machine Learning Documental
+              </h3>
+              <div className="flex gap-2 mb-3 flex-wrap">
+                <span className="text-xs px-2 py-1 rounded bg-blue-600/20 text-blue-400">
+                  IA Aplicada
+                </span>
+                <span className="text-xs px-2 py-1 rounded bg-purple-600/20 text-purple-400">
+                  Machine Learning
+                </span>
+                <span className="text-xs px-2 py-1 rounded bg-cyan-600/20 text-cyan-300">
+                  Análise Documental
+                </span>
+                <span className="text-xs px-2 py-1 rounded border border-amber-400/30 bg-amber-500/15 text-amber-300 font-semibold">
+                  Estágio: MVP Avançado
+                </span>
+              </div>
+              <p className="text-gray-300 text-sm">
+                SaaS projetado para atuar como uma sinapse analítica entre dados e documentos, usando scripts robustos em Python no backend para classificação, extração e correlação de conteúdo.
+                <br /><br />
+                Já testado com relatórios complexos de investigação policial, incluindo cenários de conexão com ERBs, com foco em acelerar análise técnica e apoiar decisão operacional.
+              </p>
+              <div className="mt-auto">
+                <CardCta />
+              </div>
+            </div>
+
+            {/* 12 */}
+            <div className="order-4 relative bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all flex flex-col">
+              <DemoSeal />
+              <h3 className="text-xl font-bold text-white mb-2 pr-16">
+                EcoCompliance
+                <br />
+                SaaS de Gestão Ambiental
+              </h3>
+              <div className="flex gap-2 mb-3 flex-wrap">
+                <span className="text-xs px-2 py-1 rounded bg-green-600/20 text-green-400">
+                  SaaS Ambiental
+                </span>
+                <span className="text-xs px-2 py-1 rounded bg-blue-600/20 text-blue-400">
+                  Licenciamento
+                </span>
+                <span className="text-xs px-2 py-1 rounded bg-emerald-600/20 text-emerald-300">
+                  ESG/Carbono
+                </span>
+                <span className="text-xs px-2 py-1 rounded border border-amber-400/30 bg-amber-500/15 text-amber-300 font-semibold">
+                  Estágio: MVP em Testes
+                </span>
+              </div>
+              <p className="text-gray-300 text-sm">
+                SaaS para empresas que precisam centralizar gestão ambiental com controle de documentos, licenças e obrigações regulatórias em um ambiente auditável.
+                <br /><br />
+                Inclui sandbox de créditos de carbono para simulação e estruturação de operações, ajudando a reduzir chances de sanções ambientais e ampliar a visibilidade da empresa com estratégias de marketing verde.
+              </p>
+              <div className="mt-auto">
+                <CardCta />
+              </div>
             </div>
 
           </div>
@@ -402,8 +542,8 @@ export default function PortfolioPage() {
             <a href="/plataforma-dados-criticos" className="text-blue-400 hover:text-blue-300 font-semibold transition-colors">
               → Conheça nossa Plataforma de Dados
             </a>
-            <a href="/solucoes" className="text-blue-400 hover:text-blue-300 font-semibold transition-colors">
-              → Veja nossas Soluções
+            <a href="/aplicacoes" className="text-blue-400 hover:text-blue-300 font-semibold transition-colors">
+              → Veja nossas Aplicações
             </a>
           </div>
         </div>

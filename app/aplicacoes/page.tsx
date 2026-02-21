@@ -63,6 +63,19 @@ const applicationCards: AppCard[] = [
     cta: 'Ver página completa do MetaScope',
   },
   {
+    name: 'EvidenceOS',
+    stage: 'Produção interna',
+    summary:
+      'Sistema para gestão de evidências e vestígios com rastreabilidade do fluxo operacional, consultas estruturadas e apoio à custódia técnica.',
+    bullets: [
+      'Controle de entrada, movimentação e retirada de vestígios',
+      'Relatórios e alertas para acompanhamento operacional',
+      'Base SQL com foco em governança e conformidade pericial',
+    ],
+    href: '/contato',
+    cta: 'Solicitar apresentação do EvidenceOS',
+  },
+  {
     name: 'CondoHub',
     stage: 'MVP em testes',
     summary:
@@ -76,17 +89,17 @@ const applicationCards: AppCard[] = [
     cta: 'Ver página do CondoHub',
   },
   {
-    name: 'EcoForensics Manager',
-    stage: 'MVP em evolução',
+    name: 'Inspecta Manager',
+    stage: 'Fase final de desenvolvimento',
     summary:
-      'Projeto focado em gestão de documentos técnicos e rastreabilidade de dados para ambientes de alta responsabilidade.',
+      'Sistema para gestão de documentos com versionamento, controle de integridade e trilhas completas de auditoria.',
     bullets: [
-      'Repositório documental com integridade por hash',
-      'Auditoria e rastreabilidade de alterações',
-      'Arquitetura orientada a compliance',
+      'Versionamento e histórico completo de documentos',
+      'Integridade documental e governança operacional',
+      'Desenvolvido com outros devs seniors',
     ],
     href: '/contato',
-    cta: 'Solicitar demonstração',
+    cta: 'Solicitar demonstração do Inspecta Manager',
   },
 ];
 
