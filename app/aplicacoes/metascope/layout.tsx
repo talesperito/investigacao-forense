@@ -5,9 +5,9 @@ const pageUrl = 'https://www.investigacaoforense.com/aplicacoes/metascope';
 const ogImage = 'https://www.investigacaoforense.com/images/metascope/screenshot-1-v2.png';
 
 export const metadata: Metadata = {
-  title: 'MetaScope Forensic | Análise Forense de Arquivos, Links e Prints',
+  title: 'MetaScope Forensic | Perícia Digital e Análise Forense de Arquivos',
   description:
-    'Valide autenticidade e integridade de imagens, vídeos e documentos com hash SHA-256, metadados, detecção de indícios de IA e relatório técnico em PDF.',
+    'Perícia digital para validar autenticidade e integridade de imagens, vídeos e documentos com hash SHA-256, metadados, análise de link suspeito e relatório técnico em PDF.',
   alternates: {
     canonical: pageUrl,
     languages: {
@@ -18,9 +18,9 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'pt_BR',
     url: pageUrl,
-    title: 'MetaScope Forensic | Análise Forense de Arquivos, Links e Prints',
+    title: 'MetaScope Forensic | Perícia Digital e Análise Forense de Arquivos',
     description:
-      'Ferramenta de apoio à decisão forense para análise de arquivos, links e prints suspeitos com evidências técnicas e relatório em PDF.',
+      'Ferramenta de perícia digital para análise forense de arquivos, links suspeitos e prints com evidências técnicas e relatório em PDF.',
     siteName: 'Investigação Forense',
     images: [
       {
@@ -33,9 +33,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'MetaScope Forensic | Análise Forense de Arquivos, Links e Prints',
+    title: 'MetaScope Forensic | Perícia Digital e Análise Forense de Arquivos',
     description:
-      'Metadados, hash SHA-256, detecção de indícios de IA e relatório técnico para apoio pericial.',
+      'Perícia digital com metadados, hash SHA-256, detecção de indícios de IA e análise de link suspeito.',
     images: [ogImage],
   },
   robots: {

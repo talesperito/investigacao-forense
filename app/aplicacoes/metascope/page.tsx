@@ -150,13 +150,14 @@ export default function MetaScopePage() {
                 </div>
 
                 <h1 className="mt-6 text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900">
-                  Perícia digital em minutos para validar autenticidade e integridade de arquivos.
+                  Perícia digital e análise forense de arquivos em minutos.
                 </h1>
 
                 <p className="mt-5 text-lg md:text-xl text-slate-600 leading-relaxed">
                   O MetaScope apoia decisões forenses em imagens, vídeos e documentos. Extraia metadados e evidências
                   técnicas, calcule hash <span className="font-semibold text-slate-800">SHA-256</span>, detecte indícios
-                  de IA em camadas e gere um <span className="font-semibold text-slate-800">relatório técnico em PDF</span>.
+                  de IA em camadas, valide <span className="font-semibold text-slate-800">link suspeito</span> e gere um{' '}
+                  <span className="font-semibold text-slate-800">relatório técnico em PDF</span>.
                 </p>
 
                 <div className="mt-8 flex flex-col sm:flex-row gap-3">
@@ -258,7 +259,7 @@ export default function MetaScopePage() {
           <div className="rounded-[28px] border border-slate-200 bg-white p-10 shadow-sm">
             <h2 className="text-3xl md:text-4xl font-extrabold">Escolha uma ferramenta</h2>
             <p className="mt-3 text-base md:text-lg text-slate-600 max-w-5xl">
-              Validação forense de arquivos e análise de links ou prints para identificar golpes e ameaças digitais.
+              Análise forense de arquivos e verificação de link suspeito ou prints para identificar golpes e ameaças digitais.
             </p>
 
             <div className="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-5 items-stretch">
@@ -822,6 +823,23 @@ export default function MetaScopePage() {
                 ))}
               </div>
             </div>
+          </div>
+        </Reveal>
+      </div>
+
+      {/* SEO Section */}
+      <div className="container mx-auto px-4 pb-12">
+        <Reveal>
+          <div className="rounded-[28px] border border-slate-200 bg-white p-8 shadow-sm">
+            <h2 className="text-2xl md:text-3xl font-extrabold text-slate-900">
+              Como o MetaScope ajuda na perícia digital
+            </h2>
+            <p className="mt-3 text-slate-600 leading-relaxed max-w-4xl">
+              O MetaScope foi desenvolvido para perícia digital aplicada a cenários reais. A plataforma combina análise
+              forense de arquivos, verificação de autenticidade de imagem, inspeção de metadados EXIF e checagem de
+              integridade por hash SHA-256. Em investigações com risco de fraude, também permite analisar link suspeito
+              e prints com OCR para apoiar decisões técnicas com mais segurança.
+            </p>
           </div>
         </Reveal>
       </div>
