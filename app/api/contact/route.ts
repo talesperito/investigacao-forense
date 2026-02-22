@@ -34,7 +34,8 @@ function sanitize(value: unknown) {
 
 function getClientIp(req: NextRequest) {
   const forwarded = req.headers.get("x-forwarded-for");
-  const ip = forwarded?.split(",")[0]?.trim() || req.ip || "unknown";
+  const realIp = req.headers.get("x-real-ip");
+  const ip = forwarded?.split(",")[0]?.trim() || realIp || "unknown";
   return ip;
 }
 
