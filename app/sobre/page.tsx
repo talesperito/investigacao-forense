@@ -12,7 +12,7 @@ export default function SobrePage() {
       <section className="px-8 py-16 text-center">
         <h1 className="text-5xl font-bold text-white mb-8">Especialistas em Tecnologia para Ambientes de Alta Responsabilidade</h1>
         <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-          A Investigação Forense é uma empresa de tecnologia especializada no desenvolvimento de sistemas de dados, plataformas de documentos e infraestrutura de decisão para ambientes onde confiabilidade, auditoria e integridade são requisitos essenciais — como jurídico, compliance, agronegócio, auditoria, setor público e investigação.
+          A Investigação Forense é uma empresa de tecnologia especializada no desenvolvimento de sistemas de dados, plataformas de documentos e infraestrutura de decisão para ambientes onde confiabilidade, auditoria e integridade são requisitos essenciais - como jurídico, compliance, agronegócio, auditoria, setor público e investigação.
         </p>
       </section>
 
@@ -32,7 +32,7 @@ export default function SobrePage() {
             Atualmente faço pós doutorado na Universidade Federal de Lavras na área de Ciência dos Dados no Departamento de Ciência da Computação. Na docência, atuo desde 2000 como professor de Química e desde 2006 no Centro Universitário de Lavras para diversos cursos de graduação e pós graduação.
           </p>
           <p className="text-center text-blue-400 font-bold pt-4">
-            Esperamos que todos aproveitem esse espaço da melhor forma possível e aguar do suas sugestões.
+            Esperamos que todos aproveitem esse espaço da melhor forma possível e aguardamos suas sugestões.
           </p>
           <p className="text-center text-2xl font-bold text-white pt-4">
             Ótima leitura! 📚
@@ -43,7 +43,7 @@ export default function SobrePage() {
       {/* Featured Articles */}
       <section className="bg-gray-white/5 px-8 py-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">Artículos Recomendados</h2>
+          <h2 className="text-3xl font-bold text-white mb-8 text-center">Artigos Recomendados</h2>
           <div className="space-y-6 text-gray-300">
             <article className="bg-gray-white/5 rounded-lg p-6 hover:bg-gray-white/10 transition">
               <h3 className="text-xl font-bold text-white mb-2">Você sabe o que é a Investigação Forense e como pode trabalhar nessa área?</h3>

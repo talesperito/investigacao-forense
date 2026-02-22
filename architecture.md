@@ -4,9 +4,9 @@
 
 This document describes the architecture of the **Investigação Forense** website.
 
-This repository contains **only the frontend code** of a professional and technical portfolio, built to present applied projects in digital forensics, data science, and artificial intelligence.
+This repository contains the website code of a professional and technical portfolio, built to present applied projects in digital forensics, data science, and artificial intelligence.
 
-No backend services, databases, or operational forensic systems are included in this repository.
+No databases or operational forensic systems are included in this repository.
 
 ---
 
@@ -21,7 +21,6 @@ Included:
 - Styling and layout configuration
 
 Not included:
-- Backend APIs or services
 - Databases or persistent storage
 - Authentication or user management
 - Forensic tools, scripts, or datasets
@@ -62,17 +61,18 @@ Not included:
 
 ## 5. Data Handling
 
-- The site does **not** store or process user data.
-- All content is static and embedded in the frontend.
-- No cookies, sessions, or tracking mechanisms are implemented.
+- The site is predominantly static content with selected interactive components.
+- Cookie consent preference is stored locally in the browser (`localStorage`).
+- The contact form posts to an internal API route for email delivery.
+- No database persistence is implemented in this repository.
 
 ---
 
 ## 6. Security Considerations
 
 - No sensitive data is present in this repository.
-- No credentials or environment secrets are required to run the site.
-- The attack surface is minimal due to the absence of backend logic.
+- Most pages run without credentials, but contact-email delivery requires environment secrets (SMTP credentials and sender settings).
+- The attack surface remains limited, with backend usage restricted to a single contact endpoint.
 
 ---
 

@@ -70,7 +70,15 @@ Users are expected to apply ethical and professional standards when interacting 
 
 ---
 
-## 7. No Warranty
+## 7. Contact Form & Email Delivery
+
+- Contact requests are submitted through an internal API route and forwarded to configured recipients.
+- Email provider credentials are loaded through environment variables and must never be committed to the repository.
+- Basic anti-abuse controls are applied (for example, bot honeypot field). Additional protections (rate limiting/WAF) are recommended at the hosting layer.
+
+---
+
+## 8. No Warranty
 
 This project is provided **"as is"**, without warranty of any kind.
 
@@ -78,7 +86,7 @@ The maintainers assume no liability for misuse, misinterpretation, or damages ar
 
 ---
 
-## 8. Final Notes
+## 9. Final Notes
 
 Security, privacy, and ethics are ongoing processes.
 
