@@ -1,4 +1,5 @@
 ﻿import type { Metadata } from 'next';
+import Link from 'next/link';
 
 const homeUrl = 'https://www.investigacaoforense.com/';
 const homeOgImage = 'https://www.investigacaoforense.com/images/metascope/screenshot-1-v2.png';
@@ -84,18 +85,18 @@ export default function HomePage() {
           </p>
 
           <div className="flex flex-col md:flex-row gap-4 md:gap-6">
-            <a
+            <Link
               href="/portfolio"
               className="px-8 py-4 bg-blue-600 hover:bg-blue-700 transition-all duration-300 rounded-lg font-semibold text-lg tracking-[-0.01em] text-white shadow-sm hover:shadow-md"
             >
               Ver casos e projetos
-            </a>
-            <a
+            </Link>
+            <Link
               href="/aplicacoes"
               className="px-8 py-4 border-2 border-blue-600 text-blue-700 bg-white/70 hover:bg-blue-600 hover:text-white transition-all duration-300 rounded-lg font-semibold text-lg tracking-[-0.01em] shadow-sm hover:shadow-md"
             >
               Explorar aplicações de perícia digital
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -109,15 +110,15 @@ export default function HomePage() {
             Da análise forense de arquivos à governança de dados críticos, projetamos soluções para reduzir risco operacional e aumentar segurança decisória.
           </p>
           <div className="flex flex-col md:flex-row gap-6 justify-center">
-            <a href="/plataforma-dados-criticos" className="text-slate-800 hover:text-blue-700 font-bold text-lg transition-colors">
+            <Link href="/plataforma-dados-criticos" className="text-slate-800 hover:text-blue-700 font-bold text-lg transition-colors">
               {'-> '}Conheça nossa Plataforma de Dados
-            </a>
-            <a href="/aplicacoes" className="text-slate-800 hover:text-blue-700 font-bold text-lg transition-colors">
+            </Link>
+            <Link href="/aplicacoes" className="text-slate-800 hover:text-blue-700 font-bold text-lg transition-colors">
               {'-> '}Veja nossas Soluções
-            </a>
-            <a href="/aplicacoes/metascope" className="text-slate-800 hover:text-blue-700 font-bold text-lg transition-colors">
+            </Link>
+            <Link href="/aplicacoes/metascope" className="text-slate-800 hover:text-blue-700 font-bold text-lg transition-colors">
               {'-> '}Conheça a aplicação de perícia digital
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -165,9 +166,9 @@ export default function HomePage() {
             ))}
           </div>
           <p className="text-center mt-10">
-            <a href="/contato" className="text-blue-700 hover:text-blue-800 font-semibold transition-colors">
+            <Link href="/contato" className="text-blue-700 hover:text-blue-800 font-semibold transition-colors">
               Seu setor não está aqui? Fale com um especialista {'->'}
-            </a>
+            </Link>
           </p>
         </div>
       </section>
@@ -212,9 +213,9 @@ export default function HomePage() {
                   <span className="text-slate-800">Integrações e Modernização de Processos Legados</span>
                 </li>
               </ul>
-              <a href="/servicos" className="px-6 py-3 border-2 border-blue-600 text-blue-700 hover:bg-blue-600 hover:text-white transition-all duration-300 font-semibold rounded-lg text-center">
+              <Link href="/servicos" className="px-6 py-3 border-2 border-blue-600 text-blue-700 hover:bg-blue-600 hover:text-white transition-all duration-300 font-semibold rounded-lg text-center">
                 Ver Serviços e Modelos de Entrega
-              </a>
+              </Link>
             </div>
 
             <div className="flex flex-col p-8 rounded-2xl border border-slate-200 bg-slate-50">
@@ -237,9 +238,9 @@ export default function HomePage() {
                   <span className="text-slate-800">Consultoria Técnica para Arquitetura e Compliance</span>
                 </li>
               </ul>
-              <a href="/contato" className="px-6 py-3 border-2 border-blue-600 text-blue-700 hover:bg-blue-600 hover:text-white transition-all duration-300 font-semibold rounded-lg text-center">
+              <Link href="/contato" className="px-6 py-3 border-2 border-blue-600 text-blue-700 hover:bg-blue-600 hover:text-white transition-all duration-300 font-semibold rounded-lg text-center">
                 Falar com um Especialista
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -256,18 +257,19 @@ export default function HomePage() {
             Conheça nossas soluções e veja como podemos apoiar sua operação com tecnologia e rastreabilidade.
           </p>
           <div className="flex flex-col md:flex-row gap-6 justify-center">
-            <a href="/portfolio" className="px-8 py-4 bg-white text-blue-700 hover:bg-blue-50 transition-all duration-300 font-semibold rounded-lg text-lg shadow-sm">
+            <Link href="/portfolio" className="px-8 py-4 bg-white text-blue-700 hover:bg-blue-50 transition-all duration-300 font-semibold rounded-lg text-lg shadow-sm">
               Ver portfólio completo
-            </a>
-            <a href="/contato" className="px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-blue-700 transition-all duration-300 rounded-lg font-semibold text-lg">
+            </Link>
+            <Link href="/contato" className="px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-blue-700 transition-all duration-300 rounded-lg font-semibold text-lg">
               Falar com especialista
-            </a>
+            </Link>
           </div>
         </div>
       </section>
     </>
   );
 }
+
 
 
 

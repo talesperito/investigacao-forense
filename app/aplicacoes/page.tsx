@@ -1,4 +1,5 @@
 ﻿import type { Metadata } from 'next';
+import Link from 'next/link';
 
 const pageUrl = 'https://www.investigacaoforense.com/aplicacoes';
 const ogImage = 'https://www.investigacaoforense.com/images/metascope/screenshot-1-v2.png';
@@ -158,12 +159,12 @@ export default function AplicacoesPage() {
                 ))}
               </ul>
 
-              <a
+              <Link
                 href={app.href}
                 className="inline-flex items-center rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white transition-colors hover:bg-blue-700"
               >
                 {app.cta}
-              </a>
+              </Link>
             </article>
           ))}
         </section>
@@ -175,24 +176,25 @@ export default function AplicacoesPage() {
             Se já tem uma necessidade específica, fale com a equipe para indicar a aplicação mais adequada ao seu cenário.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <a
+            <Link
               href="/portfolio"
               className="inline-flex justify-center rounded-lg border border-white px-6 py-3 font-semibold text-white transition-colors hover:bg-white hover:text-gray-900"
             >
               Ir para Portfólio
-            </a>
-            <a
+            </Link>
+            <Link
               href="/contato"
               className="inline-flex justify-center rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white transition-colors hover:bg-blue-700"
             >
               Falar com Especialista
-            </a>
+            </Link>
           </div>
         </section>
       </div>
     </main>
   );
 }
+
 
 
 

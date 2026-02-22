@@ -9,12 +9,20 @@ type ContactPayload = {
   website?: string;
 };
 
+type RateEntry = {
+  count: number;
+  resetAt: number;
+};
+
 const smtpHost = process.env.SMTP_HOST || "smtp.gmail.com";
 const smtpPort = Number(process.env.SMTP_PORT || "465");
 const smtpUser = process.env.SMTP_USER;
 const smtpPass = process.env.SMTP_PASS;
 const contactTo = process.env.CONTACT_TO;
 const contactFrom = process.env.CONTACT_FROM || smtpUser;
+const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1000;
+const RATE_LIMIT_MAX_REQUESTS = 5;
+const rateLimitStore = new Map<string, RateEntry>();
 
 function isValidEmail(email: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
@@ -24,8 +32,40 @@ function sanitize(value: unknown) {
   return String(value ?? "").trim();
 }
 
+function getClientIp(req: NextRequest) {
+  const forwarded = req.headers.get("x-forwarded-for");
+  const ip = forwarded?.split(",")[0]?.trim() || req.ip || "unknown";
+  return ip;
+}
+
+function isRateLimited(ip: string) {
+  const now = Date.now();
+  const entry = rateLimitStore.get(ip);
+
+  if (!entry || now > entry.resetAt) {
+    rateLimitStore.set(ip, { count: 1, resetAt: now + RATE_LIMIT_WINDOW_MS });
+    return false;
+  }
+
+  if (entry.count >= RATE_LIMIT_MAX_REQUESTS) {
+    return true;
+  }
+
+  entry.count += 1;
+  rateLimitStore.set(ip, entry);
+  return false;
+}
+
 export async function POST(req: NextRequest) {
   try {
+    const clientIp = getClientIp(req);
+    if (isRateLimited(clientIp)) {
+      return NextResponse.json(
+        { ok: false, error: "Muitas tentativas. Aguarde alguns minutos e tente novamente." },
+        { status: 429 }
+      );
+    }
+
     const body = (await req.json()) as ContactPayload;
 
     // Honeypot anti-bot field: real users keep it empty.
