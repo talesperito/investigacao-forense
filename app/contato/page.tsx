@@ -30,6 +30,15 @@ export default function ContatoPage() {
         throw new Error('Falha no envio');
       }
 
+      // GTM DataLayer Push
+      if (typeof window !== 'undefined') {
+        (window as any).dataLayer = (window as any).dataLayer || [];
+        (window as any).dataLayer.push({
+          event: 'form_submission_success',
+          form_type: 'contato'
+        });
+      }
+
       setStatus('sucesso');
       setFormData({ nome: '', email: '', telefone: '', mensagem: '', website: '' });
     } catch {
