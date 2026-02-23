@@ -4,6 +4,7 @@ import "./globals.css";
 import Footer from '@/components/Footer';
 import CookieBanner from '@/components/CookieBanner';
 import TopNav from '@/components/TopNav';
+import GoogleTagManager from '@/components/GoogleTagManager';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,6 +29,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className="antialiased bg-black">
+        <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID || ''} />
         <TopNav />
         {children}
         <Footer />
