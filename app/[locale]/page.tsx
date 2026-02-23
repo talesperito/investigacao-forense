@@ -1,50 +1,55 @@
 ﻿import type { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from '@/i18n/routing';
+import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 
 const homeUrl = 'https://www.investigacaoforense.com/';
 const homeOgImage = 'https://www.investigacaoforense.com/images/metascope/screenshot-1-v2.png';
 
-export const metadata: Metadata = {
-  title: 'Perícia Digital e Análise Forense Digital | Investigação Forense',
-  description:
-    'Software de perícia digital, análise forense digital e operações críticas com auditoria, rastreabilidade, integridade e compliance.',
-  alternates: {
-    canonical: homeUrl,
-    languages: {
-      'pt-BR': homeUrl,
-    },
-  },
-  openGraph: {
-    type: 'website',
-    locale: 'pt_BR',
-    url: homeUrl,
-    title: 'Perícia Digital e Análise Forense Digital | Investigação Forense',
-    description:
-      'Soluções de software para perícia digital, análise forense de arquivos e operações de alto impacto.',
-    siteName: 'Investigação Forense',
-    images: [
-      {
-        url: homeOgImage,
-        width: 1200,
-        height: 630,
-        alt: 'Investigação Forense - software para dados críticos e perícia digital',
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const resolvedParams = await params;
+  const t = await getTranslations({ locale: resolvedParams.locale, namespace: 'Home' });
+
+  return {
+    title: t('heroTitle') + ' | Investigação Forense',
+    description: t('heroSubtitle'),
+    alternates: {
+      canonical: homeUrl,
+      languages: {
+        'pt-BR': homeUrl,
+        'en': homeUrl + 'en',
       },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Perícia Digital e Análise Forense Digital | Investigação Forense',
-    description: 'Software para perícia digital, análise forense digital e operações reguladas.',
-    images: [homeOgImage],
-  },
-};
+    },
+    openGraph: {
+      type: 'website',
+      locale: resolvedParams.locale === 'en' ? 'en_US' : 'pt_BR',
+      url: homeUrl,
+      title: t('heroTitle') + ' | Investigação Forense',
+      description: t('heroSubtitle'),
+      siteName: 'Investigação Forense',
+      images: [
+        {
+          url: homeOgImage,
+          width: 1200,
+          height: 630,
+          alt: 'Investigação Forense',
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t('heroTitle') + ' | Investigação Forense',
+      description: t('heroSubtitle'),
+      images: [homeOgImage],
+    },
+  };
+}
 
 const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
   name: 'Investigação Forense',
   url: homeUrl,
-  inLanguage: 'pt-BR',
 };
 
 const organizationSchema = {
@@ -60,6 +65,8 @@ const organizationSchema = {
 };
 
 export default function HomePage() {
+  const t = useTranslations('Home');
+
   return (
     <>
       <script
@@ -78,10 +85,10 @@ export default function HomePage() {
 
         <div className="relative h-full min-h-[68vh] md:min-h-[74vh] flex flex-col items-center justify-center px-4 text-center text-slate-900">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-5 md:mb-6 leading-[1.08] tracking-[-0.02em] max-w-[22ch]">
-            Software para Perícia Digital e Operações Críticas
+            {t('heroTitle')}
           </h1>
           <p className="text-lg sm:text-xl md:text-[1.95rem] mb-10 md:mb-12 max-w-[42ch] text-slate-700 leading-[1.4]">
-            Desenvolvemos soluções de análise forense digital, perícia digital e automação para organizações que operam com dados sensíveis e processos regulados.
+            {t('heroSubtitle')}
           </p>
 
           <div className="flex flex-col md:flex-row gap-4 md:gap-6">
@@ -89,13 +96,13 @@ export default function HomePage() {
               href="/portfolio"
               className="px-8 py-4 bg-blue-600 hover:bg-blue-700 transition-all duration-300 rounded-lg font-semibold text-lg tracking-[-0.01em] text-white shadow-sm hover:shadow-md"
             >
-              Ver casos e projetos
+              {t('ctaPrimary')}
             </Link>
             <Link
               href="/aplicacoes"
               className="px-8 py-4 border-2 border-blue-600 text-blue-700 bg-white/70 hover:bg-blue-600 hover:text-white transition-all duration-300 rounded-lg font-semibold text-lg tracking-[-0.01em] shadow-sm hover:shadow-md"
             >
-              Explorar aplicações de perícia digital
+              {t('ctaSecondary')}
             </Link>
           </div>
         </div>
@@ -104,20 +111,20 @@ export default function HomePage() {
       <section className="py-20 px-4 bg-white">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-lg md:text-xl text-slate-700 leading-[1.75] mb-8 max-w-[56ch] mx-auto">
-            Somos uma empresa de tecnologia especializada no desenvolvimento de software, plataformas de dados e sistemas para ambientes que exigem controle, auditoria e rastreabilidade. Atuamos com SaaS, BI, automações e integrações para setores regulados e de alta responsabilidade.
+            {t('aboutP1')}
           </p>
           <p className="text-base md:text-lg text-slate-600 leading-[1.75] mb-8 max-w-[58ch] mx-auto">
-            Da análise forense de arquivos à governança de dados críticos, projetamos soluções para reduzir risco operacional e aumentar segurança decisória.
+            {t('aboutP2')}
           </p>
           <div className="flex flex-col md:flex-row gap-6 justify-center">
             <Link href="/plataforma-dados-criticos" className="text-slate-800 hover:text-blue-700 font-bold text-lg transition-colors">
-              {'-> '}Conheça nossa Plataforma de Dados
+              {'-> '}{t('aboutLink1')}
             </Link>
             <Link href="/aplicacoes" className="text-slate-800 hover:text-blue-700 font-bold text-lg transition-colors">
-              {'-> '}Veja nossas Soluções
+              {'-> '}{t('aboutLink2')}
             </Link>
             <Link href="/aplicacoes/metascope" className="text-slate-800 hover:text-blue-700 font-bold text-lg transition-colors">
-              {'-> '}Conheça a aplicação de perícia digital
+              {'-> '}{t('aboutLink3')}
             </Link>
           </div>
         </div>
@@ -125,19 +132,19 @@ export default function HomePage() {
 
       <section className="py-20 px-4 bg-gradient-to-b from-slate-50 to-blue-50 border-y border-slate-200">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold tracking-[-0.015em] text-center text-slate-900 mb-16">Como Trabalhamos</h2>
+          <h2 className="text-4xl font-bold tracking-[-0.015em] text-center text-slate-900 mb-16">{t('howWeWorkTitle')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="p-8 bg-white rounded-xl border border-slate-200 hover:border-blue-300 transition-all duration-300 shadow-sm">
-              <h3 className="text-2xl font-bold tracking-[-0.01em] text-slate-900 mb-4">Desenvolvimento Completo</h3>
-              <p className="text-slate-600">SaaS, sistemas personalizados, dashboards analíticos, automações e aplicações integradas.</p>
+              <h3 className="text-2xl font-bold tracking-[-0.01em] text-slate-900 mb-4">{t('howCard1Title')}</h3>
+              <p className="text-slate-600">{t('howCard1Desc')}</p>
             </div>
             <div className="p-8 bg-white rounded-xl border border-slate-200 hover:border-blue-300 transition-all duration-300 shadow-sm">
-              <h3 className="text-2xl font-bold tracking-[-0.01em] text-slate-900 mb-4">Foco em Resultados</h3>
-              <p className="text-slate-600">Performance, segurança e resultados mensuráveis em cada solução entregue.</p>
+              <h3 className="text-2xl font-bold tracking-[-0.01em] text-slate-900 mb-4">{t('howCard2Title')}</h3>
+              <p className="text-slate-600">{t('howCard2Desc')}</p>
             </div>
             <div className="p-8 bg-white rounded-xl border border-slate-200 hover:border-blue-300 transition-all duration-300 shadow-sm">
-              <h3 className="text-2xl font-bold tracking-[-0.01em] text-slate-900 mb-4">Experiência Sólida</h3>
-              <p className="text-slate-600">Mais de 20 anos em segurança pública, gestão e análise operacional.</p>
+              <h3 className="text-2xl font-bold tracking-[-0.01em] text-slate-900 mb-4">{t('howCard3Title')}</h3>
+              <p className="text-slate-600">{t('howCard3Desc')}</p>
             </div>
           </div>
         </div>
@@ -145,19 +152,19 @@ export default function HomePage() {
 
       <section className="py-20 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold tracking-[-0.015em] text-center text-slate-900 mb-4">Setores Atendidos</h2>
+          <h2 className="text-4xl font-bold tracking-[-0.015em] text-center text-slate-900 mb-4">{t('sectorsTitle')}</h2>
           <p className="text-center text-slate-600 text-lg leading-[1.7] max-w-[58ch] mx-auto mb-14">
-            Atuamos em segmentos que operam com dados críticos, exigência regulatória e alto nível de responsabilidade técnica.
+            {t('sectorsSubtitle')}
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              ['Jurídico', 'Fluxo de provas digitais, organização documental e auditoria para suporte técnico-processual.', 'Cadeia de Custódia'],
-              ['Segurança Pública', 'Sistemas para gestão pericial, vestígios e inteligência operacional com rastreabilidade.', 'Evidência Digital'],
-              ['Corporativo', 'Controle de processos críticos, governança de dados e trilhas de auditoria para compliance.', 'Governança'],
-              ['Condomínios', 'Operação condominial com registros auditáveis, documentos íntegros e rotinas automatizadas.', 'Operação'],
-              ['Agronegócio', 'Monitoramento de operações e documentação técnica para decisões rápidas e confiáveis.', 'Dados Críticos'],
-              ['Meio Ambiente', 'Gestão de evidências, laudos e ocorrências para fiscalização e conformidade regulatória.', 'Conformidade'],
-            ].map(([title, desc, tag]) => (
+            {([
+              [t('sector1Title'), t('sector1Desc'), t('sector1Tag')],
+              [t('sector2Title'), t('sector2Desc'), t('sector2Tag')],
+              [t('sector3Title'), t('sector3Desc'), t('sector3Tag')],
+              [t('sector4Title'), t('sector4Desc'), t('sector4Tag')],
+              [t('sector5Title'), t('sector5Desc'), t('sector5Tag')],
+              [t('sector6Title'), t('sector6Desc'), t('sector6Tag')],
+            ] as const).map(([title, desc, tag]) => (
               <div key={title} className="p-6 bg-gradient-to-b from-blue-50 to-white border border-blue-100 rounded-xl shadow-sm h-full flex flex-col">
                 <h3 className="text-xl font-bold text-slate-900 mb-3">{title}</h3>
                 <p className="text-slate-600 mb-6">{desc}</p>
@@ -167,7 +174,7 @@ export default function HomePage() {
           </div>
           <p className="text-center mt-10">
             <Link href="/contato" className="text-blue-700 hover:text-blue-800 font-semibold transition-colors">
-              Seu setor não está aqui? Fale com um especialista {'->'}
+              {t('sectorsCta')} {'->'}
             </Link>
           </p>
         </div>
@@ -177,7 +184,7 @@ export default function HomePage() {
         <div className="max-w-4xl mx-auto">
           <div className="p-12 border-l-4 border-blue-600 bg-white rounded-xl shadow-sm">
             <p className="text-xl text-slate-700 leading-relaxed text-center">
-              Acreditamos em soluções feitas para resolver problemas reais. Por isso, cada projeto é pensado de ponta a ponta: arquitetura, experiência do usuário, segurança, escalabilidade e impacto direto no seu dia a dia.
+              {t('quoteText')}
             </p>
           </div>
         </div>
@@ -186,82 +193,82 @@ export default function HomePage() {
       <section className="py-20 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold tracking-[-0.015em] text-center text-slate-900 mb-4">
-            Serviços e Soluções para Operações Críticas
+            {t('servicesTitle')}
           </h2>
           <p className="text-center text-slate-600 text-lg leading-[1.7] max-w-[58ch] mx-auto mb-14">
-            Projetamos e evoluímos software para operações críticas, com rastreabilidade, auditoria e segurança para decisões de alto impacto.
+            {t('servicesSubtitle')}
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div className="flex flex-col p-8 rounded-2xl border border-blue-100 bg-gradient-to-b from-blue-50 to-white">
-              <h3 className="text-2xl font-bold tracking-[-0.01em] text-slate-900 mb-8">Serviços Principais</h3>
+              <h3 className="text-2xl font-bold tracking-[-0.01em] text-slate-900 mb-8">{t('coreServicesTitle')}</h3>
               <ul className="space-y-4 mb-8 flex-grow">
                 <li className="flex items-start gap-3">
                   <span className="text-blue-600 font-bold">-</span>
-                  <span className="text-slate-800">Desenvolvimento de Sistemas e Aplicações Sob Medida</span>
+                  <span className="text-slate-800">{t('coreService1')}</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-blue-600 font-bold">-</span>
-                  <span className="text-slate-800">Plataformas SaaS para Dados e Documentos Críticos</span>
+                  <span className="text-slate-800">{t('coreService2')}</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-blue-600 font-bold">-</span>
-                  <span className="text-slate-800">Automação de Fluxos, Auditoria e Rastreabilidade</span>
+                  <span className="text-slate-800">{t('coreService3')}</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-blue-600 font-bold">-</span>
-                  <span className="text-slate-800">Integrações e Modernização de Processos Legados</span>
+                  <span className="text-slate-800">{t('coreService4')}</span>
                 </li>
               </ul>
               <Link href="/servicos" className="px-6 py-3 border-2 border-blue-600 text-blue-700 hover:bg-blue-600 hover:text-white transition-all duration-300 font-semibold rounded-lg text-center">
-                Ver Serviços e Modelos de Entrega
+                {t('coreServicesCta')}
               </Link>
             </div>
 
             <div className="flex flex-col p-8 rounded-2xl border border-slate-200 bg-slate-50">
-              <h3 className="text-2xl font-bold tracking-[-0.01em] text-slate-900 mb-8">Modelos de Entrega</h3>
+              <h3 className="text-2xl font-bold tracking-[-0.01em] text-slate-900 mb-8">{t('deliveryTitle')}</h3>
               <ul className="space-y-4 mb-8 flex-grow">
                 <li className="flex items-start gap-3">
                   <span className="text-blue-600 font-bold">-</span>
-                  <span className="text-slate-800">Projeto Fechado por Escopo</span>
+                  <span className="text-slate-800">{t('delivery1')}</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-blue-600 font-bold">-</span>
-                  <span className="text-slate-800">Squad Especializado sob Demanda</span>
+                  <span className="text-slate-800">{t('delivery2')}</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-blue-600 font-bold">-</span>
-                  <span className="text-slate-800">Evolução Contínua de Produto (Roadmap)</span>
+                  <span className="text-slate-800">{t('delivery3')}</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-blue-600 font-bold">-</span>
-                  <span className="text-slate-800">Consultoria Técnica para Arquitetura e Compliance</span>
+                  <span className="text-slate-800">{t('delivery4')}</span>
                 </li>
               </ul>
               <Link href="/contato" className="px-6 py-3 border-2 border-blue-600 text-blue-700 hover:bg-blue-600 hover:text-white transition-all duration-300 font-semibold rounded-lg text-center">
-                Falar com um Especialista
+                {t('deliveryCta')}
               </Link>
             </div>
           </div>
 
           <p className="text-center text-sm text-slate-500 mt-8">
-            Atendimento para setor público e privado | Demonstração sob solicitação
+            {t('servicesFootnote')}
           </p>
         </div>
       </section>
 
       <section className="py-24 px-4 bg-gradient-to-r from-blue-700 via-blue-600 to-cyan-600">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-[-0.02em] text-white mb-6">Pronto para transformar sua operação?</h2>
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-[-0.02em] text-white mb-6">{t('ctaFinalTitle')}</h2>
           <p className="text-xl leading-[1.55] text-blue-50 mb-12 max-w-[38ch] mx-auto">
-            Conheça nossas soluções e veja como podemos apoiar sua operação com tecnologia e rastreabilidade.
+            {t('ctaFinalSubtitle')}
           </p>
           <div className="flex flex-col md:flex-row gap-6 justify-center">
             <Link href="/portfolio" className="px-8 py-4 bg-white text-blue-700 hover:bg-blue-50 transition-all duration-300 font-semibold rounded-lg text-lg shadow-sm">
-              Ver portfólio completo
+              {t('ctaFinalPrimary')}
             </Link>
             <Link href="/contato" className="px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-blue-700 transition-all duration-300 rounded-lg font-semibold text-lg">
-              Falar com especialista
+              {t('ctaFinalSecondary')}
             </Link>
           </div>
         </div>
@@ -269,8 +276,5 @@ export default function HomePage() {
     </>
   );
 }
-
-
-
 
 

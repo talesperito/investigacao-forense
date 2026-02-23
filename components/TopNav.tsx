@@ -1,19 +1,22 @@
 'use client';
 
 import { useState } from 'react';
-import Link from 'next/link';
+import { Link } from '@/i18n/routing';
 import { Menu, X } from 'lucide-react';
-
-const navLinks = [
-  { href: '/', label: 'Início' },
-  { href: '/portfolio', label: 'Portfólio' },
-  { href: '/aplicacoes', label: 'Soluções' },
-  { href: '/servicos', label: 'Serviços' },
-  { href: '/contato', label: 'Contato' },
-];
+import { useTranslations } from 'next-intl';
+import LanguageSwitcher from './LanguageSwitcher';
 
 export default function TopNav() {
+  const t = useTranslations('TopNav');
   const [open, setOpen] = useState(false);
+
+  const navLinks = [
+    { href: '/', label: t('home') },
+    { href: '/portfolio', label: t('portfolio') },
+    { href: '/aplicacoes', label: t('solutions') },
+    { href: '/servicos', label: t('services') },
+    { href: '/contato', label: t('contact') },
+  ] as const;
 
   return (
     <nav className="bg-gray-900 text-white sticky top-0 z-50 shadow-lg">
@@ -23,15 +26,20 @@ export default function TopNav() {
             InvestigacaoForense.com
           </Link>
 
-          <ul className="hidden md:flex gap-6 text-sm font-semibold items-center">
-            {navLinks.map((link) => (
-              <li key={link.href}>
-                <Link href={link.href} className="hover:text-blue-400 transition-colors">
-                  {link.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
+          <div className="hidden md:flex items-center gap-6">
+            <ul className="flex gap-6 text-sm font-semibold items-center">
+              {navLinks.map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href} className="hover:text-blue-400 transition-colors">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <div className="ml-4 border-l border-gray-700 pl-4">
+              <LanguageSwitcher />
+            </div>
+          </div>
 
           <button
             type="button"
@@ -45,7 +53,7 @@ export default function TopNav() {
         </div>
 
         {open && (
-          <div className="md:hidden mt-4 border-t border-gray-800 pt-3">
+          <div className="md:hidden mt-4 border-t border-gray-800 pt-3 space-y-3 pb-3">
             <ul className="flex flex-col gap-1 text-sm font-semibold">
               {navLinks.map((link) => (
                 <li key={link.href}>
@@ -59,6 +67,9 @@ export default function TopNav() {
                 </li>
               ))}
             </ul>
+            <div className="px-3 pt-2 border-t border-gray-800">
+              <LanguageSwitcher />
+            </div>
           </div>
         )}
       </div>

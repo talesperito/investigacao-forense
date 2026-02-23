@@ -1,6 +1,6 @@
 'use client';
 
-import Link from 'next/link';
+import { Link } from '@/i18n/routing';
 
 export default function LandingPagePage() {
   return (
@@ -62,8 +62,8 @@ export default function LandingPagePage() {
           <p className="text-xl text-gray-400 mb-12">
             Conecte-se com especialistas e desenvolva suas habilidades em um ambiente de aprendizado colaborativo.
           </p>
-          <Link 
-            href="/servicos" 
+          <Link
+            href="/servicos"
             className="inline-block px-8 py-4 bg-blue-600 text-white font-bold text-lg rounded hover:bg-blue-700 transition"
           >
             Conheça Nossos Serviços

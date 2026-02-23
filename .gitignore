@@ -113,3 +113,11 @@ credentials/
 
 # Planos Internos
 PLANO_METASCOPE_PROVAS_SOCIAIS.md
+
+# Agent and AI generated internal documents
+.agent/
+.agents/
+_agents/
+_agent/
+docs/research/
+docs/internals/
