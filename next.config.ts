@@ -18,6 +18,11 @@ const nextConfig: NextConfig = {
         destination: "/",
         permanent: true,
       },
+      {
+        source: "/sobre",
+        destination: "/",
+        permanent: true,
+      },
     ];
   },
 };
