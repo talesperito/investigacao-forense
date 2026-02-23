@@ -43,16 +43,24 @@ export const metadata: Metadata = {
 type AppCard = {
   name: string;
   stage: string;
+  audience: string;
   summary: string;
   bullets: string[];
-  href: string;
-  cta: string;
+  ctas: {
+    label: string;
+    href?: string;
+    external?: boolean;
+    disabled?: boolean;
+    helper?: string;
+    variant: 'primary' | 'secondary' | 'muted';
+  }[];
 };
 
 const applicationCards: AppCard[] = [
   {
     name: 'MetaScope Forensic',
     stage: 'Piloto com parceiros',
+    audience: 'Ideal para equipes de perícia digital, jurídico, compliance e investigação de fraudes online.',
     summary:
       'Perícia digital para validação de autenticidade e integridade de arquivos, com análise de ameaças em links e prints suspeitos.',
     bullets: [
@@ -60,12 +68,30 @@ const applicationCards: AppCard[] = [
       'Detecção de indícios de IA e possível manipulação',
       'Análise de phishing, homografia e OCR em prints',
     ],
-    href: '/aplicacoes/metascope',
-    cta: 'Ver página completa do MetaScope',
+    ctas: [
+      {
+        label: 'Conhecer solução completa',
+        href: '/aplicacoes/metascope',
+        variant: 'primary',
+      },
+      {
+        label: 'Solicitar acesso / demonstração',
+        href: 'https://tally.so/r/lbrQ8p',
+        external: true,
+        variant: 'secondary',
+      },
+      {
+        label: 'Acesso à plataforma',
+        disabled: true,
+        helper: 'Acesso liberado mediante aprovação.',
+        variant: 'muted',
+      },
+    ],
   },
   {
     name: 'EvidenceOS',
     stage: 'Produção interna',
+    audience: 'Ideal para órgãos públicos, núcleos periciais e operações com cadeia de custódia estruturada.',
     summary:
       'Sistema para gestão de evidências e vestígios com rastreabilidade do fluxo operacional, consultas estruturadas e apoio à custódia técnica.',
     bullets: [
@@ -73,12 +99,29 @@ const applicationCards: AppCard[] = [
       'Relatórios e alertas para acompanhamento operacional',
       'Base SQL com foco em governança e conformidade pericial',
     ],
-    href: '/contato',
-    cta: 'Solicitar apresentação do EvidenceOS',
+    ctas: [
+      {
+        label: 'Conhecer solução (em breve)',
+        disabled: true,
+        helper: 'Página detalhada em construção.',
+        variant: 'muted',
+      },
+      {
+        label: 'Falar com especialista',
+        href: '/contato',
+        variant: 'secondary',
+      },
+      {
+        label: 'Disponibilidade sob consulta',
+        disabled: true,
+        variant: 'muted',
+      },
+    ],
   },
   {
     name: 'CondoHub',
     stage: 'MVP em testes',
+    audience: 'Ideal para condomínios, administradoras e times de operação que precisam de controle auditável.',
     summary:
       'Plataforma para operação condominial com registros auditáveis, comunicação em tempo real e processos estruturados.',
     bullets: [
@@ -86,12 +129,28 @@ const applicationCards: AppCard[] = [
       'Trilhas de governança e histórico operacional',
       'Fluxos com foco em controle e conformidade',
     ],
-    href: '/aplicacoes/condohub',
-    cta: 'Ver página do CondoHub',
+    ctas: [
+      {
+        label: 'Conhecer solução completa',
+        href: '/aplicacoes/condohub',
+        variant: 'primary',
+      },
+      {
+        label: 'Falar com especialista',
+        href: '/contato',
+        variant: 'secondary',
+      },
+      {
+        label: 'Disponibilidade sob consulta',
+        disabled: true,
+        variant: 'muted',
+      },
+    ],
   },
   {
     name: 'Inspecta Manager',
     stage: 'Fase final de desenvolvimento',
+    audience: 'Ideal para áreas com gestão documental crítica, compliance e necessidade de trilhas de auditoria.',
     summary:
       'Sistema para gestão de documentos com versionamento, controle de integridade e trilhas completas de auditoria.',
     bullets: [
@@ -99,8 +158,24 @@ const applicationCards: AppCard[] = [
       'Integridade documental e governança operacional',
       'Desenvolvido com outros devs seniors',
     ],
-    href: '/contato',
-    cta: 'Solicitar demonstração do Inspecta Manager',
+    ctas: [
+      {
+        label: 'Conhecer solução (em breve)',
+        disabled: true,
+        helper: 'Página detalhada em construção.',
+        variant: 'muted',
+      },
+      {
+        label: 'Falar com especialista',
+        href: '/contato',
+        variant: 'secondary',
+      },
+      {
+        label: 'Em implantação',
+        disabled: true,
+        variant: 'muted',
+      },
+    ],
   },
 ];
 
@@ -144,14 +219,17 @@ export default function AplicacoesPage() {
             >
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
                 <h2 className="text-2xl md:text-3xl font-bold text-white">{app.name}</h2>
-                <span className="inline-flex w-fit rounded-full border border-blue-700 bg-blue-900/50 px-3 py-1 text-sm font-semibold text-blue-200">
+                <span className="inline-flex w-fit rounded-full border border-blue-700/70 bg-blue-900/40 px-3 py-1 text-xs font-semibold text-blue-200/90">
                   Estágio: {app.stage}
                 </span>
               </div>
 
               <p className="text-gray-200 leading-relaxed mb-5">{app.summary}</p>
+              <p className="text-sm text-slate-300 mb-6">
+                <span className="font-semibold text-blue-200">Para quem:</span> {app.audience}
+              </p>
 
-              <ul className="space-y-2 mb-6">
+              <ul className="space-y-2 mb-7">
                 {app.bullets.map((item) => (
                   <li key={item} className="text-gray-300">
                     - {item}
@@ -159,12 +237,47 @@ export default function AplicacoesPage() {
                 ))}
               </ul>
 
-              <Link
-                href={app.href}
-                className="inline-flex items-center rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white transition-colors hover:bg-blue-700"
-              >
-                {app.cta}
-              </Link>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+                {app.ctas.map((cta) => {
+                  const className =
+                    cta.variant === 'primary'
+                      ? 'w-full inline-flex items-center justify-center rounded-lg bg-blue-600 px-5 py-3 font-semibold text-white transition-colors hover:bg-blue-700 shadow-sm shadow-blue-950/50'
+                      : cta.variant === 'secondary'
+                        ? 'w-full inline-flex items-center justify-center rounded-lg border border-blue-400/70 bg-blue-500/5 px-5 py-3 font-semibold text-blue-100 transition-colors hover:bg-blue-500/15'
+                        : 'w-full inline-flex items-center justify-center rounded-lg border border-slate-700/70 bg-slate-800/45 px-5 py-3 font-semibold text-slate-500 cursor-not-allowed';
+
+                  return (
+                    <div key={cta.label} className="space-y-1 min-h-[68px]">
+                      {cta.href && !cta.disabled ? (
+                        cta.external ? (
+                          <a
+                            href={cta.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={className}
+                          >
+                            {cta.label}
+                          </a>
+                        ) : (
+                          <Link href={cta.href} className={className}>
+                            {cta.label}
+                          </Link>
+                        )
+                      ) : (
+                        <button
+                          type="button"
+                          disabled
+                          className={className}
+                          title={cta.helper ?? cta.label}
+                        >
+                          {cta.label}
+                        </button>
+                      )}
+                      <p className="text-xs text-slate-400 text-center min-h-4">{cta.helper ?? ' '}</p>
+                    </div>
+                  );
+                })}
+              </div>
             </article>
           ))}
         </section>
