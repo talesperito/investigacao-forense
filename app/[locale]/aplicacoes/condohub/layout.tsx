@@ -86,7 +86,7 @@ export default async function CondoHubLayout({
             name: 'Investigação Forense',
             url: 'https://www.investigacaoforense.com',
         },
-        description: t('description'),
+        description: t('heroDesc'),
     };
 
     const breadcrumbSchema = {
@@ -96,7 +96,7 @@ export default async function CondoHubLayout({
             {
                 '@type': 'ListItem',
                 position: 1,
-                name: isEn ? 'Home' : 'Início',
+                name: t('seoBreadcrumbHome'),
                 item: isEn
                     ? 'https://www.investigacaoforense.com/en'
                     : 'https://www.investigacaoforense.com/',
@@ -104,7 +104,7 @@ export default async function CondoHubLayout({
             {
                 '@type': 'ListItem',
                 position: 2,
-                name: isEn ? 'Applications' : 'Aplicações',
+                name: t('seoBreadcrumbApps'),
                 item: isEn
                     ? 'https://www.investigacaoforense.com/en/applications'
                     : 'https://www.investigacaoforense.com/aplicacoes',

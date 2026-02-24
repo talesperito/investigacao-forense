@@ -53,18 +53,6 @@ export default function AplicacoesPage() {
       ],
     },
     {
-      name: 'EvidenceOS',
-      stage: t('evidenceosStage'),
-      audience: t('evidenceosAudience'),
-      summary: t('evidenceosSummary'),
-      bullets: [t('evidenceosBullet1'), t('evidenceosBullet2'), t('evidenceosBullet3')],
-      ctas: [
-        { label: t('evidenceosCta1'), disabled: true, helper: t('evidenceosCta1Helper'), variant: 'muted' as const },
-        { label: t('evidenceosCta2'), href: '/contato' as const, variant: 'secondary' as const },
-        { label: t('evidenceosCta3'), disabled: true, variant: 'muted' as const },
-      ],
-    },
-    {
       name: 'CondoHub',
       stage: t('condohubStage'),
       audience: t('condohubAudience'),
@@ -77,6 +65,18 @@ export default function AplicacoesPage() {
       ],
     },
     {
+      name: 'SynapseOS',
+      stage: t('synapseosStage'),
+      audience: t('synapseosAudience'),
+      summary: t('synapseosSummary'),
+      bullets: [t('synapseosBullet1'), t('synapseosBullet2'), t('synapseosBullet3')],
+      ctas: [
+        { label: t('synapseosCta1'), disabled: true, helper: t('synapseosCta1Helper'), variant: 'muted' as const },
+        { label: t('synapseosCta2'), href: '/contato' as const, variant: 'secondary' as const },
+        { label: t('synapseosCta3'), disabled: true, variant: 'muted' as const },
+      ],
+    },
+    {
       name: 'Inspecta Manager',
       stage: t('inspectaStage'),
       audience: t('inspectaAudience'),
@@ -86,6 +86,18 @@ export default function AplicacoesPage() {
         { label: t('inspectaCta1'), disabled: true, helper: t('inspectaCta1Helper'), variant: 'muted' as const },
         { label: t('inspectaCta2'), href: '/contato' as const, variant: 'secondary' as const },
         { label: t('inspectaCta3'), disabled: true, variant: 'muted' as const },
+      ],
+    },
+    {
+      name: 'EcoCompliance SaaS',
+      stage: t('ecocomplianceStage'),
+      audience: t('ecocomplianceAudience'),
+      summary: t('ecocomplianceSummary'),
+      bullets: [t('ecocomplianceBullet1'), t('ecocomplianceBullet2'), t('ecocomplianceBullet3')],
+      ctas: [
+        { label: t('ecocomplianceCta1'), disabled: true, helper: t('ecocomplianceCta1Helper'), variant: 'muted' as const },
+        { label: t('ecocomplianceCta2'), href: '/contato' as const, variant: 'secondary' as const },
+        { label: t('ecocomplianceCta3'), disabled: true, variant: 'muted' as const },
       ],
     },
   ];
