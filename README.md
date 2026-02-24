@@ -39,24 +39,37 @@ Observacao: alguns projetos e resultados apresentados no site referenciam sistem
 - TypeScript
 - Tailwind CSS 4
 - Lucide React
+- **Next-Intl** (Internacionalização/i18n)
 
 ## Estrutura
 
+O projeto utiliza a estrutura de **App Router** com suporte nativo a múltiplos idiomas via `next-intl`.
+
 ```text
 .
-|- app/                  # rotas (App Router)
-|  |- aplicacoes/
-|  |- blog/
-|  |- contato/
-|  |- cursos/
-|  |- portfolio/
-|  |- servicos/
-|  `- ...
-|- components/           # componentes reutilizaveis
-|- public/               # assets estaticos, sitemap e robots
-|- architecture.md       # visao arquitetural do frontend
-`- security.md           # consideracoes de seguranca
+|— app/                  # Rotas por idioma
+|  |— [locale]/          # Segmento dinamico para idiomas (pt/en)
+|  |  |— aplicacoes/
+|  |  |— portfolio/
+|  |  |— ...
+|— i18n/                 # Configurações de roteamento e request i18n
+|— messages/             # Arquivos de tradução (JSON)
+|  |— pt.json
+|  |— en.json
+|— components/           # Componentes reutilizaveis
+|— public/               # Assets estaticos, sitemap e robots
+|— architecture.md       # Visao arquitetural do frontend
+`- security.md           # Consideracoes de seguranca
 ```
+
+## Internacionalização (i18n)
+
+O site é totalmente bilíngue (Português e Inglês). 
+
+- **Detecção**: O idioma é detectado pela URL (ex: `/pt/` ou `/en/`).
+- **Traduções**: Centralizadas na pasta `/messages`.
+- **SEO**: Tags `hreflang` e metadados dinâmicos são aplicados automaticamente conforme o idioma selecionado.
+
 
 ## Execucao local
 
