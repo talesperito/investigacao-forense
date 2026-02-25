@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useMemo, useRef, useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import {
@@ -15,51 +15,7 @@ import {
   Sparkles,
   Users,
 } from 'lucide-react';
-
-function Reveal({
-  children,
-  delayMs = 0,
-}: {
-  children: React.ReactNode;
-  delayMs?: number;
-}) {
-  const ref = useRef<HTMLDivElement | null>(null);
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-
-    const obs = new IntersectionObserver(
-      (entries) => {
-        for (const e of entries) {
-          if (e.isIntersecting) {
-            setVisible(true);
-            obs.disconnect();
-            break;
-          }
-        }
-      },
-      { threshold: 0.12 }
-    );
-
-    obs.observe(el);
-    return () => obs.disconnect();
-  }, []);
-
-  return (
-    <div
-      ref={ref}
-      style={{ transitionDelay: `${delayMs}ms` }}
-      className={[
-        'transition-all duration-500 will-change-transform',
-        visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2',
-      ].join(' ')}
-    >
-      {children}
-    </div>
-  );
-}
+import Reveal from '@/components/Reveal';
 
 export default function MetaScopePage() {
   const t = useTranslations('MetaScope');

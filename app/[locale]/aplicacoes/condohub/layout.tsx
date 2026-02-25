@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, getMessages } from 'next-intl/server';
+import { NextIntlClientProvider } from 'next-intl';
 
 const ptUrl = 'https://www.investigacaoforense.com/aplicacoes/condohub';
 const enUrl = 'https://www.investigacaoforense.com/en/applications/condohub';
@@ -118,8 +119,14 @@ export default async function CondoHubLayout({
         ],
     };
 
+    // Provide CondoHub namespace to client page
+    const allMessages = await getMessages();
+    const pageMessages = {
+        CondoHub: (allMessages as Record<string, unknown>).CondoHub,
+    };
+
     return (
-        <>
+        <NextIntlClientProvider messages={pageMessages}>
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }}
@@ -129,6 +136,6 @@ export default async function CondoHubLayout({
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
             />
             {children}
-        </>
+        </NextIntlClientProvider>
     );
 }

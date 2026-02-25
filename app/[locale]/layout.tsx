@@ -43,12 +43,21 @@ export default async function RootLayout({
     notFound();
   }
 
-  const messages = await getMessages();
+  const allMessages = await getMessages();
+
+  // Only send layout-level namespaces to the client (~1.2 KiB instead of ~50 KiB).
+  // Server Components (Footer, page.tsx, etc.) use getTranslations() server-side.
+  // Page-specific client namespaces are provided via page-level NextIntlClientProvider.
+  const layoutMessages = {
+    TopNav: (allMessages as Record<string, unknown>).TopNav,
+    CookieBanner: (allMessages as Record<string, unknown>).CookieBanner,
+    LocaleSwitcher: (allMessages as Record<string, unknown>).LocaleSwitcher,
+  };
 
   return (
     <html lang={resolvedParams.locale}>
       <body className="antialiased bg-black">
-        <NextIntlClientProvider messages={messages}>
+        <NextIntlClientProvider messages={layoutMessages}>
           <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID || ''} />
           <TopNav />
           {children}

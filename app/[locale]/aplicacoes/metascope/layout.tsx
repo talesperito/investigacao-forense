@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, getMessages } from 'next-intl/server';
+import { NextIntlClientProvider } from 'next-intl';
 
 const ptUrl = 'https://www.investigacaoforense.com/aplicacoes/metascope';
 const enUrl = 'https://www.investigacaoforense.com/en/applications/metascope';
@@ -170,8 +171,14 @@ export default async function MetaScopeLayout({
     ],
   };
 
+  // Provide MetaScope namespace to client page
+  const allMessages = await getMessages();
+  const pageMessages = {
+    MetaScope: (allMessages as Record<string, unknown>).MetaScope,
+  };
+
   return (
-    <>
+    <NextIntlClientProvider messages={pageMessages}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }}
@@ -185,6 +192,6 @@ export default async function MetaScopeLayout({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       {children}
-    </>
+    </NextIntlClientProvider>
   );
 }
