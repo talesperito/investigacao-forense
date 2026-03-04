@@ -58,10 +58,7 @@ const organizationSchema = {
   name: 'Investigação Forense',
   url: homeUrl,
   logo: 'https://www.investigacaoforense.com/favicon.ico',
-  sameAs: [
-    'https://www.linkedin.com/in/peritotales/',
-    'https://www.linkedin.com/in/matheusvieira-dev/',
-  ],
+  sameAs: ['https://www.instagram.com/investigacao_forense'],
 };
 
 export default function HomePage() {
@@ -276,5 +273,4 @@ export default function HomePage() {
     </>
   );
 }
-
 

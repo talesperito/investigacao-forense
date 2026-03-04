@@ -78,7 +78,11 @@ export default async function PortfolioLayout({
       name: "Tales Vieira",
       jobTitle: t('talesRole'),
       url: pageUrl,
-      sameAs: ["https://www.linkedin.com/in/peritotales/"],
+      sameAs: [
+        "https://www.linkedin.com/in/peritotales",
+        "https://www.youtube.com/@peritotales",
+        "https://www.tiktok.com/@peritotales",
+      ],
     },
     {
       "@context": "https://schema.org",

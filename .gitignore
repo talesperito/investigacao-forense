@@ -61,3 +61,6 @@ Thumbs.db
 _agents/
 _agent/
 .agents/
+
+# Planejamento local SEO (nao versionar)
+seo-artigos-pendentes.local.md

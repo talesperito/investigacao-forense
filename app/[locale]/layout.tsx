@@ -20,6 +20,52 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const globalStructuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebSite',
+      '@id': 'https://www.investigacaoforense.com/#website',
+      url: 'https://www.investigacaoforense.com',
+      name: 'Investigação Forense',
+      inLanguage: 'pt-BR',
+      publisher: {
+        '@id': 'https://www.investigacaoforense.com/#organization',
+      },
+    },
+    {
+      '@type': 'Organization',
+      '@id': 'https://www.investigacaoforense.com/#organization',
+      name: 'Investigação Forense',
+      url: 'https://www.investigacaoforense.com',
+      description: 'Organização especializada em perícia forense e investigação digital.',
+      logo: 'https://www.investigacaoforense.com/tales.PNG',
+      sameAs: ['https://www.instagram.com/investigacao_forense'],
+      founder: {
+        '@id': 'https://www.investigacaoforense.com/#person-tales-vieira',
+      },
+    },
+    {
+      '@type': 'Person',
+      '@id': 'https://www.investigacaoforense.com/#person-tales-vieira',
+      name: 'Tales Vieira',
+      url: 'https://www.investigacaoforense.com/portfolio',
+      jobTitle: 'Perito e Professor',
+      description: 'Perito forense, professor e especialista em investigação digital.',
+      knowsAbout: ['Perícia Forense', 'Investigação Digital', 'Direito Digital'],
+      image: 'https://www.investigacaoforense.com/tales.PNG',
+      worksFor: {
+        '@id': 'https://www.investigacaoforense.com/#organization',
+      },
+      sameAs: [
+        'https://www.linkedin.com/in/peritotales',
+        'https://www.youtube.com/@peritotales',
+        'https://www.tiktok.com/@peritotales',
+      ],
+    },
+  ],
+};
+
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const resolvedParams = await params;
   const t = await getTranslations({ locale: resolvedParams.locale, namespace: 'Home' });
@@ -55,7 +101,13 @@ export default async function RootLayout({
   };
 
   return (
-    <html lang={resolvedParams.locale}>
+    <html lang={resolvedParams.locale} className="bg-black">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(globalStructuredData) }}
+        />
+      </head>
       <body className="antialiased bg-black">
         <NextIntlClientProvider messages={layoutMessages}>
           <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID || ''} />

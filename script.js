@@ -1,0 +1,1 @@
+const fs=require('fs'); const lh=JSON.parse(fs.readFileSync('./lh.json', 'utf8')); Object.values(lh.audits).filter(a=>a.score !== null && a.score < 1 && ['numeric', 'binary'].includes(a.scoreDisplayMode)).forEach(a=>console.log(a.id, a.score, a.title, a.displayValue));
