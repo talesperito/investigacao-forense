@@ -64,3 +64,8 @@ _agent/
 
 # Planejamento local SEO (nao versionar)
 seo-artigos-pendentes.local.md
+
+# Artefatos locais de auditoria
+lh.json
+lh-parser.js
+script.js
