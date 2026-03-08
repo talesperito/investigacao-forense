@@ -12,10 +12,12 @@
         "contact": "Contato"
     },
     "Home": {
-        "heroTitle": "De desafios complexos a soluções confiáveis para operações críticas",
-        "heroSubtitle": "Desenvolvemos soluções de análise forense digital, perícia digital e automação para organizações que operam com dados sensíveis e processos regulados.",
-        "ctaPrimary": "Ver casos e projetos",
-        "ctaSecondary": "Explorar aplicações de perícia digital",
+        "metaTitle": "Perícia Digital e Investigação Forense | Software e Soluções",
+        "metaDesc": "Software, automação e análise de evidências para perícia digital, investigação forense, compliance e operações críticas.",
+        "heroTitle": "Tecnologia para perícia digital, investigação forense e operações críticas",
+        "heroSubtitle": "Desenvolvemos software, automação e análise de evidências para equipes periciais, jurídico, compliance e organizações que operam com dados sensíveis.",
+        "ctaPrimary": "Ver soluções e casos",
+        "ctaSecondary": "Explorar software forense",
         "aboutP1": "Somos uma empresa de tecnologia especializada no desenvolvimento de software, plataformas de dados e sistemas para ambientes que exigem controle, auditoria e rastreabilidade. Atuamos com SaaS, BI, automações e integrações para setores regulados e de alta responsabilidade.",
         "aboutP2": "Da análise forense de arquivos à governança de dados críticos, projetamos soluções para reduzir risco operacional e aumentar segurança decisória.",
         "aboutLink1": "Conheça nossa Plataforma de Dados",
@@ -50,8 +52,8 @@
         "sector6Tag": "Conformidade",
         "sectorsCta": "Seu setor não está aqui? Fale com um especialista",
         "quoteText": "Acreditamos em soluções feitas para resolver problemas reais. Por isso, cada projeto é pensado de ponta a ponta: arquitetura, experiência do usuário, segurança, escalabilidade e impacto direto no seu dia a dia.",
-        "servicesTitle": "Serviços e Soluções para Operações Críticas",
-        "servicesSubtitle": "Projetamos e evoluímos software para operações críticas, com rastreabilidade, auditoria e segurança para decisões de alto impacto.",
+        "servicesTitle": "Software e serviços para perícia digital e operações críticas",
+        "servicesSubtitle": "Projetamos e evoluímos software com rastreabilidade, auditoria e segurança para investigações, compliance e decisões de alto impacto.",
         "coreServicesTitle": "Serviços Principais",
         "coreService1": "Desenvolvimento de Sistemas e Aplicações Sob Medida",
         "coreService2": "Plataformas SaaS para Dados e Documentos Críticos",
@@ -540,10 +542,10 @@
         "ctaApps": "Ver Aplicações"
     },
     "Portfolio": {
-        "metaTitle": "Software de Perícia Digital e Investigação Forense | InvestigaçãoForense.com",
-        "metaDesc": "Plataforma de tecnologia para perícia digital, investigação forense e análise de dados. Desenvolvemos software, BI e sistemas de evidências para órgãos públicos, escritórios e compliance.",
-        "heroTitle": "Portfólio de Projetos em Perícia Digital e Investigação Forense",
-        "heroDesc": "Reunimos projetos executados e em evolução nas áreas de perícia digital, investigação forense, análise de evidências, BI e automação. Desenvolvemos soluções para equipes periciais, jurídicas e de compliance que precisam de rastreabilidade, integridade e apoio à decisão em ambientes críticos.",
+        "metaTitle": "Portfólio de Software para Perícia Digital e Investigação Forense",
+        "metaDesc": "Conheça nosso portfólio de software para perícia digital, investigação forense, análise de evidências, fraude digital, BI e compliance.",
+        "heroTitle": "Portfólio de software para perícia digital, fraude e investigação forense",
+        "heroDesc": "Conheça projetos em produção, piloto e evolução nas áreas de perícia digital, investigação forense, análise de evidências, BI e automação para ambientes críticos.",
         "heroSolutionsLink": "Para conhecer as soluções disponíveis para contratação e demonstração, acesse a página de",
         "heroSolutionsLinkText": "Soluções",
         "talesRole": "Especialista em Perícia Digital e Ciência de Dados Forense",
@@ -553,8 +555,8 @@
         "matheusBio1": "Desenvolvedor Full Stack com foco em software para perícia digital, investigação forense e análise de dados.",
         "matheusBio2": "Atua no desenvolvimento de plataformas SaaS, BI e automação para governança documental, auditoria e compliance. Estagiário de Performance e Dados na Critéria Financial Group e diretor do Grupo de Estudos em Perícia e Investigação Digital (GEPID), com experiência prática em arquitetura, integrações e produtos para ambientes críticos.",
         "viewLinkedIn": "Ver LinkedIn",
-        "projectsTitle": "Projetos em Produção e Evolução",
-        "requestDetails": "Solicitar detalhes do projeto",
+        "projectsTitle": "Projetos e sistemas em produção, piloto e evolução",
+        "requestDetails": "Solicitar detalhes ou demonstração",
         "demoAvailable": "Disponível\npara teste",
         "biTitle": "BI para Segurança Pública e Investigação Forense (2024)",
         "biDesc": "Projeto concluído com dashboards para apoiar a gestão pericial e decisões operacionais na segurança pública. A solução organiza dados de múltiplas frentes em painéis com foco em rastreabilidade e leitura gerencial.",
@@ -613,7 +615,7 @@
         "viewAppsLink": "Ver aplicações em fase final de desenvolvimento",
         "dataPlatformLink": "Conheça nossa Plataforma de Dados",
         "viewAppsLink2": "Veja nossas Aplicações",
-        "seoTitle": "Tecnologia para Investigação Forense e Perícia Digital",
-        "seoDesc": "A Investigação Forense desenvolve software, plataformas de dados e sistemas de evidências digitais para apoiar peritos, investigadores, escritórios jurídicos e equipes de compliance. Nossas soluções incluem gestão de laudos periciais, análise de grandes volumes de dados, geolocalização, auditoria, integridade por hash e rastreabilidade de provas."
+        "seoTitle": "Software, plataformas e projetos para perícia digital",
+        "seoDesc": "A Investigação Forense desenvolve software, plataformas de dados e sistemas de evidências digitais para apoiar peritos, investigadores, escritórios jurídicos e equipes de compliance. Nosso portfólio inclui análise de evidências, fraude digital, gestão de laudos, geolocalização, auditoria, integridade por hash e rastreabilidade de provas."
     }
 }

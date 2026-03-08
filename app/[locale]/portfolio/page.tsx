@@ -165,7 +165,7 @@ export default function PortfolioPage() {
                 <span className="text-xs px-2 py-1 rounded border border-amber-400/30 bg-amber-500/15 text-amber-300 font-semibold">{t('stagePilotPartners')}</span>
               </div>
               <p className="text-gray-300 text-sm">{t('metascopeDesc')}</p>
-              <div className="mt-auto"><CardCta label={t('requestDetails')} /></div>
+              <div className="mt-auto"><CardCta href="/aplicacoes/metascope" label={t('requestDetails')} /></div>
             </div>
 
             {/* CondoHub */}
@@ -178,7 +178,7 @@ export default function PortfolioPage() {
                 <span className="text-xs px-2 py-1 rounded border border-emerald-400/30 bg-emerald-500/15 text-emerald-300 font-semibold">{t('stageProduction')}</span>
               </div>
               <p className="text-gray-300 text-sm">{t('condohubDesc')}</p>
-              <div className="mt-auto"><CardCta label={t('requestDetails')} /></div>
+              <div className="mt-auto"><CardCta href="/aplicacoes/condohub" label={t('requestDetails')} /></div>
             </div>
 
             {/* ScamTrace */}
@@ -226,7 +226,7 @@ export default function PortfolioPage() {
                 <span className="text-xs px-2 py-1 rounded border border-emerald-400/30 bg-emerald-500/15 text-emerald-300 font-semibold">{t('stageProduction')}</span>
               </div>
               <p className="text-gray-300 text-sm">{t('platformDesc')}</p>
-              <div className="mt-auto"><CardCta label={t('requestDetails')} /></div>
+              <div className="mt-auto"><CardCta href="/plataforma-dados-criticos" label={t('requestDetails')} /></div>
             </div>
 
             {/* Inspecta */}

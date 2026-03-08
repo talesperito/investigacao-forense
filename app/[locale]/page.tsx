@@ -3,29 +3,32 @@ import { Link } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 
-const homeUrl = 'https://www.investigacaoforense.com/';
+const ptHomeUrl = 'https://www.investigacaoforense.com/';
+const enHomeUrl = 'https://www.investigacaoforense.com/en';
 const homeOgImage = 'https://www.investigacaoforense.com/images/metascope/screenshot-1-v2.png';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const resolvedParams = await params;
   const t = await getTranslations({ locale: resolvedParams.locale, namespace: 'Home' });
+  const isEn = resolvedParams.locale === 'en';
+  const pageUrl = isEn ? enHomeUrl : ptHomeUrl;
 
   return {
-    title: t('heroTitle') + ' | Investigação Forense',
-    description: t('heroSubtitle'),
+    title: isEn ? `${t('metaTitle')} | Investigação Forense` : t('metaTitle'),
+    description: t('metaDesc'),
     alternates: {
-      canonical: homeUrl,
+      canonical: pageUrl,
       languages: {
-        'pt-BR': homeUrl,
-        'en': homeUrl + 'en',
+        'pt-BR': ptHomeUrl,
+        'en': enHomeUrl,
       },
     },
     openGraph: {
       type: 'website',
-      locale: resolvedParams.locale === 'en' ? 'en_US' : 'pt_BR',
-      url: homeUrl,
-      title: t('heroTitle') + ' | Investigação Forense',
-      description: t('heroSubtitle'),
+      locale: isEn ? 'en_US' : 'pt_BR',
+      url: pageUrl,
+      title: isEn ? `${t('metaTitle')} | Investigação Forense` : t('metaTitle'),
+      description: t('metaDesc'),
       siteName: 'Investigação Forense',
       images: [
         {
@@ -38,8 +41,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     },
     twitter: {
       card: 'summary_large_image',
-      title: t('heroTitle') + ' | Investigação Forense',
-      description: t('heroSubtitle'),
+      title: isEn ? `${t('metaTitle')} | Investigação Forense` : t('metaTitle'),
+      description: t('metaDesc'),
       images: [homeOgImage],
     },
   };
@@ -49,14 +52,14 @@ const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
   name: 'Investigação Forense',
-  url: homeUrl,
+  url: ptHomeUrl,
 };
 
 const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'Investigação Forense',
-  url: homeUrl,
+  url: ptHomeUrl,
   logo: 'https://www.investigacaoforense.com/favicon.ico',
   sameAs: ['https://www.instagram.com/investigacao_forense'],
 };
@@ -273,4 +276,3 @@ export default function HomePage() {
     </>
   );
 }
-

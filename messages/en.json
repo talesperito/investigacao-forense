@@ -12,10 +12,12 @@
         "contact": "Contact"
     },
     "Home": {
-        "heroTitle": "From complex challenges to reliable mission-critical solutions",
-        "heroSubtitle": "We build digital forensics SaaS, custom systems and analytical dashboards for investigations, fraud, legal teams and critical operations.",
-        "ctaPrimary": "View cases & projects",
-        "ctaSecondary": "Explore digital forensics apps",
+        "metaTitle": "Digital Forensics Software & Investigation Technology",
+        "metaDesc": "Digital forensics software, automation, and evidence analysis for investigations, legal teams, compliance, and critical operations.",
+        "heroTitle": "Technology for digital forensics, investigations, and critical operations",
+        "heroSubtitle": "We build digital forensics software, automation, and evidence analysis systems for forensic teams, legal departments, compliance, and data-sensitive operations.",
+        "ctaPrimary": "View solutions and case portfolio",
+        "ctaSecondary": "Explore forensic applications",
         "aboutP1": "We are a technology company specialized in building software, data platforms and systems for environments that demand control, auditability and traceability. We work with SaaS, BI, automations and integrations for regulated and high-responsibility sectors.",
         "aboutP2": "From digital file forensics to critical data governance, we design solutions to reduce operational risk and increase decision-making security.",
         "aboutLink1": "Explore our Data Platform",
@@ -50,8 +52,8 @@
         "sector6Tag": "Compliance",
         "sectorsCta": "Your industry not listed? Talk to a specialist",
         "quoteText": "We believe in solutions built to solve real problems. That's why every project is designed end-to-end: architecture, user experience, security, scalability and direct impact on your day-to-day operations.",
-        "servicesTitle": "Services & Solutions for Critical Operations",
-        "servicesSubtitle": "We design and evolve software for critical operations, with traceability, audit and security for high-impact decisions.",
+        "servicesTitle": "Software and services for digital forensics and critical operations",
+        "servicesSubtitle": "We design and evolve software with traceability, audit, and security for investigations, compliance, and high-impact decisions.",
         "coreServicesTitle": "Core Services",
         "coreService1": "Custom Systems & Application Development",
         "coreService2": "SaaS Platforms for Critical Data & Documents",
@@ -539,10 +541,10 @@
         "ctaApps": "View Applications"
     },
     "Portfolio": {
-        "metaTitle": "Digital Forensics Software & Investigation Portfolio | InvestigacaoForense.com",
-        "metaDesc": "Technology platform for digital forensics, forensic investigation and data analysis. We develop software, BI and evidence systems for government agencies, law firms and compliance.",
-        "heroTitle": "Digital Forensics & Investigation Portfolio",
-        "heroDesc": "We showcase projects executed and evolving in digital forensics, forensic investigation, evidence analysis, BI and automation. We build solutions for forensic teams, legal professionals and compliance departments that need traceability, integrity and decision support in critical environments.",
+        "metaTitle": "Digital Forensics Software Portfolio | Investigation Systems",
+        "metaDesc": "Explore our portfolio of digital forensics software, investigation systems, evidence analysis tools, fraud technology, BI, and compliance platforms.",
+        "heroTitle": "Portfolio of digital forensics software and investigation systems",
+        "heroDesc": "Explore software projects in production, pilot, and development across digital forensics, fraud investigation, evidence analysis, BI, and automation for critical environments.",
         "heroSolutionsLink": "To see solutions available for contracting and demo, visit the",
         "heroSolutionsLinkText": "Solutions",
         "talesRole": "Digital Forensics & Data Science Specialist",
@@ -552,8 +554,8 @@
         "matheusBio1": "Full Stack Developer focused on software for digital forensics, forensic investigation and data analysis.",
         "matheusBio2": "Works on developing SaaS platforms, BI and automation for document governance, audit and compliance. Performance & Data intern at Critéria Financial Group and director of GEPID (Digital Investigation Study Group), with practical experience in architecture, integrations and products for critical environments.",
         "viewLinkedIn": "View LinkedIn",
-        "projectsTitle": "Projects in Production & Evolution",
-        "requestDetails": "Request project details",
+        "projectsTitle": "Software projects in production, pilot, and development",
+        "requestDetails": "Request details or demo",
         "demoAvailable": "Available\nfor testing",
         "biTitle": "BI for Public Safety & Forensic Investigation (2024)",
         "biDesc": "Completed project with dashboards to support forensic management and operational decisions in public safety. The solution organizes data from multiple sources into panels focused on traceability and management insights.",
@@ -612,7 +614,7 @@
         "viewAppsLink": "View applications in final development phase",
         "dataPlatformLink": "Explore our Data Platform",
         "viewAppsLink2": "View our Applications",
-        "seoTitle": "Technology for Forensic Investigation & Digital Forensics",
-        "seoDesc": "Investigação Forense develops software, data platforms and digital evidence systems to support forensic experts, investigators, law firms and compliance teams. Our solutions include forensic report management, large-scale data analysis, geolocation, audit, hash integrity and evidence traceability."
+        "seoTitle": "Digital forensics software, investigation tools, and evidence systems",
+        "seoDesc": "Investigação Forense develops software, data platforms, and digital evidence systems for forensic experts, investigators, law firms, and compliance teams. Our portfolio includes evidence analysis, fraud investigation, forensic reporting, geolocation, audit, hash integrity, and traceability tools."
     }
 }

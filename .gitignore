@@ -64,6 +64,7 @@ _agent/
 
 # Planejamento local SEO (nao versionar)
 seo-artigos-pendentes.local.md
+seo-metascope-rank-baseline-*.md
 
 # Artefatos locais de auditoria
 lh.json
