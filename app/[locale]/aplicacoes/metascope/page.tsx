@@ -60,6 +60,22 @@ export default function MetaScopePage() {
     { q: t('faq8Q'), a: t('faq8A') },
   ];
 
+  const filePrivacyDesc = t('filePrivacyDesc', {
+    never: t('filePrivacyNever'),
+  });
+
+  const threatAnalysisDesc = t('threatAnalysisDesc', {
+    noClickRisk: t('noClickRisk'),
+  });
+
+  const threatSafeDesc = t('threatSafeDesc', {
+    doNotOpen: t('doNotOpen'),
+  });
+
+  const caseFeaturedDesc = t('caseFeaturedDesc', {
+    reportReady: t('reportReady'),
+  });
+
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900">
       <div
@@ -194,11 +210,7 @@ export default function MetaScopePage() {
 
                 <div className="mt-4 rounded-2xl border border-blue-200 bg-blue-50 px-4 py-3 text-sm text-blue-900">
                   <p className="font-extrabold">{t('filePrivacyTitle')}</p>
-                  <p className="mt-1">
-                    {t('filePrivacyDesc', { never: '' }).split('{never}')[0]}
-                    <span className="font-semibold">{t('filePrivacyNever')}</span>
-                    {t('filePrivacyDesc', { never: '' }).split('{never}')[1] || ''}
-                  </p>
+                  <p className="mt-1">{filePrivacyDesc}</p>
                 </div>
 
                 <ul className="mt-4 space-y-2.5 leading-relaxed text-sm md:text-base text-slate-700">
@@ -224,21 +236,13 @@ export default function MetaScopePage() {
                   <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-emerald-600 text-white shadow-md shadow-emerald-600/20">🛡️</span>
                   <div>
                     <h3 className="text-lg font-extrabold text-slate-900">{t('threatAnalysisTitle')}</h3>
-                    <p className="mt-1 text-sm text-slate-600">
-                      {t('threatAnalysisDesc', { noClickRisk: '' }).split('{noClickRisk}')[0]}
-                      <span className="font-semibold">{t('noClickRisk')}</span>
-                      {t('threatAnalysisDesc', { noClickRisk: '' }).split('{noClickRisk}')[1] || ''}
-                    </p>
+                    <p className="mt-1 text-sm text-slate-600">{threatAnalysisDesc}</p>
                   </div>
                 </div>
 
                 <div className="mt-4 rounded-2xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-900">
                   <p className="font-extrabold">{t('threatSafeTitle')}</p>
-                  <p className="mt-1">
-                    {t('threatSafeDesc', { doNotOpen: '' }).split('{doNotOpen}')[0]}
-                    <span className="font-semibold">{t('doNotOpen')}</span>
-                    {t('threatSafeDesc', { doNotOpen: '' }).split('{doNotOpen}')[1] || ''}
-                  </p>
+                  <p className="mt-1">{threatSafeDesc}</p>
                 </div>
 
                 <ul className="mt-4 space-y-2.5 leading-relaxed text-sm md:text-base text-slate-700">
@@ -290,11 +294,7 @@ export default function MetaScopePage() {
 
                 <div className="p-8 pb-2">
                   <h3 className="text-2xl md:text-3xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">{t('caseFeaturedTitle')}</h3>
-                  <p className="text-slate-400 text-base mb-6 leading-relaxed">
-                    {t('caseFeaturedDesc', { reportReady: '' }).split('{reportReady}')[0]}
-                    <span className="text-slate-200 font-semibold">{t('reportReady')}</span>
-                    {t('caseFeaturedDesc', { reportReady: '' }).split('{reportReady}')[1] || '.'}
-                  </p>
+                  <p className="text-slate-400 text-base mb-6 leading-relaxed">{caseFeaturedDesc}</p>
                 </div>
 
                 <div className="mx-4 mb-4 p-4 rounded-2xl border border-slate-700 bg-slate-950/50 relative">
