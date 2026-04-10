@@ -64,13 +64,6 @@ export default function MetaScopePage() {
     never: t('filePrivacyNever'),
   });
 
-  const threatAnalysisDesc = t('threatAnalysisDesc', {
-    noClickRisk: t('noClickRisk'),
-  });
-
-  const threatSafeDesc = t('threatSafeDesc', {
-    doNotOpen: t('doNotOpen'),
-  });
 
   const caseFeaturedDesc = t('caseFeaturedDesc', {
     reportReady: t('reportReady'),
@@ -197,11 +190,11 @@ export default function MetaScopePage() {
             <h2 className="text-3xl md:text-4xl font-extrabold">{t('chooseToolTitle')}</h2>
             <p className="mt-3 text-base md:text-lg text-slate-600 max-w-5xl">{t('chooseToolSubtitle')}</p>
 
-            <div className="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-5 items-stretch">
+            <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-5 items-stretch">
               {/* Card 1: Files */}
               <div className="rounded-3xl border border-slate-200 bg-slate-50 p-8 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 flex flex-col h-full">
-                <div className="flex items-start gap-3">
-                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-blue-600 text-white shadow-md shadow-blue-600/20">🔎</span>
+                <div className="flex items-start gap-3 min-h-[140px]">
+                  <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-blue-600 text-white shadow-md shadow-blue-600/20">🔎</span>
                   <div>
                     <h3 className="text-lg font-extrabold text-slate-900">{t('fileAnalysisTitle')}</h3>
                     <p className="mt-1 text-sm text-slate-600">{t('fileAnalysisDesc')}</p>
@@ -217,7 +210,6 @@ export default function MetaScopePage() {
                   <li>• {t('fileBullet1')}</li>
                   <li>• {t('fileBullet2')}</li>
                   <li>• {t('fileBullet3')}</li>
-                  <li>• {t('fileBullet4')}</li>
                 </ul>
 
                 <div className="mt-auto pt-6">
@@ -230,26 +222,56 @@ export default function MetaScopePage() {
                 <p className="mt-3 text-xs text-slate-500">{t('fileDisclaimer')}</p>
               </div>
 
-              {/* Card 2: Threats */}
+              {/* Card 2: Docs */}
               <div className="rounded-3xl border border-slate-200 bg-slate-50 p-8 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 flex flex-col h-full">
-                <div className="flex items-start gap-3">
-                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-emerald-600 text-white shadow-md shadow-emerald-600/20">🛡️</span>
+                <div className="flex items-start gap-3 min-h-[140px]">
+                  <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-amber-500 text-white shadow-md shadow-amber-500/20">📄</span>
+                  <div>
+                    <h3 className="text-lg font-extrabold text-slate-900">{t('docAnalysisTitle')}</h3>
+                    <p className="mt-1 text-sm text-slate-600">{t('docAnalysisDesc')}</p>
+                  </div>
+                </div>
+
+                <div className="mt-4 rounded-2xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900">
+                  <p className="font-extrabold">{t('docPrivacyTitle')}</p>
+                  <p className="mt-1">{t('docPrivacyDesc')}</p>
+                </div>
+
+                <ul className="mt-4 space-y-2.5 leading-relaxed text-sm md:text-base text-slate-700">
+                  <li>• {t('docBullet1')}</li>
+                  <li>• {t('docBullet2')}</li>
+                  <li>• {t('docBullet3')}</li>
+                </ul>
+
+                <div className="mt-auto pt-6">
+                  <a href={metascopeUrl} target="_blank" rel="noopener noreferrer" className="group inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-amber-500 px-6 py-4 text-white font-extrabold ring-1 ring-black/5 shadow-lg shadow-amber-500/20 hover:bg-amber-600 hover:-translate-y-0.5 active:translate-y-0 transition-all">
+                    {t('docCtaButton')}
+                    <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
+                  </a>
+                </div>
+
+                <p className="mt-3 text-xs text-slate-500">{t('docDisclaimer')}</p>
+              </div>
+
+              {/* Card 3: Threats */}
+              <div className="rounded-3xl border border-slate-200 bg-slate-50 p-8 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 flex flex-col h-full">
+                <div className="flex items-start gap-3 min-h-[140px]">
+                  <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-emerald-600 text-white shadow-md shadow-emerald-600/20">🛡️</span>
                   <div>
                     <h3 className="text-lg font-extrabold text-slate-900">{t('threatAnalysisTitle')}</h3>
-                    <p className="mt-1 text-sm text-slate-600">{threatAnalysisDesc}</p>
+                    <p className="mt-1 text-sm text-slate-600">{t('threatAnalysisDesc')}</p>
                   </div>
                 </div>
 
                 <div className="mt-4 rounded-2xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-900">
                   <p className="font-extrabold">{t('threatSafeTitle')}</p>
-                  <p className="mt-1">{threatSafeDesc}</p>
+                  <p className="mt-1">{t('threatSafeDesc')}</p>
                 </div>
 
                 <ul className="mt-4 space-y-2.5 leading-relaxed text-sm md:text-base text-slate-700">
                   <li>• {t('threatBullet1')}</li>
                   <li>• {t('threatBullet2')}</li>
                   <li>• {t('threatBullet3')}</li>
-                  <li>• {t('threatBullet4')}</li>
                 </ul>
 
                 <div className="mt-auto pt-6">
@@ -506,28 +528,87 @@ export default function MetaScopePage() {
         </div>
       </div>
 
-      {/* How it works */}
-      <div className="container mx-auto px-4 pb-16">
+      {/* Centralized Triage Flow (New How it works) */}
+      <div className="container mx-auto px-4 pb-24 relative mt-12">
         <Reveal>
-          <div className="rounded-[28px] border border-slate-200 bg-white p-10 shadow-sm">
-            <h2 className="text-3xl md:text-4xl font-extrabold mb-8">{t('howItWorksTitle')}</h2>
+          {/* Subtle background glow */}
+          <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-blue-600/5 rounded-full blur-[120px] -z-10 pointer-events-none" />
+          <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-emerald-600/5 rounded-full blur-[120px] -z-10 pointer-events-none" />
 
-            <div className="relative">
-              <div className="hidden md:block absolute left-8 right-8 top-8 h-1 bg-slate-100 rounded-full overflow-hidden">
-                <div className="h-full w-1/2 bg-gradient-to-r from-blue-500/20 to-transparent" />
-              </div>
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-20 relative z-10">
+              <span className="inline-block py-1 px-4 rounded-full bg-slate-900 text-white text-xs md:text-sm font-bold tracking-widest uppercase mb-6 shadow-xl shadow-slate-900/10 ring-1 ring-white/20">
+                {t('howPretitle')}
+              </span>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.1] mb-6">
+                {t('howItWorksTitle')}
+              </h2>
+              <p className="text-lg md:text-xl text-slate-600 font-medium max-w-3xl mx-auto leading-relaxed">
+                {t('howItWorksSubtitle')}
+              </p>
+            </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Interactive Pipeline */}
+            <div className="relative z-10">
+              {/* Connecting dashed line (desktop) */}
+              <div className="hidden lg:block absolute top-[60px] left-[16%] right-[16%] h-0.5 border-t-2 border-dashed border-slate-300 z-0" />
+              
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 relative z-10">
                 {[
-                  { step: '1', title: t('howStep1Title'), desc: t('howStep1Desc') },
-                  { step: '2', title: t('howStep2Title'), desc: t('howStep2Desc') },
-                  { step: '3', title: t('howStep3Title'), desc: t('howStep3Desc') },
+                  {
+                    step: t('howStep1Title'),
+                    desc: t('howStep1Desc'),
+                    icon: <FileText className="w-8 h-8 text-blue-600 transition-colors duration-500 group-hover:text-white" />,
+                    bg: "bg-blue-50/50",
+                    hoverBg: "bg-blue-600",
+                    border: "border-blue-100 group-hover:border-blue-500",
+                    textHover: "group-hover:text-white",
+                    descHover: "group-hover:text-blue-100",
+                  },
+                  {
+                    step: t('howStep2Title'),
+                    desc: t('howStep2Desc'),
+                    icon: <Sparkles className="w-8 h-8 text-indigo-600 transition-colors duration-500 group-hover:text-white" />,
+                    bg: "bg-indigo-50/50",
+                    hoverBg: "bg-indigo-600",
+                    border: "border-indigo-100 group-hover:border-indigo-500",
+                    textHover: "group-hover:text-white",
+                    descHover: "group-hover:text-indigo-100",
+                  },
+                  {
+                    step: t('howStep3Title'),
+                    desc: t('howStep3Desc'),
+                    icon: <Gavel className="w-8 h-8 text-emerald-600 transition-colors duration-500 group-hover:text-white" />,
+                    bg: "bg-emerald-50/50",
+                    hoverBg: "bg-emerald-600",
+                    border: "border-emerald-100 group-hover:border-emerald-500",
+                    textHover: "group-hover:text-white",
+                    descHover: "group-hover:text-emerald-100",
+                  },
                 ].map((s, idx) => (
-                  <Reveal key={s.step} delayMs={80 + idx * 80}>
-                    <div className="relative bg-white rounded-3xl p-6 border border-slate-100 shadow-sm hover:shadow-md hover:border-blue-100 transition-all duration-300 h-full">
-                      <div className="relative z-10 h-14 w-14 rounded-2xl bg-blue-600 text-white shadow-lg shadow-blue-600/30 flex items-center justify-center text-xl font-black mb-6">{s.step}</div>
-                      <h3 className="text-xl font-extrabold text-slate-900 mb-3">{s.title}</h3>
-                      <p className="text-slate-600 leading-relaxed">{s.desc}</p>
+                  <Reveal key={s.step} delayMs={100 + idx * 150}>
+                    <div className={`group relative h-full rounded-[32px] border ${s.border} bg-white p-8 md:p-10 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl shadow-sm cursor-default overflow-hidden`}>
+                      
+                      {/* Animated Background slide-up effect */}
+                      <div className={`absolute inset-0 translate-y-full group-hover:translate-y-0 opacity-0 group-hover:opacity-100 ${s.hoverBg} transition-all duration-500 ease-out z-0`} />
+                      
+                      <div className="relative z-10 flex flex-col h-full text-center lg:text-left items-center lg:items-start">
+                        {/* Icon Hex/Circle */}
+                        <div className={`w-24 h-24 rounded-2xl ${s.bg} group-hover:bg-white/20 border border-slate-100 shadow-inner flex items-center justify-center mb-8 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 relative`}>
+                          <div className="absolute -inset-2 bg-gradient-to-r from-transparent via-white/40 to-transparent blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
+                          {s.icon}
+                        </div>
+                        
+                        <h3 className={`text-2xl lg:text-3xl font-black text-slate-900 mb-4 ${s.textHover} transition-colors duration-500`}>
+                          {s.step}
+                        </h3>
+                        <p className={`text-slate-600 text-base md:text-lg leading-relaxed ${s.descHover} transition-colors duration-500`}>
+                          {s.desc}
+                        </p>
+                      </div>
+                      
+                      {/* Interactive Pulse Dot */}
+                      <div className="absolute top-8 right-8 w-3 h-3 rounded-full bg-slate-200 group-hover:bg-white animate-pulse transition-colors duration-500" />
                     </div>
                   </Reveal>
                 ))}
@@ -537,12 +618,27 @@ export default function MetaScopePage() {
         </Reveal>
       </div>
 
-      {/* SEO Section */}
-      <div className="container mx-auto px-4 pb-12">
+      {/* Light SEO & Bottom CTA Card */}
+      <div className="container mx-auto px-4 pb-16 mt-4">
         <Reveal>
-          <div className="rounded-[28px] border border-slate-200 bg-white p-8 shadow-sm">
-            <h2 className="text-2xl md:text-3xl font-extrabold text-slate-900">{t('seoSectionTitle')}</h2>
-            <p className="mt-3 text-slate-600 leading-relaxed max-w-4xl">{t('seoSectionDesc')}</p>
+          <div className="rounded-[32px] border border-slate-200 bg-gradient-to-b from-slate-50 to-white p-8 md:p-12 text-center max-w-5xl mx-auto shadow-sm hover:shadow-md transition-shadow">
+            <ShieldCheck className="w-10 h-10 text-blue-600 mx-auto mb-6" />
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-slate-900 mb-4 tracking-tight">
+              {t('seoSectionTitle')}
+            </h2>
+            <p className="text-base md:text-lg text-slate-600 leading-relaxed max-w-3xl mx-auto mb-8">
+              {t('seoSectionDesc')}
+            </p>
+            
+            <a
+              href={metascopeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex justify-center items-center gap-2 rounded-2xl bg-blue-600 px-6 py-3.5 text-white font-bold hover:bg-blue-700 hover:-translate-y-0.5 transition-all shadow-sm shadow-blue-600/20"
+            >
+              {t('ctaPrimary')}
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </a>
           </div>
         </Reveal>
       </div>
@@ -642,31 +738,37 @@ export default function MetaScopePage() {
       {/* Final CTA */}
       <div className="container mx-auto px-4 pb-16">
         <Reveal>
-          <div className="rounded-[28px] border border-slate-200 bg-gradient-to-r from-blue-600 to-blue-700 text-white p-10 shadow-xl shadow-blue-700/20">
-            <div className="max-w-3xl">
-              <h2 className="text-2xl md:text-3xl font-extrabold">{t('finalCtaTitle')}</h2>
-              <p className="mt-3 text-blue-100">{t('finalCtaDesc')}</p>
+          <div className="relative overflow-hidden rounded-[32px] border border-blue-500 bg-gradient-to-br from-blue-600 to-blue-800 text-white shadow-xl shadow-blue-700/20">
+            {/* Soft Glow */}
+            <div className="absolute -top-32 -right-32 w-96 h-96 bg-white/10 rounded-full blur-3xl pointer-events-none" />
+            
+            <div className="relative z-10 p-8 md:p-12 flex flex-col lg:flex-row lg:items-center justify-between gap-10">
+              <div className="max-w-4xl">
+                <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">{t('finalCtaTitle')}</h2>
+                <p className="mt-3 text-lg md:text-xl text-blue-100/90 leading-relaxed">{t('finalCtaDesc')}</p>
+                
+                <div className="mt-6 space-y-1">
+                  <p className="text-sm text-blue-200/80 font-medium">
+                    {t('finalLimits', { imgLimit: '100MB', docLimit: '25MB' })}
+                  </p>
+                  <p className="text-sm text-blue-200/80 font-medium">
+                    {t('finalSecurityQuestion')}{' '}
+                    <a href="/contato" className="font-semibold text-white underline decoration-white/30 underline-offset-4 hover:decoration-white transition-colors">
+                      {t('finalContactLink')}
+                    </a>
+                  </p>
+                </div>
+              </div>
 
-              <div className="mt-6 flex flex-col sm:flex-row gap-3">
-                <a href={metascopeUrl} target="_blank" rel="noopener noreferrer" className="group inline-flex items-center justify-center gap-2 rounded-2xl bg-white px-7 py-4 font-extrabold text-blue-700 hover:bg-blue-50 transition-all duration-200 shadow-md">
+              <div className="flex flex-col sm:flex-row lg:flex-col lg:justify-center gap-4 shrink-0">
+                <a href={metascopeUrl} target="_blank" rel="noopener noreferrer" className="group inline-flex items-center justify-center gap-2 rounded-2xl bg-white px-8 py-4 font-extrabold text-blue-700 hover:bg-slate-50 transition-all shadow-lg hover:-translate-y-0.5 whitespace-nowrap">
                   {t('finalCtaButton')}
-                  <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
+                  <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </a>
-                <a href="#exemplos" className="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/30 bg-transparent px-7 py-4 font-extrabold text-white hover:bg-white/10 transition-all duration-200">
+                <a href="#exemplos" className="inline-flex items-center justify-center gap-2 rounded-2xl border-2 border-white/20 bg-transparent px-8 py-4 font-extrabold text-white hover:bg-white/10 transition-all whitespace-nowrap">
                   {t('finalCtaSecondary')}
                 </a>
               </div>
-
-              <p className="mt-4 text-sm text-blue-100">
-                {t('finalLimits', { imgLimit: '100MB', docLimit: '25MB' })}
-              </p>
-              <p className="mt-2 text-sm text-blue-100">
-                {t('finalSecurityQuestion')}{' '}
-                <a href="/contato" className="font-semibold text-white underline decoration-white/50 underline-offset-4 hover:decoration-white">
-                  {t('finalContactLink')}
-                </a>
-                .
-              </p>
             </div>
           </div>
         </Reveal>
