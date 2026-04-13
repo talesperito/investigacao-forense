@@ -112,9 +112,9 @@ export default function Footer() {
               <Link href="/contato" className="text-gray-400 hover:text-white transition-colors duration-200">
                 {t('contact')}
               </Link>
-              <Link href="/cursos" className="text-gray-400 hover:text-white transition-colors duration-200">
+              <a href="/cursos" className="text-gray-400 hover:text-white transition-colors duration-200">
                 {t('courses')}
-              </Link>
+              </a>
             </nav>
           </div>
         </div>

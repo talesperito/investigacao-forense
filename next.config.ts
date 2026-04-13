@@ -8,6 +8,16 @@ const nextConfig: NextConfig = {
     return [
       // Legacy root-level aliases
       {
+        source: "/en/courses",
+        destination: "/cursos",
+        permanent: true,
+      },
+      {
+        source: "/courses",
+        destination: "/cursos",
+        permanent: true,
+      },
+      {
         source: "/solucoes",
         destination: "/aplicacoes",
         permanent: true,
