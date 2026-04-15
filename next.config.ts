@@ -23,23 +23,8 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        source: "/blog",
-        destination: "/",
-        permanent: true,
-      },
-      {
-        source: "/blog/:slug",
-        destination: "/",
-        permanent: true,
-      },
-      {
-        source: "/sobre",
-        destination: "/",
-        permanent: true,
-      },
-      {
-        source: "/downloads",
-        destination: "/cursos",
+        source: "/consultorias",
+        destination: "/servicos",
         permanent: true,
       },
       {

@@ -9,6 +9,7 @@ const gonePaths = new Set([
   '/author/peritotales',
   '/category/medicinalegal',
   '/login',
+  '/downloads',
   '/locais-simulados',
   '/tanatologia-e-medicina-legal-as-ciencias-que-envolvem-a-morte',
   '/cameras-de-seguranca-voce-pode-estar-sendo-filmado-sem-saber',
@@ -18,10 +19,23 @@ const gonePaths = new Set([
   '/pericias-em-automoveis-para-comprovacao-de-adulteracao-desvendando-golpes-e-protegendo-o-consumidor'
 ]);
 
+const gonePrefixes = [
+  '/blog',
+  '/product-page',
+];
+
+function isGonePath(pathname: string) {
+  if (gonePaths.has(pathname)) {
+    return true;
+  }
+
+  return gonePrefixes.some((prefix) => pathname === prefix || pathname.startsWith(`${prefix}/`));
+}
+
 export default function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname.replace(/\/+$/, '') || '/';
 
-  if (gonePaths.has(pathname)) {
+  if (isGonePath(pathname)) {
     return new NextResponse('Gone', { status: 410 });
   }
 
