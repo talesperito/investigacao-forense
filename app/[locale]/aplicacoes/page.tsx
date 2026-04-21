@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next';
+import type { Metadata } from 'next';
 import { Link } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
@@ -48,8 +48,7 @@ export default function AplicacoesPage() {
       bullets: [t('metascopeBullet1'), t('metascopeBullet2'), t('metascopeBullet3')],
       ctas: [
         { label: t('metascopeCta1'), href: '/aplicacoes/metascope' as const, variant: 'primary' as const },
-        { label: t('metascopeCta2'), href: 'https://tally.so/r/lbrQ8p', external: true, variant: 'secondary' as const },
-        { label: t('metascopeCta3'), disabled: true, helper: t('metascopeCta3Helper'), variant: 'muted' as const },
+        { label: t('metascopeCta2'), href: process.env.NEXT_PUBLIC_METASCOPE_URL || 'https://app.metascopeforense.com/', external: true, variant: 'secondary' as const },
       ],
     },
     {
@@ -158,7 +157,7 @@ export default function AplicacoesPage() {
                 ))}
               </ul>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+              <div className="flex flex-col sm:flex-row gap-3">
                 {app.ctas.map((cta) => {
                   const className =
                     cta.variant === 'primary'
@@ -168,7 +167,7 @@ export default function AplicacoesPage() {
                         : 'w-full inline-flex items-center justify-center rounded-lg border border-slate-700/70 bg-slate-800/45 px-5 py-3 font-semibold text-slate-500 cursor-not-allowed';
 
                   return (
-                    <div key={cta.label} className="space-y-1 min-h-[68px]">
+                    <div key={cta.label} className="flex-1 space-y-1 min-h-[68px]">
                       {cta.href && !cta.disabled ? (
                         cta.external ? (
                           <a

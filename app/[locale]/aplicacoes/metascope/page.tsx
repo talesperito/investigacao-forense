@@ -23,7 +23,7 @@ export default function MetaScopePage() {
   const [imgOpacity, setImgOpacity] = useState(1);
   const [faqOpenIndex, setFaqOpenIndex] = useState<number | null>(0);
 
-  const metascopeUrl = process.env.NEXT_PUBLIC_METASCOPE_URL || 'https://tally.so/r/lbrQ8p';
+  const metascopeUrl = process.env.NEXT_PUBLIC_METASCOPE_URL || 'https://app.metascopeforense.com/';
 
   const demoImages = useMemo(
     () => [
@@ -57,7 +57,7 @@ export default function MetaScopePage() {
     { q: t('faq5Q'), a: t('faq5A') },
     { q: t('faq6Q'), a: t('faq6A') },
     { q: t('faq7Q'), a: t('faq7A') },
-    { q: t('faq8Q'), a: t('faq8A') },
+    { q: t('faq8Q'), a: t.rich('faq8A', { link: (chunks) => <a href={metascopeUrl} target="_blank" rel="noopener noreferrer" className="font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 hover:decoration-blue-700 transition-colors">{chunks}</a> }) },
   ];
 
   const filePrivacyDesc = t('filePrivacyDesc', {
