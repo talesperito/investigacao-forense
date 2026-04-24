@@ -109,12 +109,15 @@ export default function Footer() {
               <Link href="/politica-de-privacidade" className="text-gray-400 hover:text-white transition-colors duration-200">
                 {t('privacyPolicy')}
               </Link>
+              <Link href="/manual-ferramentas-forenses" className="text-gray-400 hover:text-white transition-colors duration-200">
+                {t('forensicToolsManual')}
+              </Link>
               <Link href="/contato" className="text-gray-400 hover:text-white transition-colors duration-200">
                 {t('contact')}
               </Link>
-              <a href="/cursos" className="text-gray-400 hover:text-white transition-colors duration-200">
+              <Link href="/cursos" className="text-gray-400 hover:text-white transition-colors duration-200">
                 {t('courses')}
-              </a>
+              </Link>
             </nav>
           </div>
         </div>

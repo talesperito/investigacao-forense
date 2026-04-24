@@ -36,6 +36,10 @@ export const routing = defineRouting({
             pt: '/cursos',
             en: '/courses'
         },
+        '/manual-ferramentas-forenses': {
+            pt: '/manual-ferramentas-forenses',
+            en: '/forensic-tools-manual'
+        },
         '/landingpage': {
             pt: '/landingpage',
             en: '/landingpage'
