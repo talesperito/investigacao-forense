@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import CookieBanner from '@/components/CookieBanner';
 import TopNav from '@/components/TopNav';
 import GoogleTagManager from '@/components/GoogleTagManager';
+import MetaPixel from '@/components/MetaPixel';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
@@ -111,6 +112,7 @@ export default async function RootLayout({
       <body className="antialiased bg-black">
         <NextIntlClientProvider messages={layoutMessages}>
           <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID || ''} />
+          <MetaPixel />
           <TopNav />
           {children}
           <Footer />

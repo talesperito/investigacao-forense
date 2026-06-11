@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import {
@@ -20,6 +20,11 @@ import Reveal from '@/components/Reveal';
 export default function MetaScopePage() {
   const t = useTranslations('MetaScope');
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const fbq = (window as Window & { fbq?: (...args: unknown[]) => void }).fbq;
+    fbq?.('track', 'ViewContent', { content_name: 'LP MetaScope' });
+  }, []);
   const [imgOpacity, setImgOpacity] = useState(1);
   const [faqOpenIndex, setFaqOpenIndex] = useState<number | null>(0);
 
