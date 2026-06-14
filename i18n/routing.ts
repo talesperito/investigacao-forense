@@ -20,6 +20,10 @@ export const routing = defineRouting({
             pt: '/aplicacoes/condohub',
             en: '/applications/condohub'
         },
+        '/aplicacoes/locus': {
+            pt: '/aplicacoes/locus',
+            en: '/applications/locus'
+        },
         '/servicos': {
             pt: '/servicos',
             en: '/services'

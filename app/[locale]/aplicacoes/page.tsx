@@ -52,6 +52,17 @@ export default function AplicacoesPage() {
       ],
     },
     {
+      name: 'Locus — Dinâmica Pericial',
+      stage: t('locusStage'),
+      audience: t('locusAudience'),
+      summary: t('locusSummary'),
+      bullets: [t('locusBullet1'), t('locusBullet2'), t('locusBullet3')],
+      ctas: [
+        { label: t('locusCta1'), href: '/aplicacoes/locus' as const, variant: 'primary' as const },
+        { label: t('locusCta2'), disabled: true, helper: t('locusCta2Helper'), variant: 'muted' as const },
+      ],
+    },
+    {
       name: 'CondoHub',
       stage: t('condohubStage'),
       audience: t('condohubAudience'),

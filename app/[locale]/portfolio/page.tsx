@@ -155,8 +155,21 @@ export default function PortfolioPage() {
               <div className="mt-auto"><CardCta label={t('requestDetails')} /></div>
             </div>
 
+            {/* Locus */}
+            <div className="order-1 relative bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-teal-500 transition-all flex flex-col">
+              <DemoSeal label={t('demoAvailable')} />
+              <h3 className="text-xl font-bold text-white mb-2 pr-16">Locus — Dinâmica Pericial de Percurso</h3>
+              <div className="flex gap-2 mb-3 flex-wrap">
+                <span className="text-xs px-2 py-1 rounded bg-teal-600/20 text-teal-400">{t('tagCrimeScene')}</span>
+                <span className="text-xs px-2 py-1 rounded bg-blue-600/20 text-blue-400">GPS & Mapa</span>
+                <span className="text-xs px-2 py-1 rounded border border-emerald-400/30 bg-emerald-500/15 text-emerald-300 font-semibold">{t('stageProduction')}</span>
+              </div>
+              <p className="text-gray-300 text-sm">{t('locusDesc')}</p>
+              <div className="mt-auto"><CardCta href="/aplicacoes/locus" label={t('accessPlatform')} /></div>
+            </div>
+
             {/* MetaScope */}
-            <div className="order-1 relative bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all flex flex-col">
+            <div className="order-3 relative bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all flex flex-col">
 
               <h3 className="text-xl font-bold text-white mb-2 pr-16">{t('metascopeTitle')}</h3>
               <div className="flex gap-2 mb-3 flex-wrap">
