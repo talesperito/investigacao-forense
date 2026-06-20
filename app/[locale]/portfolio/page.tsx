@@ -111,7 +111,7 @@ export default function PortfolioPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
             {/* BI */}
-            <div className="order-9 bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all flex flex-col">
+            <div className="order-10 bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all flex flex-col">
               <h3 className="text-xl font-bold text-white mb-2">{t('biTitle')}</h3>
               <div className="flex gap-2 mb-3 flex-wrap">
                 <span className="text-xs px-2 py-1 rounded bg-yellow-600/20 text-yellow-400">{t('tagResearch')}</span>
@@ -131,7 +131,7 @@ export default function PortfolioPage() {
             </div>
 
             {/* FaceID */}
-            <div className="order-8 relative bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all flex flex-col">
+            <div className="order-9 relative bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all flex flex-col">
               <h3 className="text-xl font-bold text-white mb-2 pr-16">{t('faceidTitle')}</h3>
               <div className="flex gap-2 mb-3 flex-wrap">
                 <span className="text-xs px-2 py-1 rounded bg-blue-600/20 text-blue-400">{t('tagAI')}</span>
@@ -143,7 +143,7 @@ export default function PortfolioPage() {
             </div>
 
             {/* EvidenceOS */}
-            <div className="order-5 relative bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all flex flex-col">
+            <div className="order-6 relative bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all flex flex-col">
               <DemoSeal label={t('demoAvailable')} />
               <h3 className="text-xl font-bold text-white mb-2 pr-16">{t('evidenceosTitle')}</h3>
               <div className="flex gap-2 mb-3 flex-wrap">
@@ -156,7 +156,7 @@ export default function PortfolioPage() {
             </div>
 
             {/* Locus */}
-            <div className="order-1 relative bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-teal-500 transition-all flex flex-col">
+            <div className="order-2 relative bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-teal-500 transition-all flex flex-col">
               <DemoSeal label={t('demoAvailable')} />
               <h3 className="text-xl font-bold text-white mb-2 pr-16">Locus — Dinâmica Pericial de Percurso</h3>
               <div className="flex gap-2 mb-3 flex-wrap">
@@ -169,7 +169,7 @@ export default function PortfolioPage() {
             </div>
 
             {/* MetaScope */}
-            <div className="order-3 relative bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all flex flex-col">
+            <div className="order-1 relative bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all flex flex-col">
 
               <h3 className="text-xl font-bold text-white mb-2 pr-16">{t('metascopeTitle')}</h3>
               <div className="flex gap-2 mb-3 flex-wrap">
@@ -182,7 +182,7 @@ export default function PortfolioPage() {
             </div>
 
             {/* CondoHub */}
-            <div className="order-6 relative bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all flex flex-col">
+            <div className="order-4 relative bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all flex flex-col">
               <DemoSeal label={t('demoAvailable')} />
               <h3 className="text-xl font-bold text-white mb-2 pr-16">{t('condohubTitle')}</h3>
               <div className="flex gap-2 mb-3 flex-wrap">
@@ -191,11 +191,11 @@ export default function PortfolioPage() {
                 <span className="text-xs px-2 py-1 rounded border border-emerald-400/30 bg-emerald-500/15 text-emerald-300 font-semibold">{t('stageProduction')}</span>
               </div>
               <p className="text-gray-300 text-sm">{t('condohubDesc')}</p>
-              <div className="mt-auto"><CardCta href="/aplicacoes/condohub" label={t('requestDetails')} /></div>
+              <div className="mt-auto"><CardCta href="/aplicacoes/condohub" label={t('accessOfficialPage')} /></div>
             </div>
 
             {/* ScamTrace */}
-            <div className="order-7 relative bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all flex flex-col">
+            <div className="order-8 relative bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all flex flex-col">
               <DemoSeal label={t('demoAvailable')} />
               <h3 className="text-xl font-bold text-white mb-2 pr-16">{t('scamtraceTitle')}</h3>
               <div className="flex gap-2 mb-3 flex-wrap">
@@ -208,7 +208,7 @@ export default function PortfolioPage() {
             </div>
 
             {/* Document Analysis */}
-            <div className="order-11 bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all flex flex-col">
+            <div className="order-12 bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all flex flex-col">
               <h3 className="text-xl font-bold text-white mb-2">{t('docAnalysisTitle')}</h3>
               <div className="flex gap-2 mb-3 flex-wrap">
                 <span className="text-xs px-2 py-1 rounded bg-blue-600/20 text-blue-400">{t('tagForensicData')}</span>
@@ -220,7 +220,7 @@ export default function PortfolioPage() {
             </div>
 
             {/* Mobile Forensics */}
-            <div className="order-10 bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all flex flex-col">
+            <div className="order-11 bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all flex flex-col">
               <h3 className="text-xl font-bold text-white mb-2">{t('mobileForensicsTitle')}</h3>
               <div className="flex gap-2 mb-3 flex-wrap">
                 <span className="text-xs px-2 py-1 rounded bg-purple-600/20 text-purple-400">{t('tagDigitalForensics')}</span>
@@ -232,7 +232,7 @@ export default function PortfolioPage() {
             </div>
 
             {/* Platform */}
-            <div className="order-12 bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all flex flex-col">
+            <div className="order-13 bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all flex flex-col">
               <h3 className="text-xl font-bold text-white mb-2">{t('platformTitle')}</h3>
               <div className="flex gap-2 mb-3 flex-wrap">
                 <span className="text-xs px-2 py-1 rounded bg-gray-600/20 text-gray-300">Forensic Data Platform</span>
@@ -242,8 +242,8 @@ export default function PortfolioPage() {
               <div className="mt-auto"><CardCta href="/plataforma-dados-criticos" label={t('requestDetails')} /></div>
             </div>
 
-            {/* Inspecta */}
-            <div className="order-2 bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all flex flex-col">
+            {/* Nextrace (ex-Inspecta) */}
+            <div className="order-3 bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all flex flex-col">
               <h3 className="text-xl font-bold text-white mb-2">{t('inspectaTitle')}</h3>
               <div className="flex gap-2 mb-3 flex-wrap">
                 <span className="text-xs px-2 py-1 rounded bg-green-600/20 text-green-400">{t('tagDocSaaS')}</span>
@@ -256,7 +256,7 @@ export default function PortfolioPage() {
             </div>
 
             {/* SynapseOS */}
-            <div className="order-3 bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all flex flex-col">
+            <div className="order-7 bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all flex flex-col">
               <h3 className="text-xl font-bold text-white mb-2">{t('synapseTitle')}</h3>
               <div className="flex gap-2 mb-3 flex-wrap">
                 <span className="text-xs px-2 py-1 rounded bg-blue-600/20 text-blue-400">{t('tagAppliedAI')}</span>
@@ -269,7 +269,7 @@ export default function PortfolioPage() {
             </div>
 
             {/* EcoCompliance */}
-            <div className="order-4 relative bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all flex flex-col">
+            <div className="order-5 relative bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all flex flex-col">
               <DemoSeal label={t('demoAvailable')} />
               <h3 className="text-xl font-bold text-white mb-2 pr-16">{t('ecoTitle')}</h3>
               <div className="flex gap-2 mb-3 flex-wrap">

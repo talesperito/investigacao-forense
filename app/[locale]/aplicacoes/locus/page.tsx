@@ -14,6 +14,8 @@ import {
   Layers,
   Clock,
   Camera,
+  Gift,
+  Cpu,
 } from 'lucide-react';
 import Reveal from '@/components/Reveal';
 
@@ -132,6 +134,34 @@ export default function LocusPage() {
         </Reveal>
       </div>
 
+      {/* FREE + NO-AI HIGHLIGHT */}
+      <div className="container mx-auto px-4 pb-4">
+        <Reveal>
+          <div className="rounded-[32px] border border-teal-200 bg-gradient-to-br from-teal-50 to-white p-6 md:p-8 shadow-sm">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+              <div className="flex items-start gap-4">
+                <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-teal-100 text-teal-700">
+                  <Gift className="h-6 w-6" />
+                </span>
+                <div>
+                  <p className="font-extrabold text-slate-900">{t('freeForeverTitle')}</p>
+                  <p className="mt-1 text-sm md:text-base text-slate-600 leading-relaxed">{t('freeForeverDesc')}</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-teal-100 text-teal-700">
+                  <Cpu className="h-6 w-6" />
+                </span>
+                <div>
+                  <p className="font-extrabold text-slate-900">{t('noAiTitle')}</p>
+                  <p className="mt-1 text-sm md:text-base text-slate-600 leading-relaxed">{t('noAiDesc')}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Reveal>
+      </div>
+
       {/* HOW IT WORKS */}
       <div id="como-funciona" className="container mx-auto px-4 pb-24 relative mt-4">
         <Reveal>
@@ -232,12 +262,14 @@ export default function LocusPage() {
                 {t('privacyDesc')}
               </p>
 
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                 {[
                   { label: t('privacyBadge1'), icon: '🚫' },
                   { label: t('privacyBadge2'), icon: '💻' },
                   { label: t('privacyBadge3'), icon: '📄' },
                   { label: t('privacyBadge4'), icon: '🔒' },
+                  { label: t('privacyBadge5'), icon: '⚙️' },
+                  { label: t('privacyBadge6'), icon: '🎁' },
                 ].map((badge) => (
                   <div
                     key={badge.label}

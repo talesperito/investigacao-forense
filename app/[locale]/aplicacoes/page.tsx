@@ -87,7 +87,7 @@ export default function AplicacoesPage() {
       ],
     },
     {
-      name: 'Inspecta Manager',
+      name: 'Nextrace',
       stage: t('inspectaStage'),
       audience: t('inspectaAudience'),
       summary: t('inspectaSummary'),
