@@ -687,6 +687,43 @@ export default function MetaScopePage() {
         </Reveal>
       </div>
 
+      {/* Academia Forense */}
+      <div className="container mx-auto px-4 pb-10">
+        <Reveal>
+          <div className="rounded-[28px] border border-blue-100 bg-blue-50 p-8 shadow-sm">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-blue-600 text-white">
+                <FileText className="h-5 w-5" />
+              </span>
+              <p className="text-sm font-bold uppercase tracking-wide text-blue-700">Academia Forense</p>
+            </div>
+            <h2 className="text-xl md:text-2xl font-extrabold text-slate-900 mb-3">Aprofunde seu conhecimento em perícia digital</h2>
+            <p className="text-slate-600 leading-relaxed mb-6 max-w-3xl">
+              Além das ferramentas, o MetaScope oferece conteúdo educativo para peritos, advogados e profissionais de segurança. Acesse artigos sobre ciências forenses, coleta de evidências digitais e análise de imagens com IA.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {[
+                { title: 'Fundamentos das Ciências Forenses', href: 'https://app.metascopeforense.com/academy/fundamentos-das-ciencias-forenses' },
+                { title: 'Forense Digital: da Coleta ao Laudo', href: 'https://app.metascopeforense.com/academy/forense-digital-da-coleta-ao-laudo' },
+                { title: 'Inteligência Artificial e Perícia de Imagens', href: 'https://app.metascopeforense.com/academy/inteligencia-artificial-e-pericia-de-imagens' },
+                { title: 'Glossário Forense', href: 'https://app.metascopeforense.com/academy/glossario-forense' },
+              ].map((article) => (
+                <a
+                  key={article.href}
+                  href={article.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center justify-between gap-2 rounded-2xl border border-blue-200 bg-white px-4 py-3.5 text-sm font-semibold text-slate-800 hover:border-blue-400 hover:shadow-md transition-all duration-200"
+                >
+                  {article.title}
+                  <ArrowRight className="h-4 w-4 shrink-0 text-blue-500 transition-transform group-hover:translate-x-0.5" />
+                </a>
+              ))}
+            </div>
+          </div>
+        </Reveal>
+      </div>
+
       {/* Gallery */}
       <div id="exemplos" className="container mx-auto px-4 pb-12">
         <Reveal>

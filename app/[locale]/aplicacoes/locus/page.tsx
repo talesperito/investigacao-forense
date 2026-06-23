@@ -12,7 +12,6 @@ import {
   Users,
   Download,
   Layers,
-  Clock,
   Camera,
   Gift,
   Cpu,
@@ -80,10 +79,6 @@ export default function LocusPage() {
                   </a>
                 </div>
 
-                <p className="mt-5 text-xs text-slate-400 flex items-center gap-1.5">
-                  <Clock className="h-3.5 w-3.5" />
-                  {t('comingSoonNote')}
-                </p>
               </div>
 
               {/* Sidebar */}
@@ -421,6 +416,43 @@ export default function LocusPage() {
         </Reveal>
       </div>
 
+      {/* Academia Forense */}
+      <div className="container mx-auto px-4 pb-10">
+        <Reveal>
+          <div className="rounded-[28px] border border-teal-100 bg-teal-50 p-8 shadow-sm">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-teal-600 text-white">
+                <FileText className="h-5 w-5" />
+              </span>
+              <p className="text-sm font-bold uppercase tracking-wide text-teal-700">Academia Forense</p>
+            </div>
+            <h2 className="text-xl md:text-2xl font-extrabold text-slate-900 mb-3">Aprenda enquanto aguarda o lançamento</h2>
+            <p className="text-slate-600 leading-relaxed mb-6 max-w-3xl">
+              O Locus ainda está em desenvolvimento, mas você já pode se aprofundar nas ciências forenses pela Academia. Acesse artigos sobre fundamentos periciais, coleta de evidências digitais e análise de imagens com IA.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {[
+                { title: 'Fundamentos das Ciências Forenses', href: 'https://app.metascopeforense.com/academy/fundamentos-das-ciencias-forenses' },
+                { title: 'Forense Digital: da Coleta ao Laudo', href: 'https://app.metascopeforense.com/academy/forense-digital-da-coleta-ao-laudo' },
+                { title: 'Inteligência Artificial e Perícia de Imagens', href: 'https://app.metascopeforense.com/academy/inteligencia-artificial-e-pericia-de-imagens' },
+                { title: 'Glossário Forense', href: 'https://app.metascopeforense.com/academy/glossario-forense' },
+              ].map((article) => (
+                <a
+                  key={article.href}
+                  href={article.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center justify-between gap-2 rounded-2xl border border-teal-200 bg-white px-4 py-3.5 text-sm font-semibold text-slate-800 hover:border-teal-400 hover:shadow-md transition-all duration-200"
+                >
+                  {article.title}
+                  <ArrowRight className="h-4 w-4 shrink-0 text-teal-500 transition-transform group-hover:translate-x-0.5" />
+                </a>
+              ))}
+            </div>
+          </div>
+        </Reveal>
+      </div>
+
       {/* FAQ */}
       <div className="container mx-auto px-4 pb-10">
         <Reveal>
@@ -476,10 +508,6 @@ export default function LocusPage() {
               <div className="max-w-4xl">
                 <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">{t('finalCtaTitle')}</h2>
                 <p className="mt-3 text-lg md:text-xl text-teal-100/90 leading-relaxed">{t('finalCtaDesc')}</p>
-                <p className="mt-4 text-sm text-teal-200/70 flex items-center gap-1.5">
-                  <Clock className="h-3.5 w-3.5" />
-                  {t('finalComingSoonNote')}
-                </p>
               </div>
 
               <div className="flex flex-col sm:flex-row lg:flex-col lg:justify-center gap-4 shrink-0">
