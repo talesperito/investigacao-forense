@@ -3,17 +3,20 @@ import { Link } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 
-const pageUrl = 'https://www.investigacaoforense.com/aplicacoes';
+const ptUrl = 'https://www.investigacaoforense.com/aplicacoes';
+const enUrl = 'https://www.investigacaoforense.com/en/applications';
 const ogImage = 'https://www.investigacaoforense.com/images/metascope/screenshot-1-v2.png';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const resolvedParams = await params;
   const t = await getTranslations({ locale: resolvedParams.locale, namespace: 'Applications' });
+  const isEn = resolvedParams.locale === 'en';
+  const pageUrl = isEn ? enUrl : ptUrl;
   return {
     title: t('pageTitle') + ' | Investigação Forense',
     description: t('pageSubtitle'),
-    alternates: { canonical: pageUrl, languages: { 'pt-BR': pageUrl, 'en': pageUrl.replace('/aplicacoes', '/en/applications') } },
-    openGraph: { type: 'website', locale: resolvedParams.locale === 'en' ? 'en_US' : 'pt_BR', url: pageUrl, title: t('pageTitle'), description: t('pageSubtitle'), siteName: 'Investigação Forense', images: [{ url: ogImage, width: 1200, height: 630, alt: 'Investigação Forense' }] },
+    alternates: { canonical: pageUrl, languages: { 'pt-BR': ptUrl, 'en': enUrl, 'x-default': ptUrl } },
+    openGraph: { type: 'website', locale: isEn ? 'en_US' : 'pt_BR', url: pageUrl, title: t('pageTitle'), description: t('pageSubtitle'), siteName: 'Investigação Forense', images: [{ url: ogImage, width: 1200, height: 630, alt: 'Investigação Forense' }] },
     twitter: { card: 'summary_large_image' as const, title: t('pageTitle'), description: t('pageSubtitle'), images: [ogImage] },
   };
 }

@@ -4,6 +4,10 @@ import { Shield, Mail, MapPin, Globe, Clock, Lock, Eye, UserCheck, Trash2, Alert
 export const metadata: Metadata = {
     title: 'Política de Privacidade | Privacy Policy | Investigação Forense',
     description: 'Política de Privacidade e Proteção de Dados - LGPD e GDPR. Saiba como coletamos, usamos e protegemos seus dados pessoais.',
+    // Documento único bilíngue: a URL PT é a canônica para os dois idiomas
+    alternates: {
+        canonical: 'https://www.investigacaoforense.com/politica-de-privacidade',
+    },
 };
 
 export default function PoliticaDePrivacidade() {

@@ -3,6 +3,10 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
     title: "Plataforma para Dados, Documentos e Auditoria | Investigação Forense",
     description: "Desenvolvemos plataformas para ingestão, armazenamento, rastreamento e análise de dados e documentos em ambientes que exigem controle de acesso, logs, integridade e rastreabilidade.",
+    // Conteúdo apenas em PT: a URL PT é a canônica também para /en/critical-data-platform
+    alternates: {
+        canonical: "https://www.investigacaoforense.com/plataforma-dados-criticos",
+    },
 };
 
 export default function PlataformaDadosCriticosPage() {

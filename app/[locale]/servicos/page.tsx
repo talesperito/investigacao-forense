@@ -2,12 +2,20 @@
 import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 
+const servicosPtUrl = 'https://www.investigacaoforense.com/servicos';
+const servicosEnUrl = 'https://www.investigacaoforense.com/en/services';
+
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const resolvedParams = await params;
   const t = await getTranslations({ locale: resolvedParams.locale, namespace: 'Services' });
+  const isEn = resolvedParams.locale === 'en';
   return {
     title: t('pageTitle') + ' | Investigação Forense',
     description: t('pageSubtitle'),
+    alternates: {
+      canonical: isEn ? servicosEnUrl : servicosPtUrl,
+      languages: { 'pt-BR': servicosPtUrl, 'en': servicosEnUrl, 'x-default': servicosPtUrl },
+    },
   };
 }
 
