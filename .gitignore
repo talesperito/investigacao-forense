@@ -49,6 +49,8 @@ Thumbs.db
 *.mp3
 *.wav
 *.pdf
+# Excecao: ebooks publicos servidos pelo site precisam ir para o deploy
+!public/ebooks/*.pdf
 
 # Pastas de Upload/Temp
 /uploads/
