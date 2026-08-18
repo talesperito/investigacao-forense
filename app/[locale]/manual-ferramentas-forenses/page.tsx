@@ -7,6 +7,7 @@ import {
   FileSearch,
   Fingerprint,
   FlaskConical,
+  Instagram,
   Network,
   Search,
   ShieldCheck,
@@ -17,6 +18,7 @@ import { Link } from '@/i18n/routing';
 const ptPageUrl = 'https://www.investigacaoforense.com/manual-ferramentas-forenses';
 const enPageUrl = 'https://www.investigacaoforense.com/en/forensic-tools-manual';
 const ebookDownloadUrl = '/ebooks/manual-ferramentas-forenses.pdf';
+const gepidInstagramUrl = 'https://www.instagram.com/grupo.gepid';
 
 type Locale = 'pt' | 'en';
 type PageProps = {
@@ -48,7 +50,7 @@ const copy = {
     schemaName: 'Ferramentas Forenses Aplicadas à Investigação Cibernética',
     schemaDescription:
       'Ebook técnico gratuito com tutoriais, fluxos de trabalho e exemplos práticos para ferramentas de perícia digital e investigação cibernética.',
-    schemaGroup: 'Grupo de Estudos de Perícias e Investigações Digitais',
+    schemaGroup: 'Grupo de Estudos em Perícia e Investigação Digital',
     badge: 'Ebook técnico gratuito',
     heroTitle: 'Manual de Ferramentas Forenses',
     heroDescription:
@@ -146,7 +148,7 @@ const copy = {
     originEyebrow: 'Origem técnica',
     originTitle: 'Desenvolvido a partir de revisão e experimentação prática',
     originDescription:
-      'O ebook nasceu no contexto do Grupo de Estudos de Perícias e Investigações Digitais, reunindo revisão bibliográfica, triagem de ferramentas usadas em investigações cibernéticas e auditorias de segurança, testes em laboratório e estruturação didática dos capítulos.',
+      'O ebook nasceu no contexto do Grupo de Estudos em Perícia e Investigação Digital, reunindo revisão bibliográfica, triagem de ferramentas usadas em investigações cibernéticas e auditorias de segurança, testes em laboratório e estruturação didática dos capítulos.',
     originCards: [
       {
         eyebrow: 'Coordenação técnica',
@@ -157,6 +159,7 @@ const copy = {
         eyebrow: 'Grupo de estudo',
         title: 'GEPID',
         description: 'Grupo dedicado a perícias e investigações digitais aplicadas.',
+        url: gepidInstagramUrl,
       },
       {
         eyebrow: 'Aplicação',
@@ -205,7 +208,7 @@ const copy = {
     schemaName: 'Forensic Tools Applied to Cyber Investigations',
     schemaDescription:
       'Free technical ebook with tutorials, workflows, and practical examples for digital forensics and cyber investigation tools.',
-    schemaGroup: 'Digital Forensics and Investigations Study Group',
+    schemaGroup: 'Grupo de Estudos em Perícia e Investigação Digital',
     badge: 'Free technical ebook',
     heroTitle: 'Forensic Tools Manual',
     heroDescription:
@@ -314,6 +317,7 @@ const copy = {
         eyebrow: 'Study group',
         title: 'GEPID',
         description: 'A group dedicated to applied digital forensics and investigations.',
+        url: gepidInstagramUrl,
       },
       {
         eyebrow: 'Application',
@@ -399,6 +403,7 @@ const copy = {
     eyebrow: string;
     title: string;
     description: string;
+    url?: string;
   }>;
   faqTitle: string;
   faqItems: Array<{
@@ -504,6 +509,7 @@ export default async function ManualFerramentasForensesPage({ params }: PageProp
       {
         '@type': 'Organization',
         name: t.schemaGroup,
+        sameAs: [gepidInstagramUrl],
       },
     ],
     publisher: {
@@ -678,7 +684,23 @@ export default async function ManualFerramentasForensesPage({ params }: PageProp
             {t.originCards.map((card) => (
               <div key={card.title} className="rounded-3xl bg-slate-50 p-6">
                 <p className="text-sm font-bold uppercase text-slate-500">{card.eyebrow}</p>
-                <h3 className="mt-3 text-xl font-black">{card.title}</h3>
+                <h3 className="mt-3 text-xl font-black">
+                  {card.url ? (
+                    <a
+                      href={card.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group inline-flex items-center gap-2 text-blue-800 transition hover:text-blue-900"
+                    >
+                      <span className="underline decoration-blue-200 underline-offset-4 transition group-hover:decoration-blue-700">
+                        {card.title}
+                      </span>
+                      <Instagram className="h-5 w-5 shrink-0" aria-hidden="true" />
+                    </a>
+                  ) : (
+                    card.title
+                  )}
+                </h3>
                 <p className="mt-2 text-slate-600">{card.description}</p>
               </div>
             ))}
