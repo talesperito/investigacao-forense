@@ -16,6 +16,7 @@ import {
   Users,
 } from 'lucide-react';
 import Reveal from '@/components/Reveal';
+import { useTrackingUrlBuilder } from '@/lib/tracking-params';
 
 export default function MetaScopePage() {
   const t = useTranslations('MetaScope');
@@ -28,7 +29,10 @@ export default function MetaScopePage() {
   const [imgOpacity, setImgOpacity] = useState(1);
   const [faqOpenIndex, setFaqOpenIndex] = useState<number | null>(0);
 
-  const metascopeUrl = process.env.NEXT_PUBLIC_METASCOPE_URL || 'https://app.metascopeforense.com/';
+  const withTracking = useTrackingUrlBuilder();
+  const metascopeUrl = withTracking(
+    process.env.NEXT_PUBLIC_METASCOPE_URL || 'https://app.metascopeforense.com/'
+  );
 
   const demoImages = useMemo(
     () => [
@@ -710,7 +714,7 @@ export default function MetaScopePage() {
               ].map((article) => (
                 <a
                   key={article.href}
-                  href={article.href}
+                  href={withTracking(article.href)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group flex items-center justify-between gap-2 rounded-2xl border border-blue-200 bg-white px-4 py-3.5 text-sm font-semibold text-slate-800 hover:border-blue-400 hover:shadow-md transition-all duration-200"
