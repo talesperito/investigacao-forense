@@ -18,7 +18,7 @@ import {
 } from 'lucide-react';
 import Reveal from '@/components/Reveal';
 
-const LOCUS_VPS_URL = 'https://locus-pericial-locus.2bwwuq.easypanel.host/';
+const LOCUS_URL = 'https://locus.investigacaoforense.com/';
 
 export default function LocusPage() {
   const t = useTranslations('Locus');
@@ -63,13 +63,15 @@ export default function LocusPage() {
                 </p>
 
                 <div className="mt-8 flex flex-col sm:flex-row gap-3">
-                  <button
-                    type="button"
-                    disabled
-                    className="inline-flex justify-center items-center gap-2 rounded-2xl border border-slate-300 bg-slate-100 px-7 py-4 text-slate-400 font-extrabold cursor-not-allowed"
+                  <a
+                    href={LOCUS_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex justify-center items-center gap-2 rounded-2xl bg-gradient-to-r from-teal-600 to-teal-700 px-7 py-4 text-white font-extrabold shadow-lg shadow-teal-700/25 ring-1 ring-teal-500/40 hover:from-teal-700 hover:to-teal-800 hover:shadow-xl hover:shadow-teal-700/30 transition-all duration-200"
+                    aria-label={t('ctaPrimary')}
                   >
-                    {t('ctaPrimary')} — em breve
-                  </button>
+                    {t('ctaPrimary')}
+                  </a>
 
                   <a
                     href="#como-funciona"
@@ -405,13 +407,15 @@ export default function LocusPage() {
               {t('seoSectionDesc')}
             </p>
 
-            <button
-              type="button"
-              disabled
-              className="inline-flex justify-center items-center gap-2 rounded-2xl border border-slate-300 bg-slate-100 px-6 py-3.5 text-slate-400 font-bold cursor-not-allowed"
+            <a
+              href={LOCUS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex justify-center items-center gap-2 rounded-2xl bg-gradient-to-r from-teal-600 to-teal-700 px-6 py-3.5 text-white font-bold shadow-lg shadow-teal-700/25 hover:from-teal-700 hover:to-teal-800 transition-all duration-200"
+              aria-label={t('ctaPrimary')}
             >
-              {t('ctaPrimary')} — em breve
-            </button>
+              {t('ctaPrimary')}
+            </a>
           </div>
         </Reveal>
       </div>
@@ -511,13 +515,15 @@ export default function LocusPage() {
               </div>
 
               <div className="flex flex-col sm:flex-row lg:flex-col lg:justify-center gap-4 shrink-0">
-                <button
-                  type="button"
-                  disabled
-                  className="inline-flex items-center justify-center gap-2 rounded-2xl bg-white/20 border border-white/30 px-8 py-4 font-extrabold text-white/50 cursor-not-allowed whitespace-nowrap"
+                <a
+                  href={LOCUS_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 rounded-2xl bg-white px-8 py-4 font-extrabold text-teal-700 shadow-lg hover:bg-slate-50 hover:-translate-y-0.5 transition-all whitespace-nowrap"
+                  aria-label={t('finalCtaButton')}
                 >
-                  {t('finalCtaButton')} — em breve
-                </button>
+                  {t('finalCtaButton')}
+                </a>
                 <a
                   href="#como-funciona"
                   className="inline-flex items-center justify-center gap-2 rounded-2xl border-2 border-white/20 bg-transparent px-8 py-4 font-extrabold text-white hover:bg-white/10 transition-all whitespace-nowrap"
@@ -533,13 +539,15 @@ export default function LocusPage() {
       {/* Mobile sticky CTA */}
       <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden border-t border-slate-200 bg-white/85 backdrop-blur">
         <div className="px-4 py-3">
-          <button
-            type="button"
-            disabled
-            className="w-full inline-flex items-center justify-center gap-2 rounded-2xl border border-slate-300 bg-slate-100 px-5 py-3 text-slate-400 font-extrabold cursor-not-allowed"
+          <a
+            href={LOCUS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full inline-flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-teal-600 to-teal-700 px-5 py-3 text-white font-extrabold shadow-lg shadow-teal-700/25 hover:from-teal-700 hover:to-teal-800 transition-all duration-200"
+            aria-label={t('mobileCtaButton')}
           >
-            {t('mobileCtaButton')} — em breve
-          </button>
+            {t('mobileCtaButton')}
+          </a>
         </div>
       </div>
     </div>
