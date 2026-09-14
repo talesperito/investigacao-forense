@@ -332,19 +332,19 @@ export default function MetaScopePage() {
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-3 h-48 md:h-64">
                     <div className="relative rounded-xl overflow-hidden border border-slate-800 bg-black/20 group/item">
                       <div className="absolute top-2 left-2 z-10 bg-black/60 backdrop-blur px-2 py-0.5 rounded text-[10px] font-bold text-white">1. {t('evidenceLabel')}</div>
-                      <Image src="/images/metascope/cases/Case1_Oficial-Justiça.png" alt="Evidence" fill className="object-contain p-1 opacity-80 group-hover/item:opacity-100 transition-opacity" />
+                      <Image src="/images/metascope/cases/Case1_Oficial-Justiça.png" alt="Evidence" fill sizes="(max-width: 767px) 50vw, 25vw" className="object-contain p-1 opacity-80 group-hover/item:opacity-100 transition-opacity" />
                     </div>
                     <div className="relative rounded-xl overflow-hidden border border-slate-800 bg-black/20 group/item">
                       <div className="absolute top-2 left-2 z-10 bg-black/60 backdrop-blur px-2 py-0.5 rounded text-[10px] font-bold text-white">2. {t('documentLabel')}</div>
-                      <Image src="/images/metascope/cases/Case1a_Oficial-justiça.jpg" alt="Document" fill className="object-contain p-1 opacity-80 group-hover/item:opacity-100 transition-opacity" />
+                      <Image src="/images/metascope/cases/Case1a_Oficial-justiça.jpg" alt="Document" fill sizes="(max-width: 767px) 50vw, 25vw" className="object-contain p-1 opacity-80 group-hover/item:opacity-100 transition-opacity" />
                     </div>
                     <div className="relative rounded-xl overflow-hidden border border-slate-800 bg-slate-900/50 group/item">
                       <div className="absolute top-2 left-2 z-10 bg-red-600 px-2 py-0.5 rounded text-[10px] font-bold text-white shadow-lg">3. {t('analysisLabel')}</div>
-                      <Image src="/images/metascope/cases/result_case1_.png" alt="Analysis" fill className="object-contain p-1 opacity-90 group-hover/item:opacity-100 transition-opacity" />
+                      <Image src="/images/metascope/cases/result_case1_.png" alt="Analysis" fill sizes="(max-width: 767px) 50vw, 25vw" className="object-contain p-1 opacity-90 group-hover/item:opacity-100 transition-opacity" />
                     </div>
                     <div className="relative rounded-xl overflow-hidden border border-blue-900/30 bg-blue-900/10 group/item shadow-[0_0_30px_rgba(37,99,235,0.1)]">
                       <div className="absolute top-2 left-2 z-10 bg-blue-600 px-2 py-0.5 rounded text-[10px] font-bold text-white shadow-lg">4. {t('reportLabel')}</div>
-                      <Image src="/images/metascope/cases/report_case1.png" alt="Report" fill className="object-contain p-2 opacity-90 group-hover/item:opacity-100 transition-opacity scale-95 group-hover/item:scale-100 duration-300" />
+                      <Image src="/images/metascope/cases/report_case1.png" alt="Report" fill sizes="(max-width: 767px) 50vw, 25vw" className="object-contain p-2 opacity-90 group-hover/item:opacity-100 transition-opacity scale-95 group-hover/item:scale-100 duration-300" />
                     </div>
                   </div>
 
@@ -375,11 +375,11 @@ export default function MetaScopePage() {
                   <div className="grid grid-cols-2 h-64 md:h-72">
                     <div className="relative border-r border-slate-700 group/img bg-black/20">
                       <div className="absolute top-2 left-2 z-10 bg-black/60 backdrop-blur px-2 py-0.5 rounded text-[10px] font-bold text-white">{t('evidenceLabel')}</div>
-                      <Image src="/images/metascope/cases/Case3_ATPVe.png" alt="ATPV-e" fill className="object-contain p-2 opacity-90 group-hover/img:opacity-100 transition-opacity" />
+                      <Image src="/images/metascope/cases/Case3_ATPVe.jpg" alt="ATPV-e" fill sizes="(max-width: 767px) 50vw, 25vw" className="object-contain p-2 opacity-90 group-hover/img:opacity-100 transition-opacity" />
                     </div>
                     <div className="relative group/res bg-slate-900/50">
                       <div className="absolute top-2 left-2 z-10 bg-red-600 px-2 py-0.5 rounded text-[10px] font-bold text-white shadow-lg">{t('analysisLabel')}</div>
-                      <Image src="/images/metascope/cases/result_case3.png" alt="Result" fill className="object-contain object-top p-1 opacity-90 group-hover/res:opacity-100 transition-opacity" />
+                      <Image src="/images/metascope/cases/result_case3.png" alt="Result" fill sizes="(max-width: 767px) 50vw, 25vw" className="object-contain object-top p-1 opacity-90 group-hover/res:opacity-100 transition-opacity" />
                     </div>
                   </div>
                   <div className="bg-red-900/20 p-3 border-t border-red-900/30 flex items-center gap-3">
@@ -404,11 +404,11 @@ export default function MetaScopePage() {
                   <div className="grid grid-cols-2 h-64 md:h-72">
                     <div className="relative border-r border-slate-700 group/img bg-black/20">
                       <div className="absolute top-2 left-2 z-10 bg-black/60 backdrop-blur px-2 py-0.5 rounded text-[10px] font-bold text-white">{t('evidenceLabel')}</div>
-                      <Image src="/images/metascope/cases/Case5_maduro.jpg" alt="Viral" fill className="object-contain p-2 opacity-90 group-hover/img:opacity-100 transition-opacity" />
+                      <Image src="/images/metascope/cases/Case5_maduro.jpg" alt="Viral" fill sizes="(max-width: 767px) 50vw, 25vw" className="object-contain p-2 opacity-90 group-hover/img:opacity-100 transition-opacity" />
                     </div>
                     <div className="relative group/res bg-slate-900/50">
                       <div className="absolute top-2 left-2 z-10 bg-amber-600 px-2 py-0.5 rounded text-[10px] font-bold text-white shadow-lg">{t('analysisLabel')}</div>
-                      <Image src="/images/metascope/cases/result_case5.png" alt="Result" fill className="object-contain object-top p-1 opacity-90 group-hover/res:opacity-100 transition-opacity" />
+                      <Image src="/images/metascope/cases/result_case5.png" alt="Result" fill sizes="(max-width: 767px) 50vw, 25vw" className="object-contain object-top p-1 opacity-90 group-hover/res:opacity-100 transition-opacity" />
                     </div>
                   </div>
                   <div className="bg-amber-900/20 p-3 border-t border-amber-900/30 flex items-center gap-3">
@@ -433,11 +433,11 @@ export default function MetaScopePage() {
                   <div className="grid grid-cols-2 h-64 md:h-72">
                     <div className="relative border-r border-slate-700 group/img bg-black/20">
                       <div className="absolute top-2 left-2 z-10 bg-black/60 backdrop-blur px-2 py-0.5 rounded text-[10px] font-bold text-white">{t('evidenceLabel')}</div>
-                      <Image src="/images/metascope/cases/Case6_print_whats_rastreio.png" alt="Phishing" fill className="object-contain p-2 opacity-90 group-hover/img:opacity-100 transition-opacity" />
+                      <Image src="/images/metascope/cases/Case6_print_whats_rastreio.png" alt="Phishing" fill sizes="(max-width: 767px) 50vw, 25vw" className="object-contain p-2 opacity-90 group-hover/img:opacity-100 transition-opacity" />
                     </div>
                     <div className="relative group/res bg-slate-900/50">
                       <div className="absolute top-2 left-2 z-10 bg-orange-600 px-2 py-0.5 rounded text-[10px] font-bold text-white shadow-lg">{t('analysisLabel')}</div>
-                      <Image src="/images/metascope/cases/result_case6.png" alt="Result" fill className="object-contain object-left-top p-1 opacity-90 group-hover/res:opacity-100 transition-opacity" />
+                      <Image src="/images/metascope/cases/result_case6.png" alt="Result" fill sizes="(max-width: 767px) 50vw, 25vw" className="object-contain object-left-top p-1 opacity-90 group-hover/res:opacity-100 transition-opacity" />
                     </div>
                   </div>
                   <div className="bg-orange-900/20 p-3 border-t border-orange-900/30 flex items-center gap-3">
@@ -462,11 +462,11 @@ export default function MetaScopePage() {
                   <div className="grid grid-cols-2 h-64 md:h-72">
                     <div className="relative border-r border-slate-700 group/img bg-black/20">
                       <div className="absolute top-2 left-2 z-10 bg-black/60 backdrop-blur px-2 py-0.5 rounded text-[10px] font-bold text-white">{t('evidenceLabel')}</div>
-                      <Image src="/images/metascope/cases/Case4_London.jpeg" alt="London" fill className="object-contain p-2 opacity-90 group-hover/img:opacity-100 transition-opacity" />
+                      <Image src="/images/metascope/cases/Case4_London.jpeg" alt="London" fill sizes="(max-width: 767px) 50vw, 25vw" className="object-contain p-2 opacity-90 group-hover/img:opacity-100 transition-opacity" />
                     </div>
                     <div className="relative group/res bg-slate-900/50">
                       <div className="absolute top-2 left-2 z-10 bg-emerald-600 px-2 py-0.5 rounded text-[10px] font-bold text-white shadow-lg">{t('analysisLabel')}</div>
-                      <Image src="/images/metascope/cases/result_case4.png" alt="Result" fill className="object-contain object-top p-1 opacity-90 group-hover/res:opacity-100 transition-opacity" />
+                      <Image src="/images/metascope/cases/result_case4.png" alt="Result" fill sizes="(max-width: 767px) 50vw, 25vw" className="object-contain object-top p-1 opacity-90 group-hover/res:opacity-100 transition-opacity" />
                     </div>
                   </div>
                   <div className="bg-emerald-900/20 p-3 border-t border-emerald-900/30 flex items-center gap-3">
@@ -740,7 +740,13 @@ export default function MetaScopePage() {
                 <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-white/0 via-white/0 to-slate-900/5" />
                 <div className="relative w-full h-80 md:h-[520px]">
                   <div className="absolute inset-0 transition-opacity duration-200" style={{ opacity: imgOpacity }}>
-                    <Image src={demoImages[currentImageIndex].src} alt={demoImages[currentImageIndex].alt} fill className="object-contain" priority />
+                    <Image
+                      src={demoImages[currentImageIndex].src}
+                      alt={demoImages[currentImageIndex].alt}
+                      fill
+                      sizes="(max-width: 639px) calc(100vw - 96px), (max-width: 767px) 544px, (max-width: 1023px) 672px, (max-width: 1279px) 928px, (max-width: 1535px) 1184px, 1440px"
+                      className="object-contain"
+                    />
                   </div>
                 </div>
               </div>
