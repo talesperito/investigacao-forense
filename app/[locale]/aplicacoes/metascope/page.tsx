@@ -2,7 +2,7 @@
 
 import React, { useEffect, useMemo, useState } from 'react';
 import Image from 'next/image';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import {
   ArrowRight,
   ChevronLeft,
@@ -16,10 +16,22 @@ import {
   Users,
 } from 'lucide-react';
 import Reveal from '@/components/Reveal';
+import { getPathname } from '@/i18n/routing';
 import { useTrackingUrlBuilder } from '@/lib/tracking-params';
 
 export default function MetaScopePage() {
   const t = useTranslations('MetaScope');
+  const locale = useLocale();
+  // The site's policy is Portuguese-first and does not cover MetaScope; other locales link to the app's own policy.
+  const privacyIsExternal = locale !== 'pt';
+  const privacyHref = privacyIsExternal
+    ? 'https://app.metascopeforense.com/privacy'
+    : getPathname({ href: '/politica-de-privacidade', locale });
+  const contactHref = getPathname({ href: '/contato', locale });
+  // Only defined for audiences outside Brazil, where the Brazilian cases need context.
+  const caseOriginBadge = t.has('caseOriginBadge') ? (
+    <span className="inline-block mb-3 px-2.5 py-0.5 rounded-full bg-white/10 text-slate-300 text-[11px] font-bold border border-white/15 uppercase tracking-wide">{t('caseOriginBadge')}</span>
+  ) : null;
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
@@ -133,11 +145,11 @@ export default function MetaScopePage() {
                 </div>
                 <p className="mt-3 text-sm text-slate-600">
                   {t('privacyLine')}{' '}
-                  <a href="/politica-de-privacidade" className="font-semibold text-slate-800 underline decoration-slate-300 underline-offset-4 hover:decoration-slate-600">
+                  <a href={privacyHref} {...(privacyIsExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})} className="font-semibold text-slate-800 underline decoration-slate-300 underline-offset-4 hover:decoration-slate-600">
                     {t('privacyLink')}
                   </a>{' '}
                   {t('orText')}{' '}
-                  <a href="/contato" className="font-semibold text-slate-800 underline decoration-slate-300 underline-offset-4 hover:decoration-slate-600">
+                  <a href={contactHref} className="font-semibold text-slate-800 underline decoration-slate-300 underline-offset-4 hover:decoration-slate-600">
                     {t('specialistLink')}
                   </a>
                   .
@@ -324,6 +336,7 @@ export default function MetaScopePage() {
                 </div>
 
                 <div className="p-8 pb-2">
+                  {caseOriginBadge}
                   <h3 className="text-2xl md:text-3xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">{t('caseFeaturedTitle')}</h3>
                   <p className="text-slate-400 text-base mb-6 leading-relaxed">{caseFeaturedDesc}</p>
                 </div>
@@ -368,6 +381,7 @@ export default function MetaScopePage() {
                   <span className="px-3 py-1 rounded-full bg-red-500/20 text-red-300 text-xs font-bold border border-red-500/30 uppercase tracking-wide">{t('caseATPVBadge')}</span>
                 </div>
                 <div className="p-8 pb-0">
+                  {caseOriginBadge}
                   <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-red-400 transition-colors">{t('caseATPVTitle')}</h3>
                   <p className="text-slate-400 text-sm mb-6 min-h-[40px]">{t('caseATPVDesc')}</p>
                 </div>
@@ -426,6 +440,7 @@ export default function MetaScopePage() {
                   <span className="px-3 py-1 rounded-full bg-orange-500/20 text-orange-300 text-xs font-bold border border-orange-500/30 uppercase tracking-wide">{t('casePhishingBadge')}</span>
                 </div>
                 <div className="p-8 pb-0">
+                  {caseOriginBadge}
                   <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-orange-400 transition-colors">{t('casePhishingTitle')}</h3>
                   <p className="text-slate-400 text-sm mb-6 min-h-[40px]">{t('casePhishingDesc')}</p>
                 </div>
@@ -699,18 +714,18 @@ export default function MetaScopePage() {
               <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-blue-600 text-white">
                 <FileText className="h-5 w-5" />
               </span>
-              <p className="text-sm font-bold uppercase tracking-wide text-blue-700">Academia Forense</p>
+              <p className="text-sm font-bold uppercase tracking-wide text-blue-700">{t('academyTag')}</p>
             </div>
-            <h2 className="text-xl md:text-2xl font-extrabold text-slate-900 mb-3">Aprofunde seu conhecimento em perícia digital</h2>
+            <h2 className="text-xl md:text-2xl font-extrabold text-slate-900 mb-3">{t('academyTitle')}</h2>
             <p className="text-slate-600 leading-relaxed mb-6 max-w-3xl">
-              Além das ferramentas, o MetaScope oferece conteúdo educativo para peritos, advogados e profissionais de segurança. Acesse artigos sobre ciências forenses, coleta de evidências digitais e análise de imagens com IA.
+              {t('academyDesc')}
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { title: 'Fundamentos das Ciências Forenses', href: 'https://app.metascopeforense.com/academy/fundamentos-das-ciencias-forenses' },
-                { title: 'Forense Digital: da Coleta ao Laudo', href: 'https://app.metascopeforense.com/academy/forense-digital-da-coleta-ao-laudo' },
-                { title: 'Inteligência Artificial e Perícia de Imagens', href: 'https://app.metascopeforense.com/academy/inteligencia-artificial-e-pericia-de-imagens' },
-                { title: 'Glossário Forense', href: 'https://app.metascopeforense.com/academy/glossario-forense' },
+                { title: t('academyArticle1Title'), href: `https://app.metascopeforense.com/academy/${t('academyArticle1Slug')}` },
+                { title: t('academyArticle2Title'), href: `https://app.metascopeforense.com/academy/${t('academyArticle2Slug')}` },
+                { title: t('academyArticle3Title'), href: `https://app.metascopeforense.com/academy/${t('academyArticle3Slug')}` },
+                { title: t('academyArticle4Title'), href: `https://app.metascopeforense.com/academy/${t('academyArticle4Slug')}` },
               ].map((article) => (
                 <a
                   key={article.href}
@@ -805,7 +820,7 @@ export default function MetaScopePage() {
                   </p>
                   <p className="text-sm text-blue-200/80 font-medium">
                     {t('finalSecurityQuestion')}{' '}
-                    <a href="/contato" className="font-semibold text-white underline decoration-white/30 underline-offset-4 hover:decoration-white transition-colors">
+                    <a href={contactHref} className="font-semibold text-white underline decoration-white/30 underline-offset-4 hover:decoration-white transition-colors">
                       {t('finalContactLink')}
                     </a>
                   </p>
