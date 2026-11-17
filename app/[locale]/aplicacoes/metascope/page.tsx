@@ -495,6 +495,26 @@ export default function MetaScopePage() {
         </div>
       </div>
 
+      {/* Guia de integridade digital: logo apos os casos reais, que mostram os golpes que o guia ensina a evitar */}
+      <div className="container mx-auto px-4 pb-10">
+        <Reveal>
+          <div className="flex flex-col gap-4 rounded-[28px] border border-slate-200 bg-white p-6 shadow-sm md:flex-row md:items-center md:justify-between md:p-8">
+            <div className="max-w-3xl">
+              <p className="text-sm font-bold uppercase tracking-wide text-blue-700">{t('guideTag')}</p>
+              <h2 className="mt-1 text-xl md:text-2xl font-extrabold text-slate-900">{t('guideTitle')}</h2>
+              <p className="mt-2 text-slate-600 leading-relaxed">{t('guideDesc')}</p>
+            </div>
+            <a
+              href={getPathname({ href: '/guia-integridade-digital', locale })}
+              className="group inline-flex shrink-0 items-center justify-center gap-2 rounded-2xl border border-blue-200 bg-blue-50 px-5 py-3.5 text-sm font-bold text-blue-800 hover:border-blue-400 hover:bg-blue-100 transition-colors"
+            >
+              {t('guideCta')}
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+            </a>
+          </div>
+        </Reveal>
+      </div>
+
       {/* Audience */}
       <div className="container mx-auto px-4 pb-10">
         <Reveal>

@@ -257,6 +257,32 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="py-20 px-4 bg-slate-50 border-t border-slate-200">
+        <div className="max-w-6xl mx-auto">
+          <p className="text-center text-sm font-bold uppercase tracking-wide text-blue-700">{t('freeEyebrow')}</p>
+          <h2 className="mt-3 text-4xl font-bold tracking-[-0.015em] text-center text-slate-900 mb-12">{t('freeTitle')}</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {([
+              ['/guia-integridade-digital', t('freeGuideTag'), t('freeGuideTitle'), t('freeGuideDesc'), t('freeGuideCta')],
+              ['/manual-ferramentas-forenses', t('freeManualTag'), t('freeManualTitle'), t('freeManualDesc'), t('freeManualCta')],
+            ] as const).map(([href, tag, title, desc, cta]) => (
+              <Link
+                key={href}
+                href={href}
+                className="group flex h-full flex-col p-8 bg-white rounded-2xl border border-slate-200 hover:border-blue-300 shadow-sm transition-all duration-300"
+              >
+                <span className="self-start text-xs px-3 py-1 rounded-full bg-blue-600/10 text-blue-700 font-semibold">{tag}</span>
+                <h3 className="mt-5 text-2xl font-bold tracking-[-0.01em] text-slate-900">{title}</h3>
+                <p className="mt-3 mb-6 text-slate-600 leading-relaxed">{desc}</p>
+                <span className="mt-auto font-semibold text-blue-700 group-hover:text-blue-800 transition-colors">
+                  {cta} {'->'}
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="py-24 px-4 bg-gradient-to-r from-blue-700 via-blue-600 to-cyan-600">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-[-0.02em] text-white mb-6">{t('ctaFinalTitle')}</h2>

@@ -109,6 +109,42 @@
   
   <!-- Legal Pages -->
   <url>
+    <loc>https://www.investigacaoforense.com/aplicacoes/locus</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.investigacaoforense.com/en/applications/locus</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.investigacaoforense.com/manual-ferramentas-forenses</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.investigacaoforense.com/en/forensic-tools-manual</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.investigacaoforense.com/guia-integridade-digital</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.investigacaoforense.com/en/digital-integrity-guide</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.investigacaoforense.com/politica-de-privacidade</loc>
     <lastmod>2026-01-05</lastmod>
     <changefreq>yearly</changefreq>

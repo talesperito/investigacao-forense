@@ -70,7 +70,17 @@
         "ctaFinalTitle": "Ready to transform your operation?",
         "ctaFinalSubtitle": "Discover our solutions and see how we can support your operation with technology and traceability.",
         "ctaFinalPrimary": "View full portfolio",
-        "ctaFinalSecondary": "Talk to a specialist"
+        "ctaFinalSecondary": "Talk to a specialist",
+        "freeEyebrow": "Free resources",
+        "freeTitle": "To study and apply day to day",
+        "freeGuideTag": "Guide · PDF in Portuguese",
+        "freeGuideTitle": "When the File Lies",
+        "freeGuideDesc": "A digital integrity guide built for Brazilian documents: how to check boletos, invoices, contracts, photos and links before you act.",
+        "freeGuideCta": "See the guide",
+        "freeManualTag": "Technical ebook",
+        "freeManualTitle": "Forensic Tools Manual",
+        "freeManualDesc": "Tutorials and practical workflows for Autopsy, Maltego, IPED, ExifTool, SIFT, Recuva and MetaScope.",
+        "freeManualCta": "See the manual"
     },
     "MetaScope": {
         "seoTitle": "MetaScope Forensic | Digital Forensics Software for Files, Images, and Links",
@@ -258,7 +268,11 @@
         "academyArticle3Title": "Artificial Intelligence and Image Forensics",
         "academyArticle3Slug": "artificial-intelligence-and-image-forensics",
         "academyArticle4Title": "Forensic Glossary",
-        "academyArticle4Slug": "forensic-glossary"
+        "academyArticle4Slug": "forensic-glossary",
+        "guideTag": "Free guide",
+        "guideTitle": "When the File Lies",
+        "guideDesc": "How to check Brazilian boletos, invoices, contracts, photos and links before you pay, sign or forward them, and how to keep what matters provable. A 19-page PDF in Portuguese, built for Brazil, no sign-up.",
+        "guideCta": "See the digital integrity guide"
     },
     "CondoHub": {
         "seoTitle": "CondoHub – Smart Management & Tracking System for Properties and HOAs",
@@ -405,6 +419,7 @@
         "copyright": "All rights reserved.",
         "privacyPolicy": "Privacy Policy",
         "forensicToolsManual": "Forensic tools manual",
+        "digitalIntegrityGuide": "Digital integrity guide",
         "contact": "Contact",
         "courses": "Courses"
     },

@@ -105,12 +105,15 @@ export default function Footer() {
             <p className="text-gray-400 text-sm">
               © {currentYear} Investigação Forense. {t('copyright')}
             </p>
-            <nav className="flex gap-6 text-sm">
+            <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm">
               <Link href="/politica-de-privacidade" className="text-gray-400 hover:text-white transition-colors duration-200">
                 {t('privacyPolicy')}
               </Link>
               <Link href="/manual-ferramentas-forenses" className="text-gray-400 hover:text-white transition-colors duration-200">
                 {t('forensicToolsManual')}
+              </Link>
+              <Link href="/guia-integridade-digital" className="text-gray-400 hover:text-white transition-colors duration-200">
+                {t('digitalIntegrityGuide')}
               </Link>
               <Link href="/contato" className="text-gray-400 hover:text-white transition-colors duration-200">
                 {t('contact')}

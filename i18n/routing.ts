@@ -44,6 +44,10 @@ export const routing = defineRouting({
             pt: '/manual-ferramentas-forenses',
             en: '/forensic-tools-manual'
         },
+        '/guia-integridade-digital': {
+            pt: '/guia-integridade-digital',
+            en: '/digital-integrity-guide'
+        },
         '/landingpage': {
             pt: '/landingpage',
             en: '/landingpage'

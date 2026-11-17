@@ -70,7 +70,17 @@
         "ctaFinalTitle": "Pronto para transformar sua operação?",
         "ctaFinalSubtitle": "Conheça nossas soluções e veja como podemos apoiar sua operação com tecnologia e rastreabilidade.",
         "ctaFinalPrimary": "Ver portfólio completo",
-        "ctaFinalSecondary": "Falar com especialista"
+        "ctaFinalSecondary": "Falar com especialista",
+        "freeEyebrow": "Materiais gratuitos",
+        "freeTitle": "Para estudar e aplicar no dia a dia",
+        "freeGuideTag": "Guia · PDF · 19 páginas",
+        "freeGuideTitle": "Quando o arquivo engana",
+        "freeGuideDesc": "Como conferir boletos, notas, contratos, fotos e links antes de agir, e guardar o que importa para provar depois.",
+        "freeGuideCta": "Ver o guia",
+        "freeManualTag": "Ebook técnico",
+        "freeManualTitle": "Manual de Ferramentas Forenses",
+        "freeManualDesc": "Tutoriais e fluxos práticos para Autopsy, Maltego, IPED, ExifTool, SIFT, Recuva e MetaScope.",
+        "freeManualCta": "Ver o manual"
     },
     "MetaScope": {
         "seoTitle": "MetaScope Forensic | Software de Perícia Digital para Arquivos, Imagens e Links",
@@ -257,7 +267,11 @@
         "academyArticle3Title": "Inteligência Artificial e Perícia de Imagens",
         "academyArticle3Slug": "inteligencia-artificial-e-pericia-de-imagens",
         "academyArticle4Title": "Glossário Forense",
-        "academyArticle4Slug": "glossario-forense"
+        "academyArticle4Slug": "glossario-forense",
+        "guideTag": "Guia gratuito",
+        "guideTitle": "Quando o arquivo engana",
+        "guideDesc": "Como conferir boletos, notas, contratos, fotos e links antes de pagar, assinar ou encaminhar, e como guardar o que importa para provar depois. PDF de 19 páginas, sem cadastro.",
+        "guideCta": "Ver o guia de integridade digital"
     },
     "CondoHub": {
         "seoTitle": "CondoHub – Sistema de Gestão e Ocorrências para Condomínios e Administradoras",
@@ -405,6 +419,7 @@
         "copyright": "Todos os direitos reservados.",
         "privacyPolicy": "Política de Privacidade",
         "forensicToolsManual": "Manual de ferramentas forenses",
+        "digitalIntegrityGuide": "Guia de integridade digital",
         "contact": "Contato",
         "courses": "Cursos"
     },
